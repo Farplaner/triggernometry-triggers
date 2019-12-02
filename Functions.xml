@@ -1,0 +1,141 @@
+<?xml version="1.0"?>
+<TriggernometryExport Version="1">
+  <ExportedFolder Id="90e1881c-e411-438d-b7dc-67b1e80bc5c0" Name="Functions" Enabled="true">
+    <Folders />
+    <Triggers>
+      <Trigger Enabled="true" Sequential="True" Name="function addTimerGroup(id,x,y,icon_size,width,padding)" Id="417f6259-a9a1-4226-af1a-7535b6387028" RegularExpression="^addTimerGroup\((?&lt;id&gt;\S{1,50}),(?&lt;x&gt;\d{1,4}),(?&lt;y&gt;\d{1,4}),(?&lt;icon_size&gt;\d{1,4}),(?&lt;width&gt;\d{1,4}),(?&lt;padding&gt;\d{1,3})\)" DebugLevel="Verbose">
+        <Actions>
+          <Action OrderNumber="1" VariableOp="SetNumeric" VariableName="timer_group_${id}_x" VariableExpression="${x}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="2" VariableOp="SetNumeric" VariableName="timer_group_${id}_y" VariableExpression="${y}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="3" VariableOp="SetNumeric" VariableName="timer_group_${id}_icon_size" VariableExpression="${icon_size}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="4" VariableOp="SetNumeric" VariableName="timer_group_${id}_width" VariableExpression="${width}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="5" VariableOp="SetNumeric" VariableName="timer_group_${id}_padding" VariableExpression="${padding}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+        </Actions>
+        <Condition Enabled="false" Grouping="Or" />
+      </Trigger>
+      <Trigger Enabled="true" Name="function endActionTimer(id,timer_group_id)" Id="605e85c8-377c-43a1-8412-d81f1f19e748" RegularExpression="^endActionTimer\((?&lt;id&gt;\d{1,6}),(?&lt;timer_group_id&gt;\S{1,50})\)" DebugLevel="Verbose">
+        <Actions>
+          <Action OrderNumber="1" ListVariableOp="Remove" ListVariableName="timer_group_${timer_group_id}_list" ListVariableIndex="${lvar:timer_group_${timer_group_id}_list.indexof(${id})}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable">
+            <Condition Enabled="true" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="${var:${timer_group_id}_${id}_start_time}-${_systemtime}+${var:${timer_group_id}_${id}_total}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericLessEqual" />
+            </Condition>
+          </Action>
+        </Actions>
+        <Condition Enabled="false" Grouping="Or" />
+      </Trigger>
+      <Trigger Enabled="true" Name="function addTimer(id,type,timer_group_id,title,active,total)" Id="81c16a02-9880-4f49-94ff-409b80cb0731" RegularExpression="^addTimer\((?&lt;id&gt;\d{1,6}),(?&lt;type&gt;\S{1,10}),(?&lt;timer_group_id&gt;\S{1,50}),(?&lt;title&gt;[\S ]{1,50}),(?&lt;active&gt;\d{1,3}),(?&lt;total&gt;\d{1,3})\)" DebugLevel="Verbose">
+        <Actions>
+          <Action OrderNumber="1" VariableOp="SetNumeric" VariableName="${timer_group_id}_${id}_start_time" VariableExpression="${_systemtime}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False">
+            <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
+          </Action>
+          <Action OrderNumber="2" VariableOp="SetNumeric" VariableName="${timer_group_id}_${id}_total" VariableExpression="${total}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False">
+            <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
+          </Action>
+          <Action OrderNumber="3" AuraImageMode="Zoom" AuraName="${timer_group_id}_${id}_icon" AuraImage="http://www.garlandtools.org/files/icons/${type}/${id}.png" AuraXIniExpression="${var:timer_group_${timer_group_id}_x}" AuraYIniExpression="${var:timer_group_${timer_group_id}_y}+(${lvar:timer_group_${timer_group_id}_list.indexof(${id})}-1)*(${var:timer_group_${timer_group_id}_icon_size}+${var:timer_group_${timer_group_id}_padding})" AuraWIniExpression="${var:timer_group_${timer_group_id}_icon_size}" AuraHIniExpression="${var:timer_group_${timer_group_id}_icon_size}" AuraOIniExpression="100" AuraYTickExpression="${var:timer_group_${timer_group_id}_y}+(${lvar:timer_group_${timer_group_id}_list.indexof(${id})}-1)*(${var:timer_group_${timer_group_id}_icon_size}+${var:timer_group_${timer_group_id}_padding})" AuraTTLTickExpression="${var:${timer_group_id}_${id}_start_time}-${_systemtime}+(${total}))" TextAuraAlignment="MiddleLeft" TextAuraFontSize="14.25" TextAuraForeground="White" TextAuraOutline="Black" TextAuraName="${eid}${skill}ta" TextAuraExpression="${ename} - ${skill} &gt; ${numeric:round((${var:d${eid}${skill}dur}-${_systemtime}+(${dur})),2)}" TextAuraXIniExpression="800" TextAuraYIniExpression="400" TextAuraWIniExpression="800" TextAuraHIniExpression="50" TextAuraOIniExpression="100" TextAuraFontName="Microsoft Sans Serif" ActionType="Aura" Asynchronous="False" DebugLevel="Info">
+            <Condition Enabled="true" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="${lvar:timer_group_${timer_group_id}_list.indexof(${id})}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+            </Condition>
+            <Conditions />
+          </Action>
+          <Action OrderNumber="4" TextAuraAlignment="TopLeft" TextAuraFontSize="9.75" TextAuraForeground="White" TextAuraOutline="Black" TextAuraName="${timer_group_id}_${id}_title" TextAuraExpression="${title}" TextAuraXIniExpression="${var:timer_group_${timer_group_id}_x}+${var:timer_group_${timer_group_id}_icon_size}+${var:timer_group_${timer_group_id}_padding}" TextAuraYIniExpression="${var:timer_group_${timer_group_id}_y}+(${lvar:timer_group_${timer_group_id}_list.indexof(${id})}-1)*(${var:timer_group_${timer_group_id}_icon_size}+${var:timer_group_${timer_group_id}_padding})+5" TextAuraWIniExpression="400" TextAuraHIniExpression="34" TextAuraOIniExpression="100" TextAuraYTickExpression="${var:timer_group_${timer_group_id}_y}+(${lvar:timer_group_${timer_group_id}_list.indexof(${id})}-1)*(${var:timer_group_${timer_group_id}_icon_size}+${var:timer_group_${timer_group_id}_padding})+5" TextAuraTTLTickExpression="${var:${timer_group_id}_${id}_start_time}-${_systemtime}+(${total}))" TextAuraUseOutline="True" TextAuraFontName="Microsoft Sans Serif" ActionType="TextAura" Asynchronous="False" DebugLevel="Warning">
+            <Condition Enabled="true" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="${lvar:timer_group_${timer_group_id}_list.indexof(${id})}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+            </Condition>
+            <Conditions />
+          </Action>
+          <Action OrderNumber="5" AuraName="${timer_group_id}_${id}_active_bar_left" AuraImage="https://raw.githubusercontent.com/Farplaner/triggernometry-triggers/master/resources/images/BlueBarLeft.png" AuraXIniExpression="${var:timer_group_${timer_group_id}_x}+${var:timer_group_${timer_group_id}_icon_size}+2" AuraYIniExpression="${var:timer_group_${timer_group_id}_y}+(${lvar:timer_group_${timer_group_id}_list.indexof(${id})}-1)*(${var:timer_group_${timer_group_id}_icon_size}+${var:timer_group_${timer_group_id}_padding})+15" AuraWIniExpression="3" AuraHIniExpression="21" AuraOIniExpression="100" AuraYTickExpression="${var:timer_group_${timer_group_id}_y}+(${lvar:timer_group_${timer_group_id}_list.indexof(${id})}-1)*(${var:timer_group_${timer_group_id}_icon_size}+${var:timer_group_${timer_group_id}_padding})+15" AuraOTickExpression="if(${_systemtime}-${var:${timer_group_id}_${id}_start_time}&lt;${active},100,0)" AuraTTLTickExpression="${var:${timer_group_id}_${id}_start_time}-${_systemtime}+(${total}))" TextAuraAlignment="MiddleLeft" TextAuraFontSize="14.25" TextAuraForeground="White" TextAuraOutline="Black" TextAuraName="${eid}${skill}ta" TextAuraExpression="${ename} - ${skill} &gt; ${numeric:round((${var:d${eid}${skill}dur}-${_systemtime}+(${dur})),2)}" TextAuraXIniExpression="800" TextAuraYIniExpression="400" TextAuraWIniExpression="800" TextAuraHIniExpression="50" TextAuraOIniExpression="100" TextAuraFontName="Microsoft Sans Serif" ActionType="Aura" Asynchronous="False" DebugLevel="Warning">
+            <Condition Enabled="true" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="${lvar:timer_group_${timer_group_id}_list.indexof(${id})}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+            </Condition>
+            <Conditions />
+          </Action>
+          <Action OrderNumber="6" AuraName="${timer_group_id}_${id}_active_bar_right" AuraImage="https://raw.githubusercontent.com/Farplaner/triggernometry-triggers/master/resources/images/BlueBarRight.png" AuraXIniExpression="${var:timer_group_${timer_group_id}_x}+${var:timer_group_${timer_group_id}_icon_size}+${var:timer_group_${timer_group_id}_width}-1" AuraYIniExpression="${var:timer_group_${timer_group_id}_y}+(${lvar:timer_group_${timer_group_id}_list.indexof(${id})}-1)*(${var:timer_group_${timer_group_id}_icon_size}+${var:timer_group_${timer_group_id}_padding})+15" AuraWIniExpression="3" AuraHIniExpression="21" AuraOIniExpression="100" AuraYTickExpression="${var:timer_group_${timer_group_id}_y}+(${lvar:timer_group_${timer_group_id}_list.indexof(${id})}-1)*(${var:timer_group_${timer_group_id}_icon_size}+${var:timer_group_${timer_group_id}_padding})+15" AuraOTickExpression="if(${_systemtime}-${var:${timer_group_id}_${id}_start_time}&lt;${active},100,0)" AuraTTLTickExpression="${var:${timer_group_id}_${id}_start_time}-${_systemtime}+(${total}))" TextAuraAlignment="MiddleLeft" TextAuraFontSize="14.25" TextAuraForeground="White" TextAuraOutline="Black" TextAuraName="${eid}${skill}ta" TextAuraExpression="${ename} - ${skill} &gt; ${numeric:round((${var:d${eid}${skill}dur}-${_systemtime}+(${dur})),2)}" TextAuraXIniExpression="800" TextAuraYIniExpression="400" TextAuraWIniExpression="800" TextAuraHIniExpression="50" TextAuraOIniExpression="100" TextAuraFontName="Microsoft Sans Serif" ActionType="Aura" Asynchronous="False" DebugLevel="Warning">
+            <Condition Enabled="true" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="${lvar:timer_group_${timer_group_id}_list.indexof(${id})}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+            </Condition>
+            <Conditions />
+          </Action>
+          <Action OrderNumber="7" AuraImageMode="StretchImage" AuraName="${timer_group_id}_${id}_active_bar" AuraImage="https://raw.githubusercontent.com/Farplaner/triggernometry-triggers/master/resources/images/BlueBarMiddle.png" AuraXIniExpression="${var:timer_group_${timer_group_id}_x}+${var:timer_group_${timer_group_id}_icon_size}+5" AuraYIniExpression="${var:timer_group_${timer_group_id}_y}+(${lvar:timer_group_${timer_group_id}_list.indexof(${id})}-1)*(${var:timer_group_${timer_group_id}_icon_size}+${var:timer_group_${timer_group_id}_padding})+15" AuraWIniExpression="${var:timer_group_${timer_group_id}_width}-6" AuraHIniExpression="21" AuraOIniExpression="100" AuraYTickExpression="${var:timer_group_${timer_group_id}_y}+(${lvar:timer_group_${timer_group_id}_list.indexof(${id})}-1)*(${var:timer_group_${timer_group_id}_icon_size}+${var:timer_group_${timer_group_id}_padding})+15" AuraOTickExpression="if(${_systemtime}-${var:${timer_group_id}_${id}_start_time}&lt;${active},100,0)" AuraTTLTickExpression="${var:${timer_group_id}_${id}_start_time}-${_systemtime}+(${total}))" TextAuraAlignment="MiddleLeft" TextAuraFontSize="14.25" TextAuraForeground="White" TextAuraOutline="Black" TextAuraName="${eid}${skill}ta" TextAuraExpression="${ename} - ${skill} &gt; ${numeric:round((${var:d${eid}${skill}dur}-${_systemtime}+(${dur})),2)}" TextAuraXIniExpression="800" TextAuraYIniExpression="400" TextAuraWIniExpression="800" TextAuraHIniExpression="50" TextAuraOIniExpression="100" TextAuraFontName="Microsoft Sans Serif" ActionType="Aura" Asynchronous="False" DebugLevel="Warning">
+            <Condition Enabled="true" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="${lvar:timer_group_${timer_group_id}_list.indexof(${id})}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+            </Condition>
+            <Conditions />
+          </Action>
+          <Action OrderNumber="8" AuraImageMode="StretchImage" AuraName="${timer_group_id}_${id}_active_bar_value" AuraImage="https://raw.githubusercontent.com/Farplaner/triggernometry-triggers/master/resources/images/TimerBarValue.png" AuraXIniExpression="${var:timer_group_${timer_group_id}_x}+${var:timer_group_${timer_group_id}_icon_size}+5" AuraYIniExpression="${var:timer_group_${timer_group_id}_y}+(${lvar:timer_group_${timer_group_id}_list.indexof(${id})}-1)*(${var:timer_group_${timer_group_id}_icon_size}+${var:timer_group_${timer_group_id}_padding})+15" AuraWIniExpression="${var:timer_group_${timer_group_id}_width}-6" AuraHIniExpression="21" AuraOIniExpression="100" AuraYTickExpression="${var:timer_group_${timer_group_id}_y}+(${lvar:timer_group_${timer_group_id}_list.indexof(${id})}-1)*(${var:timer_group_${timer_group_id}_icon_size}+${var:timer_group_${timer_group_id}_padding})+15" AuraWTickExpression="(${var:timer_group_${timer_group_id}_width}-6)*(${var:${timer_group_id}_${id}_start_time}*1000-${_systemtimems}+${active}*1000)/${active}/1000" AuraOTickExpression="if(${_systemtime}-${var:${timer_group_id}_${id}_start_time}&lt;${active},100,0)" AuraTTLTickExpression="${var:${timer_group_id}_${id}_start_time}-${_systemtime}+(${total}))" TextAuraAlignment="MiddleLeft" TextAuraFontSize="14.25" TextAuraForeground="White" TextAuraOutline="Black" TextAuraName="${eid}${skill}ta" TextAuraExpression="${ename} - ${skill} &gt; ${numeric:round((${var:d${eid}${skill}dur}-${_systemtime}+(${dur})),2)}" TextAuraXIniExpression="800" TextAuraYIniExpression="400" TextAuraWIniExpression="800" TextAuraHIniExpression="50" TextAuraOIniExpression="100" TextAuraFontName="Microsoft Sans Serif" ActionType="Aura" Asynchronous="False" DebugLevel="Warning">
+            <Condition Enabled="true" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="${lvar:timer_group_${timer_group_id}_list.indexof(${id})}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+            </Condition>
+            <Conditions />
+          </Action>
+          <Action OrderNumber="9" AuraName="${timer_group_id}_${id}_cooldown_bar_left" AuraImage="https://raw.githubusercontent.com/Farplaner/triggernometry-triggers/master/resources/images/RedBarLeft.png" AuraXIniExpression="${var:timer_group_${timer_group_id}_x}+${var:timer_group_${timer_group_id}_icon_size}+2" AuraYIniExpression="${var:timer_group_${timer_group_id}_y}+(${lvar:timer_group_${timer_group_id}_list.indexof(${id})}-1)*(${var:timer_group_${timer_group_id}_icon_size}+${var:timer_group_${timer_group_id}_padding})+15" AuraWIniExpression="3" AuraHIniExpression="21" AuraOIniExpression="0" AuraYTickExpression="${var:timer_group_${timer_group_id}_y}+(${lvar:timer_group_${timer_group_id}_list.indexof(${id})}-1)*(${var:timer_group_${timer_group_id}_icon_size}+${var:timer_group_${timer_group_id}_padding})+15" AuraOTickExpression="if(${_systemtime}-${var:${timer_group_id}_${id}_start_time}&lt;${active},0,100)" AuraTTLTickExpression="${var:${timer_group_id}_${id}_start_time}-${_systemtime}+(${total}))" TextAuraAlignment="MiddleLeft" TextAuraFontSize="14.25" TextAuraForeground="White" TextAuraOutline="Black" TextAuraName="${eid}${skill}ta" TextAuraExpression="${ename} - ${skill} &gt; ${numeric:round((${var:d${eid}${skill}dur}-${_systemtime}+(${dur})),2)}" TextAuraXIniExpression="800" TextAuraYIniExpression="400" TextAuraWIniExpression="800" TextAuraHIniExpression="50" TextAuraOIniExpression="100" TextAuraFontName="Microsoft Sans Serif" ActionType="Aura" Asynchronous="False" DebugLevel="Warning">
+            <Condition Enabled="true" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="${lvar:timer_group_${timer_group_id}_list.indexof(${id})}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+            </Condition>
+            <Conditions />
+          </Action>
+          <Action OrderNumber="10" AuraName="${timer_group_id}_${id}_cooldown_bar_right" AuraImage="https://raw.githubusercontent.com/Farplaner/triggernometry-triggers/master/resources/images/RedBarRight.png" AuraXIniExpression="${var:timer_group_${timer_group_id}_x}+${var:timer_group_${timer_group_id}_icon_size}+${var:timer_group_${timer_group_id}_width}-1" AuraYIniExpression="${var:timer_group_${timer_group_id}_y}+(${lvar:timer_group_${timer_group_id}_list.indexof(${id})}-1)*(${var:timer_group_${timer_group_id}_icon_size}+${var:timer_group_${timer_group_id}_padding})+15" AuraWIniExpression="3" AuraHIniExpression="21" AuraOIniExpression="0" AuraYTickExpression="${var:timer_group_${timer_group_id}_y}+(${lvar:timer_group_${timer_group_id}_list.indexof(${id})}-1)*(${var:timer_group_${timer_group_id}_icon_size}+${var:timer_group_${timer_group_id}_padding})+15" AuraOTickExpression="if(${_systemtime}-${var:${timer_group_id}_${id}_start_time}&lt;${active},0,100)" AuraTTLTickExpression="${var:${timer_group_id}_${id}_start_time}-${_systemtime}+(${total}))" TextAuraAlignment="MiddleLeft" TextAuraFontSize="14.25" TextAuraForeground="White" TextAuraOutline="Black" TextAuraName="${eid}${skill}ta" TextAuraExpression="${ename} - ${skill} &gt; ${numeric:round((${var:d${eid}${skill}dur}-${_systemtime}+(${dur})),2)}" TextAuraXIniExpression="800" TextAuraYIniExpression="400" TextAuraWIniExpression="800" TextAuraHIniExpression="50" TextAuraOIniExpression="100" TextAuraFontName="Microsoft Sans Serif" ActionType="Aura" Asynchronous="False" DebugLevel="Warning">
+            <Condition Enabled="true" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="${lvar:timer_group_${timer_group_id}_list.indexof(${id})}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+            </Condition>
+            <Conditions />
+          </Action>
+          <Action OrderNumber="11" AuraImageMode="StretchImage" AuraName="${timer_group_id}_${id}_cooldown_bar" AuraImage="https://raw.githubusercontent.com/Farplaner/triggernometry-triggers/master/resources/images/RedBarMiddle.png" AuraXIniExpression="${var:timer_group_${timer_group_id}_x}+${var:timer_group_${timer_group_id}_icon_size}+5" AuraYIniExpression="${var:timer_group_${timer_group_id}_y}+(${lvar:timer_group_${timer_group_id}_list.indexof(${id})}-1)*(${var:timer_group_${timer_group_id}_icon_size}+${var:timer_group_${timer_group_id}_padding})+15" AuraWIniExpression="${var:timer_group_${timer_group_id}_width}-6" AuraHIniExpression="21" AuraOIniExpression="0" AuraYTickExpression="${var:timer_group_${timer_group_id}_y}+(${lvar:timer_group_${timer_group_id}_list.indexof(${id})}-1)*(${var:timer_group_${timer_group_id}_icon_size}+${var:timer_group_${timer_group_id}_padding})+15" AuraOTickExpression="if(${_systemtime}-${var:${timer_group_id}_${id}_start_time}&lt;${active},0,100)" AuraTTLTickExpression="${var:${timer_group_id}_${id}_start_time}-${_systemtime}+(${total}))" TextAuraAlignment="MiddleLeft" TextAuraFontSize="14.25" TextAuraForeground="White" TextAuraOutline="Black" TextAuraName="${eid}${skill}ta" TextAuraExpression="${ename} - ${skill} &gt; ${numeric:round((${var:d${eid}${skill}dur}-${_systemtime}+(${dur})),2)}" TextAuraXIniExpression="800" TextAuraYIniExpression="400" TextAuraWIniExpression="800" TextAuraHIniExpression="50" TextAuraOIniExpression="100" TextAuraFontName="Microsoft Sans Serif" ActionType="Aura" Asynchronous="False" DebugLevel="Warning">
+            <Condition Enabled="true" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="${lvar:timer_group_${timer_group_id}_list.indexof(${id})}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+            </Condition>
+            <Conditions />
+          </Action>
+          <Action OrderNumber="12" AuraImageMode="StretchImage" AuraName="${timer_group_id}_${id}_cooldown_bar_value" AuraImage="https://raw.githubusercontent.com/Farplaner/triggernometry-triggers/master/resources/images/TimerBarValue.png" AuraXIniExpression="${var:timer_group_${timer_group_id}_x}+${var:timer_group_${timer_group_id}_icon_size}+5" AuraYIniExpression="${var:timer_group_${timer_group_id}_y}+(${lvar:timer_group_${timer_group_id}_list.indexof(${id})}-1)*(${var:timer_group_${timer_group_id}_icon_size}+${var:timer_group_${timer_group_id}_padding})+15" AuraWIniExpression="${var:timer_group_${timer_group_id}_width}-6" AuraHIniExpression="21" AuraOIniExpression="0" AuraYTickExpression="${var:timer_group_${timer_group_id}_y}+(${lvar:timer_group_${timer_group_id}_list.indexof(${id})}-1)*(${var:timer_group_${timer_group_id}_icon_size}+${var:timer_group_${timer_group_id}_padding})+15" AuraWTickExpression="(${var:timer_group_${timer_group_id}_width}-6)*(${total}*1000-${_systemtimems}+${var:${timer_group_id}_${id}_start_time}*1000)/(${total}-${active})/1000" AuraOTickExpression="if(${_systemtime}-${var:${timer_group_id}_${id}_start_time}&lt;${active},0,100)" AuraTTLTickExpression="${var:${timer_group_id}_${id}_start_time}-${_systemtime}+(${total}))" TextAuraAlignment="MiddleLeft" TextAuraFontSize="14.25" TextAuraForeground="White" TextAuraOutline="Black" TextAuraName="${eid}${skill}ta" TextAuraExpression="${ename} - ${skill} &gt; ${numeric:round((${var:d${eid}${skill}dur}-${_systemtime}+(${dur})),2)}" TextAuraXIniExpression="800" TextAuraYIniExpression="400" TextAuraWIniExpression="800" TextAuraHIniExpression="50" TextAuraOIniExpression="100" TextAuraFontName="Microsoft Sans Serif" ActionType="Aura" Asynchronous="False" DebugLevel="Warning">
+            <Condition Enabled="true" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="${lvar:timer_group_${timer_group_id}_list.indexof(${id})}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+            </Condition>
+            <Conditions />
+          </Action>
+          <Action OrderNumber="13" TextAuraAlignment="TopLeft" TextAuraFontSize="9.75" TextAuraForeground="White" TextAuraOutline="Black" TextAuraName="${timer_group_id}_${id}_active_seconds" TextAuraExpression="${numeric:round(${var:${timer_group_id}_${id}_start_time}-${_systemtime}+${active})}" TextAuraXIniExpression="${var:timer_group_${timer_group_id}_x}+${var:timer_group_${timer_group_id}_icon_size}+${var:timer_group_${timer_group_id}_width}+4" TextAuraYIniExpression="${var:timer_group_${timer_group_id}_y}+(${lvar:timer_group_${timer_group_id}_list.indexof(${id})}-1)*(${var:timer_group_${timer_group_id}_icon_size}+${var:timer_group_${timer_group_id}_padding})+15" TextAuraWIniExpression="122" TextAuraHIniExpression="34" TextAuraOIniExpression="100" TextAuraYTickExpression="${var:timer_group_${timer_group_id}_y}+(${lvar:timer_group_${timer_group_id}_list.indexof(${id})}-1)*(${var:timer_group_${timer_group_id}_icon_size}+${var:timer_group_${timer_group_id}_padding})+15" TextAuraOTickExpression="if(${_systemtime}-${var:${timer_group_id}_${id}_start_time}&lt;${active},100,0)" TextAuraTTLTickExpression="${var:${timer_group_id}_${id}_start_time}-${_systemtime}+(${total}))" TextAuraUseOutline="True" TextAuraFontName="Microsoft Sans Serif" ActionType="TextAura" Asynchronous="False" DebugLevel="Warning">
+            <Condition Enabled="true" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="${lvar:timer_group_${timer_group_id}_list.indexof(${id})}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+            </Condition>
+            <Conditions />
+          </Action>
+          <Action OrderNumber="14" TextAuraAlignment="TopLeft" TextAuraFontSize="9.75" TextAuraForeground="White" TextAuraOutline="Black" TextAuraName="${timer_group_id}_${id}_cooldown_seconds" TextAuraExpression="${numeric:round(${var:${timer_group_id}_${id}_start_time}-${_systemtime}+${total})}" TextAuraXIniExpression="${var:timer_group_${timer_group_id}_x}+${var:timer_group_${timer_group_id}_icon_size}+${var:timer_group_${timer_group_id}_width}+4" TextAuraYIniExpression="${var:timer_group_${timer_group_id}_y}+(${lvar:timer_group_${timer_group_id}_list.indexof(${id})}-1)*(${var:timer_group_${timer_group_id}_icon_size}+${var:timer_group_${timer_group_id}_padding})+15" TextAuraWIniExpression="122" TextAuraHIniExpression="34" TextAuraOIniExpression="0" TextAuraYTickExpression="${var:timer_group_${timer_group_id}_y}+(${lvar:timer_group_${timer_group_id}_list.indexof(${id})}-1)*(${var:timer_group_${timer_group_id}_icon_size}+${var:timer_group_${timer_group_id}_padding})+15" TextAuraOTickExpression="if(${_systemtime}-${var:${timer_group_id}_${id}_start_time}&lt;${active},0,100)" TextAuraTTLTickExpression="${var:${timer_group_id}_${id}_start_time}-${_systemtime}+(${total}))" TextAuraUseOutline="True" TextAuraFontName="Microsoft Sans Serif" ActionType="TextAura" Asynchronous="False" DebugLevel="Warning">
+            <Condition Enabled="true" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="${lvar:timer_group_${timer_group_id}_list.indexof(${id})}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+            </Condition>
+            <Conditions />
+          </Action>
+          <Action OrderNumber="15" ListVariableOp="Push" ListVariableName="timer_group_${timer_group_id}_list" ListVariableExpression="${id}" ListVariableIndex="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" Asynchronous="False">
+            <Condition Enabled="true" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="${lvar:timer_group_${timer_group_id}_list.indexof(${id})}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+            </Condition>
+            <Conditions />
+          </Action>
+          <Action OrderNumber="16" ListVariableOp="Remove" ListVariableName="timer_group_${timer_group_id}_list" ListVariableIndex="${lvar:timer_group_${timer_group_id}_list.indexof(${id})}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="605e85c8-377c-43a1-8412-d81f1f19e748" TriggerText="endActionTimer(${id},${timer_group_id})" ActionType="Trigger" ExecutionDelayExpression="(${total}+0.5)*1000">
+            <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
+          </Action>
+        </Actions>
+        <Condition Enabled="false" Grouping="Or" />
+      </Trigger>
+      <Trigger Enabled="true" Name="Wipe Reset" Id="12cf308f-d799-4b8e-8ee0-50a6cf4fc5a6" RegularExpression="21:........:40000010:">
+        <Actions>
+          <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="EndEncounter" ExecutionDelayExpression="1000">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+        </Actions>
+        <Condition Enabled="false" Grouping="Or" />
+      </Trigger>
+    </Triggers>
+  </ExportedFolder>
+</TriggernometryExport>
