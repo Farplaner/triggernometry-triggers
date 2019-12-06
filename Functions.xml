@@ -135,7 +135,7 @@
             </Condition>
             <Conditions />
           </Action>
-          <Action OrderNumber="17" ListVariableOp="Remove" ListVariableName="ffxiv_timergroup_${timergroup_id}_list" ListVariableIndex="${lvar:ffxiv_timergroup_${timergroup_id}_list.indexof(${type}_${id})}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="605e85c8-377c-43a1-8412-d81f1f19e748" TriggerText="endTimer(${id},${type},${timergroup_id})" ActionType="Trigger" ExecutionDelayExpression="(${total}+0.5)*1000">
+          <Action OrderNumber="17" ListVariableOp="Remove" ListVariableName="ffxiv_timergroup_${timergroup_id}_list" ListVariableIndex="${lvar:ffxiv_timergroup_${timergroup_id}_list.indexof(${type}_${id})}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="605e85c8-377c-43a1-8412-d81f1f19e748" TriggerText="endTimer(${id},${type},${timergroup_id})" ActionType="Trigger" ExecutionDelayExpression="(${total}+1)*1000">
             <Condition Enabled="false" Grouping="Or" />
             <Conditions />
           </Action>
