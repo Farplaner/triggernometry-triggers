@@ -7,107 +7,109 @@
           <Folder Id="aff94f6a-2868-44aa-83b3-e206dd50e962" Name="Raid Buffs" Enabled="true">
             <Folders />
             <Triggers>
-              <Trigger Enabled="true" Name="Trick Attack" Id="08f70800-c178-421c-892c-99bbf2a03f29" RegularExpression="1(5|6):[A-Z0-9]{8}:(?&lt;player&gt;[\w-' ]{1,31}):8D2:Trick Attack:[A-Z0-9]{8}:[\w' -]+:">
+              <Trigger Enabled="true" Name="Trick Attack" Id="08f70800-c178-421c-892c-99bbf2a03f29" RegularExpression="1(5|6):[A-Z0-9]{8}:(?&lt;player&gt;[\w-' ]{1,31}):8D2:Trick Attack:">
                 <Actions>
                   <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="81c16a02-9880-4f49-94ff-409b80cb0731" TriggerText="addTimer(618,action,raidbuffs,Trick Attack,15,60)" ActionType="Trigger">
                     <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
                   </Action>
                   <Action OrderNumber="2" PlaySoundFileExpression="https://raw.githubusercontent.com/Farplaner/triggernometry-triggers/master/resources/sound/actions/trick_attack.mp3" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="PlaySound">
                     <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
               </Trigger>
-              <Trigger Enabled="true" Name="Battle Litany" Id="873adefd-dd0f-4de8-8b60-c3c88b298933" RegularExpression="(15|16):[\w]{8}:(?&lt;player&gt;[\w-' ]{1,31}):DE5:Battle Litany:" DebugLevel="Warning" PrevActions="Interrupt">
+              <Trigger Enabled="true" Name="Battle Litany" Id="873adefd-dd0f-4de8-8b60-c3c88b298933" RegularExpression="(15|16):[0-9A-F]{8}:(?&lt;player&gt;[\w-' ]{1,31}):DE5:Battle Litany:" DebugLevel="Warning" PrevActions="Interrupt">
                 <Actions>
                   <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="81c16a02-9880-4f49-94ff-409b80cb0731" TriggerText="addTimer(2585,action,raidbuffs,Battle Litany,20,180)" ActionType="Trigger">
                     <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
                   </Action>
                   <Action OrderNumber="2" PlaySoundFileExpression="https://raw.githubusercontent.com/Farplaner/triggernometry-triggers/master/resources/sound/actions/battle_litany.mp3" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="PlaySound">
                     <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
                   </Action>
                 </Actions>
-                <Condition Enabled="true" Grouping="And">
-                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${player}].inparty} " ExpressionTypeL="String" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
-                </Condition>
+                <Condition Enabled="false" Grouping="And" />
               </Trigger>
-              <Trigger Enabled="true" Name="Battle Voice" Id="fffd2eff-be25-42de-8dda-3f965a978a82" RegularExpression="1(5|6):[\w]{8}:(?&lt;player&gt;[\w-' ]{1,31}):76:Battle Voice:" DebugLevel="Warning" PrevActions="Interrupt">
+              <Trigger Enabled="true" Name="Battle Voice" Id="fffd2eff-be25-42de-8dda-3f965a978a82" RegularExpression="1(5|6):[0-9A-F]{8}:(?&lt;player&gt;[\w-' ]{1,31}):76:Battle Voice:" DebugLevel="Warning" PrevActions="Interrupt">
                 <Actions>
                   <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="81c16a02-9880-4f49-94ff-409b80cb0731" TriggerText="addTimer(2601,action,raidbuffs,Battle Voice,20,180)" ActionType="Trigger">
                     <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
                   </Action>
                   <Action OrderNumber="2" PlaySoundFileExpression="https://raw.githubusercontent.com/Farplaner/triggernometry-triggers/master/resources/sound/actions/battle_voice.mp3" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="PlaySound">
                     <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
                   </Action>
                 </Actions>
-                <Condition Enabled="true" Grouping="And">
-                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${player}].inparty} " ExpressionTypeL="String" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
-                </Condition>
+                <Condition Enabled="false" Grouping="And" />
               </Trigger>
-              <Trigger Enabled="true" Name="Technical Finish" Id="b302e5b1-b0b8-4fbf-93f7-3eb92f9ff689" RegularExpression="1(5|6):[\w]{8}:(?&lt;player&gt;[\w-' ]{1,31}):3F4(2|3|4):(Double|Triple|Quadruple) Technical Finish:" DebugLevel="Warning" PrevActions="Interrupt">
+              <Trigger Enabled="true" Name="Technical Finish" Id="b302e5b1-b0b8-4fbf-93f7-3eb92f9ff689" RegularExpression="1(5|6):[0-9A-F]{8}:(?&lt;player&gt;[\w-' ]{1,31}):3F4(2|3|4):(Double|Triple|Quadruple) Technical Finish:" DebugLevel="Warning" PrevActions="Interrupt">
                 <Actions>
                   <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="81c16a02-9880-4f49-94ff-409b80cb0731" TriggerText="addTimer(3474,action,raidbuffs,Technical Finish,15,120)" ActionType="Trigger">
                     <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
                   </Action>
                   <Action OrderNumber="2" PlaySoundFileExpression="https://raw.githubusercontent.com/Farplaner/triggernometry-triggers/master/resources/sound/actions/technical_finish.mp3" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="PlaySound">
                     <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
                   </Action>
                 </Actions>
-                <Condition Enabled="true" Grouping="And">
-                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${player}].inparty} " ExpressionTypeL="String" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
-                </Condition>
+                <Condition Enabled="false" Grouping="And" />
               </Trigger>
-              <Trigger Enabled="true" Name="Chain Stratagem" Id="3d81c8e6-ea52-4609-9bdf-0e84b543bad8" RegularExpression="15:[\w]{8}:(?&lt;player&gt;[\w-' ]{1,31}):1D0C:Chain Stratagem:" DebugLevel="Warning" PrevActions="Interrupt">
+              <Trigger Enabled="true" Name="Chain Stratagem" Id="3d81c8e6-ea52-4609-9bdf-0e84b543bad8" RegularExpression="15:[0-9A-F]{8}:(?&lt;player&gt;[\w-' ]{1,31}):1D0C:Chain Stratagem:" DebugLevel="Warning" PrevActions="Interrupt">
                 <Actions>
                   <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="81c16a02-9880-4f49-94ff-409b80cb0731" TriggerText="addTimer(2815,action,raidbuffs,Chain Stratagem,15,180)" ActionType="Trigger">
                     <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
                   </Action>
                   <Action OrderNumber="2" PlaySoundFileExpression="https://raw.githubusercontent.com/Farplaner/triggernometry-triggers/master/resources/sound/actions/chain_stratagem.mp3" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="PlaySound">
                     <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
                   </Action>
                 </Actions>
-                <Condition Enabled="true" Grouping="And">
-                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${player}].inparty} " ExpressionTypeL="String" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
-                </Condition>
+                <Condition Enabled="false" Grouping="And" />
               </Trigger>
-              <Trigger Enabled="true" Name="Devotion" Id="6b626cd6-eba3-48c5-9049-1a9d2a15d964" RegularExpression="1(5|6):[\w]{8}:(?&lt;player&gt;[\w-' ]{1,31}):1CFF:Aetherpact:" DebugLevel="Warning" PrevActions="Interrupt">
+              <Trigger Enabled="true" Name="Devotion" Id="6b626cd6-eba3-48c5-9049-1a9d2a15d964" RegularExpression="1(5|6):[0-9A-F]{8}:(?&lt;player&gt;[\w-' ]{1,31}):1CFF:Aetherpact:" DebugLevel="Warning" PrevActions="Interrupt">
                 <Actions>
                   <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="81c16a02-9880-4f49-94ff-409b80cb0731" TriggerText="addTimer(2688,action,raidbuffs,Devotion,15,180)" ActionType="Trigger">
                     <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
                   </Action>
                   <Action OrderNumber="2" PlaySoundFileExpression="https://raw.githubusercontent.com/Farplaner/triggernometry-triggers/master/resources/sound/actions/devotion.mp3" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="PlaySound">
                     <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
                   </Action>
                 </Actions>
-                <Condition Enabled="true" Grouping="And">
-                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${player}].inparty} " ExpressionTypeL="String" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
-                </Condition>
+                <Condition Enabled="false" Grouping="And" />
               </Trigger>
-              <Trigger Enabled="true" Name="Brotherhood" Id="38c5ccff-1a93-4fce-a4ee-abbbdc3c2c22" RegularExpression="1(5|6):[\w]{8}:(?&lt;player&gt;[\w-' ]{1,31}):1CE4:Brotherhood:" DebugLevel="Warning" PrevActions="Interrupt">
+              <Trigger Enabled="true" Name="Brotherhood" Id="38c5ccff-1a93-4fce-a4ee-abbbdc3c2c22" RegularExpression="1(5|6):[0-9A-F]{8}:(?&lt;player&gt;[\w-' ]{1,31}):1CE4:Brotherhood:" DebugLevel="Warning" PrevActions="Interrupt">
                 <Actions>
                   <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="81c16a02-9880-4f49-94ff-409b80cb0731" TriggerText="addTimer(2542,action,raidbuffs,Brotherhood,15,90)" ActionType="Trigger">
                     <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
                   </Action>
                   <Action OrderNumber="2" PlaySoundFileExpression="https://raw.githubusercontent.com/Farplaner/triggernometry-triggers/master/resources/sound/actions/brotherhood.mp3" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="PlaySound">
                     <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
                   </Action>
                 </Actions>
-                <Condition Enabled="true" Grouping="And">
-                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${player}].inparty} " ExpressionTypeL="String" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
-                </Condition>
+                <Condition Enabled="false" Grouping="And" />
               </Trigger>
-              <Trigger Enabled="true" Name="Embolden" Id="0d34fda1-25d5-4a05-84d7-885a13c0ffc1" RegularExpression="1(5|6):[\w]{8}:(?&lt;player&gt;[\w-' ]{1,31}):1D60:Embolden:" DebugLevel="Warning" PrevActions="Interrupt">
+              <Trigger Enabled="true" Name="Embolden" Id="0d34fda1-25d5-4a05-84d7-885a13c0ffc1" RegularExpression="1(5|6):[0-9A-F]{8}:(?&lt;player&gt;[\w-' ]{1,31}):1D60:Embolden:" DebugLevel="Warning" PrevActions="Interrupt">
                 <Actions>
                   <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="81c16a02-9880-4f49-94ff-409b80cb0731" TriggerText="addTimer(3218,action,raidbuffs,Embolden,20,120)" ActionType="Trigger">
                     <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
                   </Action>
                   <Action OrderNumber="2" PlaySoundFileExpression="https://raw.githubusercontent.com/Farplaner/triggernometry-triggers/master/resources/sound/actions/embolden.mp3" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="PlaySound">
                     <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
                   </Action>
                 </Actions>
-                <Condition Enabled="true" Grouping="And">
-                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${player}].inparty} " ExpressionTypeL="String" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
-                </Condition>
+                <Condition Enabled="false" Grouping="And" />
               </Trigger>
             </Triggers>
           </Folder>
@@ -202,11 +204,9 @@
                     <Actions>
                       <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="81c16a02-9880-4f49-94ff-409b80cb0731" TriggerText="addTimer(866,action,cooldowns,Triplecast,10,60)" ActionType="Trigger">
                         <Condition Enabled="false" Grouping="Or" />
-                        <Conditions />
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                 </Triggers>
               </Folder>
@@ -233,73 +233,58 @@
                     <Actions>
                       <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="81c16a02-9880-4f49-94ff-409b80cb0731" TriggerText="addTimer(2633,action,cooldowns,Tetragrammaton,0,60)" TriggerForce="conditions" ActionType="Trigger">
                         <Condition Enabled="false" Grouping="Or" />
-                        <Conditions />
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Name="Assize" Id="10aeb70d-f4f6-435c-be3f-ccfda75236b6" RegularExpression="You use Assize">
                     <Actions>
                       <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="81c16a02-9880-4f49-94ff-409b80cb0731" TriggerText="addTimer(2634,action,cooldowns,Assize,0,45)" ActionType="Trigger">
                         <Condition Enabled="false" Grouping="Or" />
-                        <Conditions />
                       </Action>
                       <Action OrderNumber="2" UseTTSTextExpression="Assize Ready in 3" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS" ExecutionDelayExpression="42000" RefireInterrupt="True">
                         <Condition Enabled="false" Grouping="Or" />
-                        <Conditions />
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Name="Thin Air" Id="a211c839-209c-402e-ab8a-ca7b2669fedc" RegularExpression="You use Thin Air">
                     <Actions>
                       <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="81c16a02-9880-4f49-94ff-409b80cb0731" TriggerText="addTimer(2636,action,cooldowns,Thin Air,12,120)" TriggerForce="conditions" ActionType="Trigger">
                         <Condition Enabled="false" Grouping="Or" />
-                        <Conditions />
                       </Action>
                       <Action OrderNumber="2" PlaySpeechMyself="True" UseTTSTextExpression="Thin Air Ready in 3" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS" ExecutionDelayExpression="117000" RefireInterrupt="True">
                         <Condition Enabled="false" Grouping="Or" />
-                        <Conditions />
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Name="Presence of Mind" Id="9f280ee9-f372-422c-a164-b7e1c003328e" RegularExpression="You use Presence of Mind">
                     <Actions>
                       <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="81c16a02-9880-4f49-94ff-409b80cb0731" TriggerText="addTimer(2626,action,cooldowns,Presence of Mind,15,150)" TriggerForce="conditions" ActionType="Trigger">
                         <Condition Enabled="false" Grouping="Or" />
-                        <Conditions />
                       </Action>
                       <Action OrderNumber="2" PlaySpeechMyself="True" UseTTSTextExpression="Presence of Mind Ready" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS" ExecutionDelayExpression="150000" RefireInterrupt="True">
                         <Condition Enabled="false" Grouping="Or" />
-                        <Conditions />
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Name="Benediction" Id="3225a7b4-59c8-4301-ae5d-82352587dbba" RegularExpression="You use Presence of Mind">
                     <Actions>
                       <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="81c16a02-9880-4f49-94ff-409b80cb0731" TriggerText="addTimer(2627,action,cooldowns,Benediction,0,180)" TriggerForce="conditions" ActionType="Trigger">
                         <Condition Enabled="false" Grouping="Or" />
-                        <Conditions />
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Name="Asylum" Id="e0b38395-4624-425f-b314-0d6d10f0ed6c" RegularExpression="You use Asylum">
                     <Actions>
                       <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="81c16a02-9880-4f49-94ff-409b80cb0731" TriggerText="addTimer(2632,action,cooldowns,Asylum,24,90)" TriggerForce="conditions" ActionType="Trigger">
                         <Condition Enabled="false" Grouping="Or" />
-                        <Conditions />
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                 </Triggers>
               </Folder>
@@ -410,99 +395,78 @@
                     <Actions>
                       <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="81c16a02-9880-4f49-94ff-409b80cb0731" TriggerText="addTimer(2602,action,cooldowns,Mage's Ballad,30,80)" ActionType="Trigger">
                         <Condition Enabled="false" Grouping="Or" />
-                        <Conditions />
                       </Action>
                       <Action OrderNumber="2" UseTTSTextExpression="Ballad Ready in 3" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS" ExecutionDelayExpression="77000" RefireInterrupt="True">
                         <Condition Enabled="false" Grouping="Or" />
-                        <Conditions />
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Name="The Wanderer's Minuet" Id="54c13982-63a4-41dc-a68a-55ac89e1d424" RegularExpression="You cast The Wanderer's Minuet">
                     <Actions>
                       <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="81c16a02-9880-4f49-94ff-409b80cb0731" TriggerText="addTimer(2607,action,cooldowns,The Wanderer's Minuet,30,80)" ActionType="Trigger">
                         <Condition Enabled="false" Grouping="Or" />
-                        <Conditions />
                       </Action>
                       <Action OrderNumber="2" UseTTSTextExpression="Minuet Ready in 3" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS" ExecutionDelayExpression="77000" RefireInterrupt="True">
                         <Condition Enabled="false" Grouping="Or" />
-                        <Conditions />
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Name="Stright Shot" Id="f8aa15a7-e172-40d3-a800-780f22d5d73b" RegularExpression="You gain the effect of .*Straight Shot Ready">
                     <Actions>
                       <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="81c16a02-9880-4f49-94ff-409b80cb0731" TriggerText="addTimer(359,action,cooldowns,Straight Shot,10,10)" ActionType="Trigger">
                         <Condition Enabled="false" Grouping="Or" />
-                        <Conditions />
                       </Action>
                       <Action OrderNumber="2" PlaySoundFileExpression="https://raw.githubusercontent.com/Farplaner/triggernometry-triggers/master/resources/sound/sound_effects/job-done.wav" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="PlaySound" RefireInterrupt="True">
                         <Condition Enabled="false" Grouping="Or" />
-                        <Conditions />
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Name="Raging Strikes" Id="860c2ae0-dfaf-4fc7-8246-f1c4674e66f7" RegularExpression="You use Raging Strikes">
                     <Actions>
                       <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="81c16a02-9880-4f49-94ff-409b80cb0731" TriggerText="addTimer(352,action,cooldowns,Raging Strikes,20,80)" ActionType="Trigger">
                         <Condition Enabled="false" Grouping="Or" />
-                        <Conditions />
                       </Action>
                       <Action OrderNumber="2" UseTTSTextExpression="Raging Ready in 3" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS" ExecutionDelayExpression="77000" RefireInterrupt="True">
                         <Condition Enabled="false" Grouping="Or" />
-                        <Conditions />
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Name="Battle Voice" Id="dd01cc6e-c8ae-4e7d-a53d-1e6cd9b3106d" RegularExpression="You use Battle Voice">
                     <Actions>
                       <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="81c16a02-9880-4f49-94ff-409b80cb0731" TriggerText="addTimer(2601,action,cooldowns,Battle Voice,20,180)" ActionType="Trigger">
                         <Condition Enabled="false" Grouping="Or" />
-                        <Conditions />
                       </Action>
                       <Action OrderNumber="2" UseTTSTextExpression="Battle Voice in 3" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS" ExecutionDelayExpression="177000" RefireInterrupt="True">
                         <Condition Enabled="false" Grouping="Or" />
-                        <Conditions />
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Name="Army's Paeon" Id="b98e9e3f-f342-4f3c-8e60-954e86124ec0" RegularExpression="You cast Army's Paeon">
                     <Actions>
                       <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="81c16a02-9880-4f49-94ff-409b80cb0731" TriggerText="addTimer(2603,action,cooldowns,Army's Paeon,30,80)" ActionType="Trigger">
                         <Condition Enabled="false" Grouping="Or" />
-                        <Conditions />
                       </Action>
                       <Action OrderNumber="2" UseTTSTextExpression="Paeon Ready in 3" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS" ExecutionDelayExpression="77000" RefireInterrupt="True">
                         <Condition Enabled="false" Grouping="Or" />
-                        <Conditions />
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Name="Barrage" Id="954d6c02-9b60-4f27-a61b-edc13842107f" RegularExpression="You use Barrage">
                     <Actions>
                       <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="81c16a02-9880-4f49-94ff-409b80cb0731" TriggerText="addTimer(353,action,cooldowns,Barrage,10,80)" ActionType="Trigger">
                         <Condition Enabled="false" Grouping="Or" />
-                        <Conditions />
                       </Action>
                       <Action OrderNumber="2" UseTTSTextExpression="Barrage Ready in 3" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS" ExecutionDelayExpression="77000" RefireInterrupt="True">
                         <Condition Enabled="false" Grouping="Or" />
-                        <Conditions />
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                 </Triggers>
               </Folder>
@@ -513,67 +477,53 @@
                     <Actions>
                       <Action OrderNumber="0" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="81c16a02-9880-4f49-94ff-409b80cb0731" TriggerText="addTimer(2656,action,cooldowns,Ley Lines,30,90)" ActionType="Trigger">
                         <Condition Enabled="false" Grouping="Or" />
-                        <Conditions />
                       </Action>
                       <Action OrderNumber="2" PlaySoundFileExpression="https://raw.githubusercontent.com/Farplaner/triggernometry-triggers/master/resources/sound/sound_effects/alarm.wav" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="PlaySound" ExecutionDelayExpression="90000" RefireInterrupt="True">
                         <Condition Enabled="false" Grouping="Or" />
-                        <Conditions />
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Name="Manafont" Id="08b1bbfa-5350-4123-8aae-2a24994049fe" RegularExpression="You use Manafont">
                     <Actions>
                       <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="81c16a02-9880-4f49-94ff-409b80cb0731" TriggerText="addTimer(2651,action,cooldowns,Manafont,0,180)" ActionType="Trigger">
                         <Condition Enabled="false" Grouping="Or" />
-                        <Conditions />
                       </Action>
                       <Action OrderNumber="2" PlaySoundFileExpression="https://raw.githubusercontent.com/Farplaner/triggernometry-triggers/master/resources/sound/custom/manafont_ready.mp3" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="PlaySound" ExecutionDelayExpression="180000" RefireInterrupt="True">
                         <Condition Enabled="false" Grouping="Or" />
-                        <Conditions />
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Name="Sharpcast" Id="da5110cc-e05e-430e-9f85-447232f3ae27" RegularExpression="You use Sharpcast">
                     <Actions>
                       <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="81c16a02-9880-4f49-94ff-409b80cb0731" TriggerText="addTimer(2657,action,cooldowns,Sharpcast,15,60)" ActionType="Trigger">
                         <Condition Enabled="false" Grouping="Or" />
-                        <Conditions />
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Name="Triplecast" Id="e9764fbc-d7dc-468b-8699-90c202513639" RegularExpression="You use Triplecast">
                     <Actions>
                       <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="81c16a02-9880-4f49-94ff-409b80cb0731" TriggerText="addTimer(2663,action,cooldowns,Triplecast,15,60)" ActionType="Trigger">
                         <Condition Enabled="false" Grouping="Or" />
-                        <Conditions />
                       </Action>
                       <Action OrderNumber="2" PlaySoundFileExpression="https://raw.githubusercontent.com/Farplaner/triggernometry-triggers/master/resources/sound/custom/triplecast_in_3.mp3" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="PlaySound" ExecutionDelayExpression="57000" RefireInterrupt="True">
                         <Condition Enabled="false" Grouping="Or" />
-                        <Conditions />
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Name="Firestarter" Id="35a66dc7-8104-4bf3-841f-948675e53303" RegularExpression="You gain the effect of .*Firestarter">
                     <Actions>
                       <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="81c16a02-9880-4f49-94ff-409b80cb0731" TriggerText="addTimer(5352,action,cooldowns,Firestarter,18,18)" ActionType="Trigger">
                         <Condition Enabled="false" Grouping="Or" />
-                        <Conditions />
                       </Action>
                       <Action OrderNumber="2" PlaySoundFileExpression="https://raw.githubusercontent.com/Farplaner/triggernometry-triggers/master/resources/sound/sound_effects/job-done.wav" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="PlaySound" RefireInterrupt="True">
                         <Condition Enabled="false" Grouping="Or" />
-                        <Conditions />
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                 </Triggers>
               </Folder>
@@ -652,11 +602,9 @@
                     <Actions>
                       <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="81c16a02-9880-4f49-94ff-409b80cb0731" TriggerText="addTimer(810,action,party,Shirk (Co-Tank),0,120)" ActionType="Trigger">
                         <Condition Enabled="false" Grouping="Or" />
-                        <Conditions />
                       </Action>
                       <Action OrderNumber="2" PlaySoundFileExpression="https://raw.githubusercontent.com/Farplaner/triggernometry-triggers/master/resources/sound/sound_effects/what.wav" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="PlaySound" RefireInterrupt="True">
                         <Condition Enabled="false" Grouping="Or" />
-                        <Conditions />
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
@@ -670,83 +618,66 @@
                     <Actions>
                       <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="81c16a02-9880-4f49-94ff-409b80cb0731" TriggerText="addTimer(3204,action,cooldowns,Corps-a-corps,0,40)" ActionType="Trigger">
                         <Condition Enabled="false" Grouping="Or" />
-                        <Conditions />
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Name="Embolden" Id="814f4cba-dedc-4ef2-a07c-b6e2ad8c8fc1" RegularExpression="You use Embolden">
                     <Actions>
                       <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="81c16a02-9880-4f49-94ff-409b80cb0731" TriggerText="addTimer(3218,action,cooldowns,Embolden,20,120)" ActionType="Trigger">
                         <Condition Enabled="false" Grouping="Or" />
-                        <Conditions />
                       </Action>
                       <Action OrderNumber="2" UseTTSTextExpression="Embolden Ready" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS" ExecutionDelayExpression="120000" RefireInterrupt="True">
                         <Condition Enabled="false" Grouping="Or" />
-                        <Conditions />
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Name="Acceleration" Id="9c504b48-e8d8-4940-b667-e9be24c2be17" RegularExpression="You use Acceleration">
                     <Actions>
                       <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="81c16a02-9880-4f49-94ff-409b80cb0731" TriggerText="addTimer(3214,action,cooldowns,Acceleration,20,55)" ActionType="Trigger">
                         <Condition Enabled="false" Grouping="Or" />
-                        <Conditions />
                       </Action>
                       <Action OrderNumber="2" PlaySoundFileExpression="https://raw.githubusercontent.com/Farplaner/triggernometry-triggers/master/resources/sound/sound_effects/alarm.wav" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="PlaySound" ExecutionDelayExpression="55000" RefireInterrupt="True">
                         <Condition Enabled="false" Grouping="Or" />
-                        <Conditions />
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Name="Manafication" Id="ceaf40d8-23a2-4572-a3eb-d99bb8ac3774" RegularExpression="You use Manafication">
                     <Actions>
                       <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="81c16a02-9880-4f49-94ff-409b80cb0731" TriggerText="addTimer(3219,action,cooldowns,Manafication,10,120)" ActionType="Trigger">
                         <Condition Enabled="false" Grouping="Or" />
-                        <Conditions />
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Name="Fleche" Id="de7f6573-e2e2-4285-a209-c63bcaa44c78" RegularExpression="You use Fleche">
                     <Actions>
                       <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="81c16a02-9880-4f49-94ff-409b80cb0731" TriggerText="addTimer(3212,action,cooldowns,Fleche,0,25)" ActionType="Trigger">
                         <Condition Enabled="false" Grouping="Or" />
-                        <Conditions />
                       </Action>
                       <Action OrderNumber="2" PlaySoundFileExpression="https://raw.githubusercontent.com/Farplaner/triggernometry-triggers/master/resources/sound/sound_effects/job-done.wav" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="PlaySound" ExecutionDelayExpression="25000" RefireInterrupt="True">
                         <Condition Enabled="false" Grouping="Or" />
-                        <Conditions />
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Name="Contre Sixte" Id="dc729c64-b350-4cf7-babf-0214eaf6c475" RegularExpression="You use Contre Sixte">
                     <Actions>
                       <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="81c16a02-9880-4f49-94ff-409b80cb0731" TriggerText="addTimer(3217,action,cooldowns,Contre Sixte,0,45)" ActionType="Trigger">
                         <Condition Enabled="false" Grouping="Or" />
-                        <Conditions />
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Name="Displacement" Id="006d6550-9c65-466f-b587-58e03c4a3db6" RegularExpression="You use Displacement">
                     <Actions>
                       <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="81c16a02-9880-4f49-94ff-409b80cb0731" TriggerText="addTimer(3211,action,cooldowns,Displacement,0,35)" ActionType="Trigger">
                         <Condition Enabled="false" Grouping="Or" />
-                        <Conditions />
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                 </Triggers>
               </Folder>
@@ -757,41 +688,33 @@
                     <Actions>
                       <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="81c16a02-9880-4f49-94ff-409b80cb0731" TriggerText="addTimer(2809,action,cooldowns,Deployment Tactics,15,15)" TriggerForce="conditions" ActionType="Trigger">
                         <Condition Enabled="false" Grouping="Or" />
-                        <Conditions />
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Name="Dissipation" Id="607814c3-b21e-44e8-8e16-461352353d3b" RegularExpression="You use Dissipation">
                     <Actions>
                       <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="81c16a02-9880-4f49-94ff-409b80cb0731" TriggerText="addTimer(2810,action,cooldowns,Dissipation,30,180)" TriggerForce="conditions" ActionType="Trigger">
                         <Condition Enabled="false" Grouping="Or" />
-                        <Conditions />
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Name="Deployment Tactics" Id="744e0325-f491-4721-9ac8-da91135eaac0" RegularExpression="You use Deployment Tactics">
                     <Actions>
                       <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="81c16a02-9880-4f49-94ff-409b80cb0731" TriggerText="addTimer(2808,action,cooldowns,Deployment Tactics,0,120)" TriggerForce="conditions" ActionType="Trigger">
                         <Condition Enabled="false" Grouping="Or" />
-                        <Conditions />
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Name="Aetherflow" Id="7716d35e-f325-4cab-b5c6-da4df7426237" RegularExpression="You use Aetherflow">
                     <Actions>
                       <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="81c16a02-9880-4f49-94ff-409b80cb0731" TriggerText="addTimer(510,action,cooldowns,Aetherflow,0,60)" TriggerForce="conditions" ActionType="Trigger">
                         <Condition Enabled="false" Grouping="Or" />
-                        <Conditions />
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                 </Triggers>
               </Folder>
