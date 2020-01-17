@@ -5,31 +5,201 @@
       <Folder Id="33baa4ab-8de0-44d1-a6cb-3eed3f4193b1" Name="The Epic of Alexander (Ultimate)" Enabled="true">
         <Folders>
           <Folder Id="78e20c1c-b4db-4113-8f9c-106ac8011a0b" Name="Temporal Stasis" Enabled="true">
-            <Folders />
+            <Folders>
+              <Folder Id="93ce7218-d5e4-4c2f-b671-4974b502fcc4" Name="Phase Check" Enabled="true">
+                <Folders />
+                <Triggers>
+                  <Trigger Enabled="true" Name="TEA Temporal Stasis Check" Id="a19ca158-9257-4e4a-a2aa-cda463299287" RegularExpression="I am Alexander\.\.\.the Creator\. You\.\.\.who would prove yourself worthy of your utopia\.\.\.will be judged">
+                    <Actions>
+                      <Action OrderNumber="1" VariableOp="SetNumeric" VariableName="tea_stasis_phase" VariableExpression="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+                        <Condition Enabled="false" Grouping="Or" />
+                        <Conditions />
+                      </Action>
+                      <Action OrderNumber="2" VariableName="tea_stasis_phase" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" ExecutionDelayExpression="10000">
+                        <Condition Enabled="false" Grouping="Or" />
+                        <Conditions />
+                      </Action>
+                      <Action OrderNumber="3" VariableName="tea_stasis_debuff" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" ExecutionDelayExpression="10000">
+                        <Condition Enabled="false" Grouping="Or" />
+                        <Conditions />
+                      </Action>
+                    </Actions>
+                    <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
+                  </Trigger>
+                </Triggers>
+              </Folder>
+              <Folder Id="45306276-2cba-4102-8071-f5cf10809ee1" Name="Close Tether" Enabled="true">
+                <Folders />
+                <Triggers>
+                  <Trigger Enabled="true" Name="Close Tether" Id="cd0b95c1-b5f0-4e34-ae05-40a75153ec6a" RegularExpression="You suffer the effect of House Arrest">
+                    <Actions>
+                      <Action OrderNumber="1" VariableOp="SetString" VariableName="tea_stasis_debuff" VariableExpression="Close Tether" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+                        <Condition Enabled="false" Grouping="Or" />
+                        <Conditions />
+                      </Action>
+                      <Action OrderNumber="2" VariableOp="SetString" VariableName="limitcut_text" VariableExpression="Close Tether (T/H): North of Brute Justice" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+                        <Condition Enabled="true" Grouping="Or">
+                          <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${_ffxivplayer}].role}" ExpressionTypeL="String" ExpressionR="Tank" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                          <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${_ffxivplayer}].role}" ExpressionTypeL="String" ExpressionR="Healer" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                        </Condition>
+                        <Conditions />
+                      </Action>
+                      <Action OrderNumber="3" UseTTSExclusive="False" VariableOp="SetString" VariableName="limitcut_voice" VariableExpression="North of Brute Justice" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+                        <Condition Enabled="true" Grouping="Or">
+                          <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${_ffxivplayer}].role}" ExpressionTypeL="String" ExpressionR="Healer" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                          <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${_ffxivplayer}].role}" ExpressionTypeL="String" ExpressionR="Tank" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                        </Condition>
+                        <Conditions />
+                      </Action>
+                      <Action OrderNumber="4" VariableOp="SetString" VariableName="limitcut_text" VariableExpression="Close Tether (D): South of Brute Justice" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+                        <Condition Enabled="true" Grouping="Or">
+                          <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${_ffxivplayer}].role}" ExpressionTypeL="String" ExpressionR="DPS" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                        </Condition>
+                        <Conditions />
+                      </Action>
+                      <Action OrderNumber="5" UseTTSExclusive="False" VariableOp="SetString" VariableName="limitcut_voice" VariableExpression="South of Brute Justice" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+                        <Condition Enabled="true" Grouping="Or">
+                          <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${_ffxivplayer}].role}" ExpressionTypeL="String" ExpressionR="DPS" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                        </Condition>
+                        <Conditions />
+                      </Action>
+                    </Actions>
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Trigger>
+                </Triggers>
+              </Folder>
+              <Folder Id="65f8bd87-46a1-4fa3-a4e3-ed51f248a609" Name="Far Tether" Enabled="true">
+                <Folders />
+                <Triggers>
+                  <Trigger Enabled="true" Name="Far Tether" Id="26787cd5-35b5-4a97-8157-353455eec3a7" RegularExpression="You suffer the effect of Restraining Order">
+                    <Actions>
+                      <Action OrderNumber="1" VariableOp="SetString" VariableName="tea_stasis_debuff" VariableExpression="Close Tether" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+                        <Condition Enabled="false" Grouping="Or" />
+                        <Conditions />
+                      </Action>
+                      <Action OrderNumber="2" VariableOp="SetString" VariableName="limitcut_text" VariableExpression="Far Tether (T/H): Next to Cruise Chaser (Close)" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+                        <Condition Enabled="true" Grouping="Or">
+                          <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${_ffxivplayer}].role}" ExpressionTypeL="String" ExpressionR="Tank" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                          <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${_ffxivplayer}].role}" ExpressionTypeL="String" ExpressionR="Healer" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                        </Condition>
+                        <Conditions />
+                      </Action>
+                      <Action OrderNumber="3" UseTTSExclusive="False" VariableOp="SetString" VariableName="limitcut_voice" VariableExpression="Next to Cruise Chaser" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+                        <Condition Enabled="true" Grouping="Or">
+                          <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${_ffxivplayer}].role}" ExpressionTypeL="String" ExpressionR="Healer" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                          <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${_ffxivplayer}].role}" ExpressionTypeL="String" ExpressionR="Tank" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                        </Condition>
+                        <Conditions />
+                      </Action>
+                      <Action OrderNumber="4" VariableOp="SetString" VariableName="limitcut_text" VariableExpression="Far Tether (D): Next to Brute Justice (Edge)" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+                        <Condition Enabled="true" Grouping="Or">
+                          <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${_ffxivplayer}].role}" ExpressionTypeL="String" ExpressionR="DPS" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                        </Condition>
+                        <Conditions />
+                      </Action>
+                      <Action OrderNumber="5" UseTTSExclusive="False" VariableOp="SetString" VariableName="limitcut_voice" VariableExpression="Next to Brute Justice, Towards Edge" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+                        <Condition Enabled="true" Grouping="Or">
+                          <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${_ffxivplayer}].role}" ExpressionTypeL="String" ExpressionR="DPS" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                        </Condition>
+                        <Conditions />
+                      </Action>
+                    </Actions>
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Trigger>
+                </Triggers>
+              </Folder>
+              <Folder Id="f4acc4de-a9ae-48ee-bca9-0940cdc5aa79" Name="Thunder Debuff" Enabled="true">
+                <Folders />
+                <Triggers>
+                  <Trigger Enabled="true" Name="Thunder" Id="fe0ee97c-80f4-4cb3-bf25-586c17f672d8" RegularExpression="You suffer the effect of Aggravated Assault">
+                    <Actions>
+                      <Action OrderNumber="1" VariableOp="SetString" VariableName="tea_stasis_debuff" VariableExpression="Thunder" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+                        <Condition Enabled="false" Grouping="Or" />
+                        <Conditions />
+                      </Action>
+                      <Action OrderNumber="2" VariableOp="SetString" VariableName="limitcut_text" VariableExpression="Thunder (T/H): North of Brute Justice" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+                        <Condition Enabled="true" Grouping="Or">
+                          <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${_ffxivplayer}].role}" ExpressionTypeL="String" ExpressionR="Tank" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                          <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${_ffxivplayer}].role}" ExpressionTypeL="String" ExpressionR="Healer" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                        </Condition>
+                        <Conditions />
+                      </Action>
+                      <Action OrderNumber="3" UseTTSExclusive="False" VariableOp="SetString" VariableName="limitcut_voice" VariableExpression="North of Brute Justice" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+                        <Condition Enabled="true" Grouping="Or">
+                          <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${_ffxivplayer}].role}" ExpressionTypeL="String" ExpressionR="Healer" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                          <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${_ffxivplayer}].role}" ExpressionTypeL="String" ExpressionR="Tank" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                        </Condition>
+                        <Conditions />
+                      </Action>
+                      <Action OrderNumber="4" VariableOp="SetString" VariableName="limitcut_text" VariableExpression="Thunder (D): South of Brute Justice" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+                        <Condition Enabled="true" Grouping="Or">
+                          <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${_ffxivplayer}].role}" ExpressionTypeL="String" ExpressionR="DPS" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                        </Condition>
+                        <Conditions />
+                      </Action>
+                      <Action OrderNumber="5" UseTTSExclusive="False" VariableOp="SetString" VariableName="limitcut_voice" VariableExpression="South of Brute Justice" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+                        <Condition Enabled="true" Grouping="Or">
+                          <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${_ffxivplayer}].role}" ExpressionTypeL="String" ExpressionR="DPS" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                        </Condition>
+                        <Conditions />
+                      </Action>
+                    </Actions>
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Trigger>
+                </Triggers>
+              </Folder>
+            </Folders>
             <Triggers>
-              <Trigger Enabled="true" Name="Thunder" Id="fe0ee97c-80f4-4cb3-bf25-586c17f672d8" RegularExpression="You suffer the effect of Aggravated Assault">
+              <Trigger Enabled="true" Sequential="True" Name="Temporal Stasis" Id="025c61c7-79c1-41b0-baba-8dad85e2e5b4" RegularExpression="Alexander Prime readies Temporal Stasis">
                 <Actions>
-                  <Action OrderNumber="1" UseTTSTextExpression="South of Brute Justice" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS">
+                  <Action OrderNumber="1" VariableOp="SetString" VariableName="limitcut_text" VariableExpression="No Debuffs (T/H): North of Cruise Chaser" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+                    <Condition Enabled="true" Grouping="And">
+                      <ConditionSingle Enabled="true" ExpressionL="${var:tea_stasis_debuff}" ExpressionTypeL="String" ExpressionR="" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                      <ConditionGroup Enabled="true" Grouping="Or">
+                        <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${_ffxivplayer}].role}" ExpressionTypeL="String" ExpressionR="Tank" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                        <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${_ffxivplayer}].role}" ExpressionTypeL="String" ExpressionR="Healer" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                      </ConditionGroup>
+                    </Condition>
+                    <Conditions />
+                  </Action>
+                  <Action OrderNumber="2" UseTTSExclusive="False" VariableOp="SetString" VariableName="limitcut_voice" VariableExpression="North of Cruise Chaser" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+                    <Condition Enabled="true" Grouping="And">
+                      <ConditionGroup Enabled="true" Grouping="Or">
+                        <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${_ffxivplayer}].role}" ExpressionTypeL="String" ExpressionR="Healer" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                        <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${_ffxivplayer}].role}" ExpressionTypeL="String" ExpressionR="Tank" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                      </ConditionGroup>
+                      <ConditionSingle Enabled="true" ExpressionL="${var:tea_stasis_debuff}" ExpressionTypeL="String" ExpressionR="" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                    </Condition>
+                    <Conditions />
+                  </Action>
+                  <Action OrderNumber="3" VariableOp="SetString" VariableName="limitcut_text" VariableExpression="No Debuffs (D): South of Cruise Chaser" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+                    <Condition Enabled="true" Grouping="And">
+                      <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${_ffxivplayer}].role}" ExpressionTypeL="String" ExpressionR="DPS" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                      <ConditionSingle Enabled="true" ExpressionL="${var:tea_stasis_debuff}" ExpressionTypeL="String" ExpressionR="" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                    </Condition>
+                    <Conditions />
+                  </Action>
+                  <Action OrderNumber="4" UseTTSExclusive="False" VariableOp="SetString" VariableName="limitcut_voice" VariableExpression="South of Cruise Chaser" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+                    <Condition Enabled="true" Grouping="And">
+                      <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${_ffxivplayer}].role}" ExpressionTypeL="String" ExpressionR="DPS" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                      <ConditionSingle Enabled="true" ExpressionL="${var:tea_stasis_debuff}" ExpressionTypeL="String" ExpressionR="" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                    </Condition>
+                    <Conditions />
+                  </Action>
+                  <Action OrderNumber="5" TextAuraEffect="Bold" TextAuraFontSize="27.75" TextAuraForeground="White" TextAuraOutline="Black" TextAuraName="limitcut_text_aura" TextAuraExpression="${var:limitcut_text}" TextAuraXIniExpression="0" TextAuraYIniExpression="200" TextAuraWIniExpression="1920" TextAuraHIniExpression="105" TextAuraOIniExpression="100" TextAuraTTLTickExpression="20-${_since}" TextAuraUseOutline="True" TextAuraFontName="Microsoft Sans Serif" ActionType="TextAura" ExecutionDelayExpression="100">
                     <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
+                  </Action>
+                  <Action OrderNumber="6" UseTTSTextExpression="${var:limitcut_voice}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS" ExecutionDelayExpression="100">
+                    <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
                   </Action>
                 </Actions>
-                <Condition Enabled="false" Grouping="Or" />
-              </Trigger>
-              <Trigger Enabled="true" Name="Close" Id="cd0b95c1-b5f0-4e34-ae05-40a75153ec6a" RegularExpression="You suffer the effect of House Arrest">
-                <Actions>
-                  <Action OrderNumber="1" UseTTSTextExpression="South of Cruise Chaser" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS">
-                    <Condition Enabled="false" Grouping="Or" />
-                  </Action>
-                </Actions>
-                <Condition Enabled="false" Grouping="Or" />
-              </Trigger>
-              <Trigger Enabled="true" Name="Far" Id="26787cd5-35b5-4a97-8157-353455eec3a7" RegularExpression="You suffer the effect of Restraining Order">
-                <Actions>
-                  <Action OrderNumber="1" UseTTSTextExpression="Go West" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS">
-                    <Condition Enabled="false" Grouping="Or" />
-                  </Action>
-                </Actions>
-                <Condition Enabled="false" Grouping="Or" />
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${var:tea_stasis_phase}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                </Condition>
+                <Conditions />
               </Trigger>
             </Triggers>
           </Folder>
