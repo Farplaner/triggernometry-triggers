@@ -1,0 +1,113 @@
+<?xml version="1.0"?>
+<TriggernometryExport Version="1">
+  <ExportedFolder Id="dc7a1dcb-f398-475b-998c-5773f73df0d1" Name="E6S" Enabled="true">
+    <Folders>
+      <Folder ZoneFilterEnabled="True" Id="d5a80ad0-0952-4d5b-84a4-f5c782846a78" ZoneFilterRegularExpression="Eden's Verse: Furor \(Savage\)" Name="Strike Spark" Enabled="true">
+        <Folders />
+        <Triggers>
+          <Trigger Enabled="true" Name="Wipe" Id="8e331044-eebe-4d1a-be84-18608b6d6a32" RegularExpression="21:........:40000010:">
+            <Actions>
+              <Action OrderNumber="1" VariableName="e6s_hotfoot_id" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+            </Actions>
+            <Condition Enabled="false" Grouping="Or" />
+          </Trigger>
+          <Trigger Enabled="true" Name="Strike Spark Cast" Id="ce722e8a-dc04-485f-9f77-08112f7d5822" RegularExpression="15:[0-9A-F]{8}:(Ifrit|Raktapaksa):4BD3:">
+            <Actions>
+              <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="42f48ed9-8feb-4243-808e-3cfe51c7c960" TriggerForce="regexp,parent" ActionType="Trigger" ExecutionDelayExpression="7000">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="2" VariableName="e6s_hotfoot_id" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" ExecutionDelayExpression="15000">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+            </Actions>
+            <Condition Enabled="false" Grouping="Or" />
+          </Trigger>
+          <Trigger Enabled="true" Name="Safe Zone Callout" Id="42f48ed9-8feb-4243-808e-3cfe51c7c960" RegularExpression="">
+            <Actions>
+              <Action OrderNumber="1" UseTTSTextExpression="North" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS">
+                <Condition Enabled="true" Grouping="And">
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxiventity[${var:e6s_hotfoot_id}].y}" ExpressionTypeL="Numeric" ExpressionR="94" ExpressionTypeR="Numeric" ConditionType="NumericLess" />
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxiventity[${var:e6s_hotfoot_id}].x}" ExpressionTypeL="Numeric" ExpressionR="105" ExpressionTypeR="Numeric" ConditionType="NumericLess" />
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxiventity[${var:e6s_hotfoot_id}].x}" ExpressionTypeL="Numeric" ExpressionR="95" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxiventity[${var:e6s_hotfoot_id}].y}" ExpressionTypeL="Numeric" ExpressionR="84" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="2" UseTTSTextExpression="Northeast" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS">
+                <Condition Enabled="true" Grouping="And">
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxiventity[${var:e6s_hotfoot_id}].y}" ExpressionTypeL="Numeric" ExpressionR="94" ExpressionTypeR="Numeric" ConditionType="NumericLess" />
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxiventity[${var:e6s_hotfoot_id}].x}" ExpressionTypeL="Numeric" ExpressionR="116" ExpressionTypeR="Numeric" ConditionType="NumericLess" />
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxiventity[${var:e6s_hotfoot_id}].x}" ExpressionTypeL="Numeric" ExpressionR="106" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxiventity[${var:e6s_hotfoot_id}].y}" ExpressionTypeL="Numeric" ExpressionR="84" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="3" UseTTSTextExpression="East" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS">
+                <Condition Enabled="true" Grouping="And">
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxiventity[${var:e6s_hotfoot_id}].x}" ExpressionTypeL="Numeric" ExpressionR="116" ExpressionTypeR="Numeric" ConditionType="NumericLess" />
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxiventity[${var:e6s_hotfoot_id}].y}" ExpressionTypeL="Numeric" ExpressionR="105" ExpressionTypeR="Numeric" ConditionType="NumericLess" />
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxiventity[${var:e6s_hotfoot_id}].y}" ExpressionTypeL="Numeric" ExpressionR="95" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxiventity[${var:e6s_hotfoot_id}].x}" ExpressionTypeL="Numeric" ExpressionR="106" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="4" UseTTSTextExpression="Southeast" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS">
+                <Condition Enabled="true" Grouping="And">
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxiventity[${var:e6s_hotfoot_id}].y}" ExpressionTypeL="Numeric" ExpressionR="116" ExpressionTypeR="Numeric" ConditionType="NumericLess" />
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxiventity[${var:e6s_hotfoot_id}].x}" ExpressionTypeL="Numeric" ExpressionR="116" ExpressionTypeR="Numeric" ConditionType="NumericLess" />
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxiventity[${var:e6s_hotfoot_id}].y}" ExpressionTypeL="Numeric" ExpressionR="106" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxiventity[${var:e6s_hotfoot_id}].x}" ExpressionTypeL="Numeric" ExpressionR="106" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="5" UseTTSTextExpression="South" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS">
+                <Condition Enabled="true" Grouping="And">
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxiventity[${var:e6s_hotfoot_id}].y}" ExpressionTypeL="Numeric" ExpressionR="116" ExpressionTypeR="Numeric" ConditionType="NumericLess" />
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxiventity[${var:e6s_hotfoot_id}].x}" ExpressionTypeL="Numeric" ExpressionR="105" ExpressionTypeR="Numeric" ConditionType="NumericLess" />
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxiventity[${var:e6s_hotfoot_id}].x}" ExpressionTypeL="Numeric" ExpressionR="95" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxiventity[${var:e6s_hotfoot_id}].y}" ExpressionTypeL="Numeric" ExpressionR="106" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="6" UseTTSTextExpression="Southwest" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS">
+                <Condition Enabled="true" Grouping="And">
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxiventity[${var:e6s_hotfoot_id}].y}" ExpressionTypeL="Numeric" ExpressionR="116" ExpressionTypeR="Numeric" ConditionType="NumericLess" />
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxiventity[${var:e6s_hotfoot_id}].x}" ExpressionTypeL="Numeric" ExpressionR="94" ExpressionTypeR="Numeric" ConditionType="NumericLess" />
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxiventity[${var:e6s_hotfoot_id}].y}" ExpressionTypeL="Numeric" ExpressionR="106" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxiventity[${var:e6s_hotfoot_id}].x}" ExpressionTypeL="Numeric" ExpressionR="84" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="7" UseTTSTextExpression="West" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS">
+                <Condition Enabled="true" Grouping="And">
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxiventity[${var:e6s_hotfoot_id}].x}" ExpressionTypeL="Numeric" ExpressionR="94" ExpressionTypeR="Numeric" ConditionType="NumericLess" />
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxiventity[${var:e6s_hotfoot_id}].y}" ExpressionTypeL="Numeric" ExpressionR="105" ExpressionTypeR="Numeric" ConditionType="NumericLess" />
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxiventity[${var:e6s_hotfoot_id}].y}" ExpressionTypeL="Numeric" ExpressionR="95" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxiventity[${var:e6s_hotfoot_id}].x}" ExpressionTypeL="Numeric" ExpressionR="84" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="8" UseTTSTextExpression="Northwest" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS">
+                <Condition Enabled="true" Grouping="And">
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxiventity[${var:e6s_hotfoot_id}].y}" ExpressionTypeL="Numeric" ExpressionR="94" ExpressionTypeR="Numeric" ConditionType="NumericLess" />
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxiventity[${var:e6s_hotfoot_id}].x}" ExpressionTypeL="Numeric" ExpressionR="94" ExpressionTypeR="Numeric" ConditionType="NumericLess" />
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxiventity[${var:e6s_hotfoot_id}].x}" ExpressionTypeL="Numeric" ExpressionR="84" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxiventity[${var:e6s_hotfoot_id}].y}" ExpressionTypeL="Numeric" ExpressionR="84" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
+                </Condition>
+              </Action>
+            </Actions>
+            <Condition Enabled="false" Grouping="Or" />
+          </Trigger>
+          <Trigger Enabled="true" Name="Update Actor ID" Id="fcb3f0e6-9728-4e0a-a81a-c9426842367e" RegularExpression="03:(?&lt;id&gt;[0-9A-F]{8}):Added new combatant (Ifrit|Raktapaksa).  Job: N\/A Level: 80">
+            <Actions>
+              <Action OrderNumber="1" VariableOp="SetString" VariableName="e6s_hotfoot_id" VariableExpression="${id}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+            </Actions>
+            <Condition Enabled="true" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="${evar:e6s_hotfoot_id}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+              <ConditionSingle Enabled="true" ExpressionL="${numeric:hex2dec(${var:e6s_hotfoot_id})}" ExpressionTypeL="Numeric" ExpressionR="${numeric:hex2dec(${id})}" ExpressionTypeR="Numeric" ConditionType="NumericLess" />
+            </Condition>
+          </Trigger>
+        </Triggers>
+      </Folder>
+    </Folders>
+    <Triggers />
+  </ExportedFolder>
+</TriggernometryExport>
