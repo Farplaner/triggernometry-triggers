@@ -2829,6 +2829,47 @@
                           <Action OrderNumber="1" UseTTSTextExpression="Water on ${first}" TextAuraFontSize="0" ActionType="UseTTS" />
                         </Actions>
                       </Trigger>
+                      <Trigger Enabled="true" Name="You suffer the effect of Final Judgment: Decree Nisi A\." Id="3c41f89e-5295-4416-b38c-95c6856067c6" RegularExpression="You suffer the effect of Final Judgment: Decree Nisi A\.">
+                        <Actions>
+                          <Action OrderNumber="1" UseTTSTextExpression="Blue Regulator" ActionType="UseTTS" />
+                        </Actions>
+                      </Trigger>
+                      <Trigger Enabled="true" Name="You suffer the effect of Final Judgment: Decree Nisi B\." Id="5277349b-896c-4c2b-ac3e-7a5f91017f45" RegularExpression="You suffer the effect of Final Judgment: Decree Nisi B\.">
+                        <Actions>
+                          <Action OrderNumber="1" UseTTSTextExpression="Red Regulator" ActionType="UseTTS" />
+                        </Actions>
+                      </Trigger>
+                      <Trigger Enabled="true" Name="You suffer the effect of Final Judgment: Max HP\." Id="01e9934e-7cf3-4dcd-b926-03b5d621a8f6" RegularExpression="You suffer the effect of Final Judgment: Max HP\.">
+                        <Actions>
+                          <Action OrderNumber="1" UseTTSTextExpression="Max HP" ActionType="UseTTS" />
+                        </Actions>
+                      </Trigger>
+                      <Trigger Enabled="true" Name="You suffer the effect of Final Judgment: Min HP\." Id="dd915805-5a76-469b-bdb4-65c5d9e6d4e1" RegularExpression="You suffer the effect of Final Judgment: Min HP\.">
+                        <Actions>
+                          <Action OrderNumber="1" UseTTSTextExpression="Min HP, Northeast Tornado during Gavel" ActionType="UseTTS">
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Action>
+                        </Actions>
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Trigger>
+                      <Trigger Enabled="true" Name="You suffer the effect of Final Judgment: Penalty I\." Id="62ac9919-175f-4af4-9317-3bc7a7eac5bc" RegularExpression="You suffer the effect of Final Judgment: Penalty I\.">
+                        <Actions>
+                          <Action OrderNumber="1" UseTTSTextExpression="Southwest Ball, then share North 2 Balls" ActionType="UseTTS">
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Action>
+                        </Actions>
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Trigger>
+                      <Trigger Enabled="true" Name="You suffer the effect of Final Judgment: Penalty II\." Id="240cecbd-566c-44f1-a35a-92d16d926713" RegularExpression="You suffer the effect of Final Judgment: Penalty II\.">
+                        <Actions>
+                          <Action OrderNumber="1" UseTTSTextExpression="Northwest Tornado" ActionType="UseTTS" />
+                        </Actions>
+                      </Trigger>
+                      <Trigger Enabled="true" Name="You suffer the effect of Final Judgment: Penalty III\." Id="3b6437c9-7a21-4880-b131-1f1bd504ed11" RegularExpression="You suffer the effect of Final Judgment: Penalty III\.">
+                        <Actions>
+                          <Action OrderNumber="1" UseTTSTextExpression="South Tornado, share south ball after Gavel" ActionType="UseTTS" />
+                        </Actions>
+                      </Trigger>
                     </Triggers>
                   </Folder>
                   <Folder Id="c4cbf7f2-2286-4015-ba41-c676be610640" Name="Common" Enabled="true">
@@ -3168,7 +3209,7 @@
                       <Folder Id="09ab9cf6-c8c0-45b4-a6ac-2e8606285305" Name="Fury's Fourteen" Enabled="true">
                         <Folders />
                         <Triggers>
-                          <Trigger Enabled="true" Name="Determine Side" Id="a4d839cf-0b25-437d-a554-98bae2fdf14d" RegularExpression="03:[0-9A-F]{8}:Added new combatant Will Of Ixion\.  Job: N\/A Level: 80 Max HP: 7400000 Max MP: 0 Pos: \((?&lt;x&gt;(97\.5|102\.5)),(?&lt;y&gt;[\d\.]+)">
+                          <Trigger Enabled="true" Name="Determine Side" Id="a4d839cf-0b25-437d-a554-98bae2fdf14d" RegularExpression="03:[0-9A-F]{8}:Added new combatant Will Of Ixion\.  Job: N\/A Level: 80 Max HP: 7400000 Max MP: 10000 Pos: \((?&lt;x&gt;(97\.5|102\.5)),(?&lt;y&gt;[\d\.]+)">
                             <Actions>
                               <Action OrderNumber="1" VariableOp="SetString" VariableName="side" VariableExpression="east" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
                                 <Condition Enabled="true" Grouping="Or">
@@ -3185,7 +3226,7 @@
                               <ConditionSingle Enabled="true" ExpressionL="${var:infury}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                             </Condition>
                           </Trigger>
-                          <Trigger Enabled="true" Name="Determine N/S" Id="2a65176a-5eec-4d6d-a069-31d2a546834d" RegularExpression="03:[0-9A-F]{8}:Added new combatant Will Of Ramuh\.  Job: N\/A Level: 80 Max HP: 7400000 Max MP: 0 Pos: \((?&lt;x&gt;100),(?&lt;y&gt;81|119)">
+                          <Trigger Enabled="true" Name="Determine N/S" Id="2a65176a-5eec-4d6d-a069-31d2a546834d" RegularExpression="03:[0-9A-F]{8}:Added new combatant Will Of Ramuh\.  Job: N\/A Level: 80 Max HP: 7400000 Max MP: 10000 Pos: \((?&lt;x&gt;100),(?&lt;y&gt;81|119)">
                             <Actions>
                               <Action OrderNumber="1" VariableOp="SetString" VariableName="ns" VariableExpression="South" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False">
                                 <Condition Enabled="true" Grouping="Or">
@@ -3245,25 +3286,20 @@
                             <Actions>
                               <Action OrderNumber="1" VariableName="e6s_hotfoot_id" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
                                 <Condition Enabled="false" Grouping="Or" />
-                                <Conditions />
                               </Action>
                             </Actions>
                             <Condition Enabled="false" Grouping="Or" />
-                            <Conditions />
                           </Trigger>
                           <Trigger Enabled="true" Name="Strike Spark Cast" Id="ce722e8a-dc04-485f-9f77-08112f7d5822" RegularExpression="15:[0-9A-F]{8}:(Ifrit|Raktapaksa):4BD3:">
                             <Actions>
                               <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="42f48ed9-8feb-4243-808e-3cfe51c7c960" TriggerForce="regexp,parent" ActionType="Trigger" ExecutionDelayExpression="7000">
                                 <Condition Enabled="false" Grouping="Or" />
-                                <Conditions />
                               </Action>
                               <Action OrderNumber="2" VariableName="e6s_hotfoot_id" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" ExecutionDelayExpression="15000">
                                 <Condition Enabled="false" Grouping="Or" />
-                                <Conditions />
                               </Action>
                             </Actions>
                             <Condition Enabled="false" Grouping="Or" />
-                            <Conditions />
                           </Trigger>
                           <Trigger Enabled="true" Name="Safe Zone Callout" Id="42f48ed9-8feb-4243-808e-3cfe51c7c960" RegularExpression="">
                             <Actions>
@@ -3274,7 +3310,6 @@
                                   <ConditionSingle Enabled="true" ExpressionL="${_ffxiventity[${var:e6s_hotfoot_id}].x}" ExpressionTypeL="Numeric" ExpressionR="95" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
                                   <ConditionSingle Enabled="true" ExpressionL="${_ffxiventity[${var:e6s_hotfoot_id}].y}" ExpressionTypeL="Numeric" ExpressionR="84" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
                                 </Condition>
-                                <Conditions />
                               </Action>
                               <Action OrderNumber="2" UseTTSTextExpression="Northeast" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS">
                                 <Condition Enabled="true" Grouping="And">
@@ -3283,7 +3318,6 @@
                                   <ConditionSingle Enabled="true" ExpressionL="${_ffxiventity[${var:e6s_hotfoot_id}].x}" ExpressionTypeL="Numeric" ExpressionR="106" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
                                   <ConditionSingle Enabled="true" ExpressionL="${_ffxiventity[${var:e6s_hotfoot_id}].y}" ExpressionTypeL="Numeric" ExpressionR="84" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
                                 </Condition>
-                                <Conditions />
                               </Action>
                               <Action OrderNumber="3" UseTTSTextExpression="East" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS">
                                 <Condition Enabled="true" Grouping="And">
@@ -3292,7 +3326,6 @@
                                   <ConditionSingle Enabled="true" ExpressionL="${_ffxiventity[${var:e6s_hotfoot_id}].y}" ExpressionTypeL="Numeric" ExpressionR="95" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
                                   <ConditionSingle Enabled="true" ExpressionL="${_ffxiventity[${var:e6s_hotfoot_id}].x}" ExpressionTypeL="Numeric" ExpressionR="106" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
                                 </Condition>
-                                <Conditions />
                               </Action>
                               <Action OrderNumber="4" UseTTSTextExpression="Southeast" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS">
                                 <Condition Enabled="true" Grouping="And">
@@ -3301,7 +3334,6 @@
                                   <ConditionSingle Enabled="true" ExpressionL="${_ffxiventity[${var:e6s_hotfoot_id}].y}" ExpressionTypeL="Numeric" ExpressionR="106" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
                                   <ConditionSingle Enabled="true" ExpressionL="${_ffxiventity[${var:e6s_hotfoot_id}].x}" ExpressionTypeL="Numeric" ExpressionR="106" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
                                 </Condition>
-                                <Conditions />
                               </Action>
                               <Action OrderNumber="5" UseTTSTextExpression="South" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS">
                                 <Condition Enabled="true" Grouping="And">
@@ -3310,7 +3342,6 @@
                                   <ConditionSingle Enabled="true" ExpressionL="${_ffxiventity[${var:e6s_hotfoot_id}].x}" ExpressionTypeL="Numeric" ExpressionR="95" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
                                   <ConditionSingle Enabled="true" ExpressionL="${_ffxiventity[${var:e6s_hotfoot_id}].y}" ExpressionTypeL="Numeric" ExpressionR="106" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
                                 </Condition>
-                                <Conditions />
                               </Action>
                               <Action OrderNumber="6" UseTTSTextExpression="Southwest" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS">
                                 <Condition Enabled="true" Grouping="And">
@@ -3319,7 +3350,6 @@
                                   <ConditionSingle Enabled="true" ExpressionL="${_ffxiventity[${var:e6s_hotfoot_id}].y}" ExpressionTypeL="Numeric" ExpressionR="106" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
                                   <ConditionSingle Enabled="true" ExpressionL="${_ffxiventity[${var:e6s_hotfoot_id}].x}" ExpressionTypeL="Numeric" ExpressionR="84" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
                                 </Condition>
-                                <Conditions />
                               </Action>
                               <Action OrderNumber="7" UseTTSTextExpression="West" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS">
                                 <Condition Enabled="true" Grouping="And">
@@ -3328,7 +3358,6 @@
                                   <ConditionSingle Enabled="true" ExpressionL="${_ffxiventity[${var:e6s_hotfoot_id}].y}" ExpressionTypeL="Numeric" ExpressionR="95" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
                                   <ConditionSingle Enabled="true" ExpressionL="${_ffxiventity[${var:e6s_hotfoot_id}].x}" ExpressionTypeL="Numeric" ExpressionR="84" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
                                 </Condition>
-                                <Conditions />
                               </Action>
                               <Action OrderNumber="8" UseTTSTextExpression="Northwest" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS">
                                 <Condition Enabled="true" Grouping="And">
@@ -3337,29 +3366,132 @@
                                   <ConditionSingle Enabled="true" ExpressionL="${_ffxiventity[${var:e6s_hotfoot_id}].x}" ExpressionTypeL="Numeric" ExpressionR="84" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
                                   <ConditionSingle Enabled="true" ExpressionL="${_ffxiventity[${var:e6s_hotfoot_id}].y}" ExpressionTypeL="Numeric" ExpressionR="84" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
                                 </Condition>
-                                <Conditions />
                               </Action>
                             </Actions>
                             <Condition Enabled="false" Grouping="Or" />
-                            <Conditions />
                           </Trigger>
-                          <Trigger Enabled="true" Name="Update Actor ID" Id="fcb3f0e6-9728-4e0a-a81a-c9426842367e" RegularExpression="03:(?&lt;id&gt;[0-9A-F]{8}):Added new combatant (Ifrit|Raktapaksa).  Job: N\/A Level: 80 Max HP: 38480000">
+                          <Trigger Enabled="true" Name="Update Actor ID" Id="fcb3f0e6-9728-4e0a-a81a-c9426842367e" RegularExpression="03:(?&lt;id&gt;[0-9A-F]{8}):Added new combatant (Ifrit|Raktapaksa).  Job: N\/A Level: 80">
                             <Actions>
-                              <Action OrderNumber="1" VariableOp="SetString" VariableName="e6s_hotfoot_id" VariableExpression="${id}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
-                                <Condition Enabled="false" Grouping="Or" />
-                                <Conditions />
+                              <Action OrderNumber="1" VariableOp="SetString" VariableName="e6s_hotfoot_id" VariableExpression="${id}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False">
+                                <Condition Enabled="true" Grouping="Or">
+                                  <ConditionSingle Enabled="true" ExpressionL="${evar:e6s_hotfoot_id}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                                  <ConditionSingle Enabled="true" ExpressionL="${numeric:hex2dec(${var:e6s_hotfoot_id})}" ExpressionTypeL="Numeric" ExpressionR="${numeric:hex2dec(${id})}" ExpressionTypeR="Numeric" ConditionType="NumericLess" />
+                                </Condition>
                               </Action>
                             </Actions>
-                            <Condition Enabled="true" Grouping="Or">
-                              <ConditionSingle Enabled="true" ExpressionL="${evar:e6s_hotfoot_id}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
-                              <ConditionSingle Enabled="true" ExpressionL="${numeric:hex2dec(${var:e6s_hotfoot_id})}" ExpressionTypeL="Numeric" ExpressionR="${numeric:hex2dec(${id})}" ExpressionTypeR="Numeric" ConditionType="NumericLess" />
-                            </Condition>
-                            <Conditions />
+                            <Condition Enabled="false" Grouping="Or" />
                           </Trigger>
                         </Triggers>
                       </Folder>
                     </Folders>
                     <Triggers />
+                  </Folder>
+                  <Folder Id="e0463d15-5e7d-478c-ae93-1289ba34d6fa" Name="E7S" Enabled="true">
+                    <Folders />
+                    <Triggers>
+                      <Trigger Enabled="true" Name="You suffer the effect of Astral Effect" Id="0cad9420-79ae-4e52-9c8c-b5490db530ed" RegularExpression="You suffer the effect of Astral Effect">
+                        <Actions>
+                          <Action OrderNumber="1" UseTTSTextExpression="Get Dark" ActionType="UseTTS">
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Action>
+                        </Actions>
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Trigger>
+                      <Trigger Enabled="true" Name="You suffer the effect of Umbral Effect" Id="ce68ed62-4838-4353-9046-a0b2364c8f58" RegularExpression="You suffer the effect of Umbral Effect">
+                        <Actions>
+                          <Action OrderNumber="1" UseTTSTextExpression="Get Light" ActionType="UseTTS">
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Action>
+                        </Actions>
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Trigger>
+                      <Trigger Enabled="true" Name="You suffer the effect of (?&lt;direction&gt;.*) with Thee" Id="339d5aa9-accf-4c0d-907e-f3dd1ffd2bf8" RegularExpression="You suffer the effect of (?&lt;direction&gt;.*) with Thee">
+                        <Actions>
+                          <Action OrderNumber="1" UseTTSTextExpression="${direction}" ActionType="UseTTS" />
+                        </Actions>
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Trigger>
+                    </Triggers>
+                  </Folder>
+                  <Folder Id="bac6ce1b-1673-4078-9f32-927a9e170b17" Name="E8S" Enabled="true">
+                    <Folders />
+                    <Triggers>
+                      <Trigger Enabled="true" Name="Shiva readies Driving Frost" Id="edbef770-6491-4fa0-96d7-b6f69238b320" RegularExpression="Shiva readies Driving Frost">
+                        <Actions>
+                          <Action OrderNumber="1" UseTTSTextExpression="Get In Front" ActionType="UseTTS" />
+                        </Actions>
+                      </Trigger>
+                      <Trigger Enabled="true" Name="Shiva readies Biting Frost" Id="08edd927-cce9-43af-b5b5-5aa7ff4ccc15" RegularExpression="Shiva readies Biting Frost">
+                        <Actions>
+                          <Action OrderNumber="1" UseTTSTextExpression="Get Behind" ActionType="UseTTS" />
+                        </Actions>
+                      </Trigger>
+                      <Trigger Enabled="true" Name="Shiva readies Axe Kick" Id="66d9177e-bfc1-4444-b631-f86e90bd55c7" RegularExpression="Shiva readies Axe Kick">
+                        <Actions>
+                          <Action OrderNumber="1" UseTTSTextExpression="Get Away" ActionType="UseTTS" />
+                        </Actions>
+                      </Trigger>
+                      <Trigger Enabled="true" Name="Shiva readies Scythe Kick" Id="442e4ac7-c2d0-4935-b627-b050b969e632" RegularExpression="Shiva readies Scythe Kick">
+                        <Actions>
+                          <Action OrderNumber="1" UseTTSTextExpression="Go In" ActionType="UseTTS" />
+                        </Actions>
+                      </Trigger>
+                      <Trigger Enabled="true" Name="You suffer the effect of Refulgent Chain" Id="d11f2733-c433-4de7-8a1e-ea4750f99c96" RegularExpression="You suffer the effect of Refulgent Chain">
+                        <Actions>
+                          <Action OrderNumber="1" UseTTSTextExpression="Chained" ActionType="UseTTS" />
+                        </Actions>
+                      </Trigger>
+                      <Trigger Enabled="true" Name="Shiva readies Twin Silence" Id="b80db5bd-6659-4321-96b4-51d1e5778fee" RegularExpression="Shiva readies Twin Silence">
+                        <Actions>
+                          <Action OrderNumber="1" UseTTSTextExpression="Front then Back" ActionType="UseTTS" />
+                        </Actions>
+                      </Trigger>
+                      <Trigger Enabled="true" Name="Shiva readies Twin Stillness" Id="a0c343b4-56e3-4afa-9887-a33c495a9b6d" RegularExpression="Shiva readies Twin Stillness">
+                        <Actions>
+                          <Action OrderNumber="1" UseTTSTextExpression="Back then Front" ActionType="UseTTS" />
+                        </Actions>
+                      </Trigger>
+                      <Trigger Enabled="true" Name="Shiva readies Spiteful Dance" Id="e2f98277-ab28-473d-8751-f195ff98aee2" RegularExpression="Shiva readies Spiteful Dance">
+                        <Actions>
+                          <Action OrderNumber="1" UseTTSTextExpression="Out then In" ActionType="UseTTS" />
+                        </Actions>
+                      </Trigger>
+                      <Trigger Enabled="true" Name="Shiva readies Embittered Dance" Id="87951554-ed69-4134-95f5-6722dcf3aa64" RegularExpression="Shiva readies Embittered Dance">
+                        <Actions>
+                          <Action OrderNumber="1" UseTTSTextExpression="In then Out" ActionType="UseTTS" />
+                        </Actions>
+                      </Trigger>
+                      <Trigger Enabled="true" Name="14:4D7E:Shiva" Id="e9ceeec0-b1bd-4b49-9654-6f6ed81cb71c" RegularExpression="14:4D7E:Shiva">
+                        <Actions>
+                          <Action OrderNumber="1" UseTTSTextExpression="Stack" ActionType="UseTTS" />
+                        </Actions>
+                      </Trigger>
+                      <Trigger Enabled="true" Name="14:4D7F:Shiva" Id="fecc7e00-dea5-4223-9753-d30510c718cc" RegularExpression="14:4D7F:Shiva">
+                        <Actions>
+                          <Action OrderNumber="1" UseTTSTextExpression="Spread" ActionType="UseTTS" />
+                        </Actions>
+                      </Trigger>
+                      <Trigger Enabled="true" Name="14:4D80:Shiva" Id="36689e63-5cdc-425b-9707-95306f87840d" RegularExpression="14:4D80:Shiva">
+                        <Actions>
+                          <Action OrderNumber="1" UseTTSTextExpression="Stack" ActionType="UseTTS" />
+                        </Actions>
+                      </Trigger>
+                      <Trigger Enabled="true" Name="14:4D81:Shiva" Id="a201e8fe-832b-40cf-88cb-4d639108dfae" RegularExpression="14:4D81:Shiva">
+                        <Actions>
+                          <Action OrderNumber="1" UseTTSTextExpression="Spread" ActionType="UseTTS" />
+                        </Actions>
+                      </Trigger>
+                      <Trigger Enabled="true" Name="14:4D82:Shiva" Id="ef5ee5af-a759-40c0-b1a0-82f2c64b0b75" RegularExpression="14:4D82:Shiva">
+                        <Actions>
+                          <Action OrderNumber="1" UseTTSTextExpression="Go Edge" ActionType="UseTTS" />
+                        </Actions>
+                      </Trigger>
+                      <Trigger Enabled="true" Name="14:4D83:Shiva" Id="542668fa-e0de-4f38-95c9-4db76fa61b18" RegularExpression="14:4D83:Shiva">
+                        <Actions>
+                          <Action OrderNumber="1" UseTTSTextExpression="Go Center" ActionType="UseTTS" />
+                        </Actions>
+                      </Trigger>
+                    </Triggers>
                   </Folder>
                 </Folders>
                 <Triggers />
