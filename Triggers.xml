@@ -3463,13 +3463,21 @@
                       </Trigger>
                       <Trigger Enabled="true" Name="14:4D7E:Shiva" Id="e9ceeec0-b1bd-4b49-9654-6f6ed81cb71c" RegularExpression="14:4D7E:Shiva">
                         <Actions>
-                          <Action OrderNumber="1" UseTTSTextExpression="Stack" ActionType="UseTTS" />
+                          <Action OrderNumber="1" UseTTSTextExpression="Tank Stack" ActionType="UseTTS">
+                            <Condition Enabled="false" Grouping="Or" />
+                            <Conditions />
+                          </Action>
                         </Actions>
+                        <Condition Enabled="false" Grouping="Or" />
                       </Trigger>
                       <Trigger Enabled="true" Name="14:4D7F:Shiva" Id="fecc7e00-dea5-4223-9753-d30510c718cc" RegularExpression="14:4D7F:Shiva">
                         <Actions>
-                          <Action OrderNumber="1" UseTTSTextExpression="Spread" ActionType="UseTTS" />
+                          <Action OrderNumber="1" UseTTSTextExpression="Tank Spread" ActionType="UseTTS">
+                            <Condition Enabled="false" Grouping="Or" />
+                            <Conditions />
+                          </Action>
                         </Actions>
+                        <Condition Enabled="false" Grouping="Or" />
                       </Trigger>
                       <Trigger Enabled="true" Name="14:4D80:Shiva" Id="36689e63-5cdc-425b-9707-95306f87840d" RegularExpression="14:4D80:Shiva">
                         <Actions>
@@ -3478,8 +3486,12 @@
                       </Trigger>
                       <Trigger Enabled="true" Name="14:4D81:Shiva" Id="a201e8fe-832b-40cf-88cb-4d639108dfae" RegularExpression="14:4D81:Shiva">
                         <Actions>
-                          <Action OrderNumber="1" UseTTSTextExpression="Spread" ActionType="UseTTS" />
+                          <Action OrderNumber="1" UseTTSTextExpression="Buddies" ActionType="UseTTS">
+                            <Condition Enabled="false" Grouping="Or" />
+                            <Conditions />
+                          </Action>
                         </Actions>
+                        <Condition Enabled="false" Grouping="Or" />
                       </Trigger>
                       <Trigger Enabled="true" Name="14:4D82:Shiva" Id="ef5ee5af-a759-40c0-b1a0-82f2c64b0b75" RegularExpression="14:4D82:Shiva">
                         <Actions>
