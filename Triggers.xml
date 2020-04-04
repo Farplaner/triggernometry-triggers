@@ -1289,7 +1289,7 @@
                           <Action OrderNumber="1" UseTTSTextExpression="Stunned" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS" />
                         </Actions>
                       </Trigger>
-                      <Trigger Enabled="true" Name="Fireball" Id="27cbe94b-5bda-43ee-9e01-ce6267d6aac9" RegularExpression="1B:[0-9A-F]{8}:(?&lt;char&gt;[a-zA-Z']*).*:0000:[0-9A-F]{4}:005D:0000:0000:0000:">
+                      <Trigger Enabled="false" Name="Fireball" Id="27cbe94b-5bda-43ee-9e01-ce6267d6aac9" RegularExpression="1B:[0-9A-F]{8}:(?&lt;char&gt;[a-zA-Z']*).*:0000:[0-9A-F]{4}:005D:0000:0000:0000:">
                         <Actions>
                           <Action OrderNumber="1" UseTTSTextExpression="on ${char}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS" />
                         </Actions>
@@ -3461,7 +3461,7 @@
                           <Action OrderNumber="1" UseTTSTextExpression="In then Out" ActionType="UseTTS" />
                         </Actions>
                       </Trigger>
-                      <Trigger Enabled="true" Name="14:4D7E:Shiva" Id="e9ceeec0-b1bd-4b49-9654-6f6ed81cb71c" RegularExpression="14:4D7E:Shiva">
+                      <Trigger Enabled="true" Name="Banish (Tank Stack)" Id="e9ceeec0-b1bd-4b49-9654-6f6ed81cb71c" RegularExpression="14:4D7E:Shiva">
                         <Actions>
                           <Action OrderNumber="1" UseTTSTextExpression="Tank Stack" ActionType="UseTTS">
                             <Condition Enabled="false" Grouping="Or" />
@@ -3470,7 +3470,7 @@
                         </Actions>
                         <Condition Enabled="false" Grouping="Or" />
                       </Trigger>
-                      <Trigger Enabled="true" Name="14:4D7F:Shiva" Id="fecc7e00-dea5-4223-9753-d30510c718cc" RegularExpression="14:4D7F:Shiva">
+                      <Trigger Enabled="true" Name="Banish (Tank Spread)" Id="fecc7e00-dea5-4223-9753-d30510c718cc" RegularExpression="14:4D7F:Shiva">
                         <Actions>
                           <Action OrderNumber="1" UseTTSTextExpression="Tank Spread" ActionType="UseTTS">
                             <Condition Enabled="false" Grouping="Or" />
@@ -3479,12 +3479,7 @@
                         </Actions>
                         <Condition Enabled="false" Grouping="Or" />
                       </Trigger>
-                      <Trigger Enabled="true" Name="14:4D80:Shiva" Id="36689e63-5cdc-425b-9707-95306f87840d" RegularExpression="14:4D80:Shiva">
-                        <Actions>
-                          <Action OrderNumber="1" UseTTSTextExpression="Stack" ActionType="UseTTS" />
-                        </Actions>
-                      </Trigger>
-                      <Trigger Enabled="true" Name="14:4D81:Shiva" Id="a201e8fe-832b-40cf-88cb-4d639108dfae" RegularExpression="14:4D81:Shiva">
+                      <Trigger Enabled="true" Name="Banish III (Buddies)" Id="36689e63-5cdc-425b-9707-95306f87840d" RegularExpression="14:4D80:Shiva">
                         <Actions>
                           <Action OrderNumber="1" UseTTSTextExpression="Buddies" ActionType="UseTTS">
                             <Condition Enabled="false" Grouping="Or" />
@@ -3493,15 +3488,42 @@
                         </Actions>
                         <Condition Enabled="false" Grouping="Or" />
                       </Trigger>
-                      <Trigger Enabled="true" Name="14:4D82:Shiva" Id="ef5ee5af-a759-40c0-b1a0-82f2c64b0b75" RegularExpression="14:4D82:Shiva">
+                      <Trigger Enabled="true" Name="Banish III (Spread)" Id="a201e8fe-832b-40cf-88cb-4d639108dfae" RegularExpression="14:4D81:Shiva">
                         <Actions>
-                          <Action OrderNumber="1" UseTTSTextExpression="Go Edge" ActionType="UseTTS" />
+                          <Action OrderNumber="1" UseTTSTextExpression="Spread" ActionType="UseTTS">
+                            <Condition Enabled="false" Grouping="Or" />
+                            <Conditions />
+                          </Action>
                         </Actions>
+                        <Condition Enabled="false" Grouping="Or" />
                       </Trigger>
-                      <Trigger Enabled="true" Name="14:4D83:Shiva" Id="542668fa-e0de-4f38-95c9-4db76fa61b18" RegularExpression="14:4D83:Shiva">
+                      <Trigger Enabled="true" Name="Holy (Go Edge)" Id="ef5ee5af-a759-40c0-b1a0-82f2c64b0b75" RegularExpression="14:4D82:Shiva">
                         <Actions>
-                          <Action OrderNumber="1" UseTTSTextExpression="Go Center" ActionType="UseTTS" />
+                          <Action OrderNumber="1" UseTTSTextExpression="Go Edge" ActionType="UseTTS">
+                            <Conditions />
+                          </Action>
                         </Actions>
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Trigger>
+                      <Trigger Enabled="true" Name="Holy (Go Center)" Id="542668fa-e0de-4f38-95c9-4db76fa61b18" RegularExpression="14:4D83:Shiva">
+                        <Actions>
+                          <Action OrderNumber="1" UseTTSTextExpression="Go Center" ActionType="UseTTS">
+                            <Conditions />
+                          </Action>
+                        </Actions>
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Trigger>
+                      <Trigger Enabled="true" Source="FFXIVNetwork" Name="Lightsteeped Stacks" Id="b4e1b650-57db-4848-b498-e97086b82857" RegularExpression=".*?Lightsteeped\|([^|]*)\|([^|]*)\|([^|]*)\|([^|]*)\|(?&lt;player&gt;[^|]*)\|\d(?&lt;stacks&gt;[^|]*)">
+                        <Actions>
+                          <Action OrderNumber="1" UseTTSTextExpression="${stacks}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS">
+                            <Condition Enabled="false" Grouping="Or" />
+                            <Conditions />
+                          </Action>
+                        </Actions>
+                        <Condition Enabled="true" Grouping="And">
+                          <ConditionSingle Enabled="true" ExpressionL="${player}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                        </Condition>
+                        <Conditions />
                       </Trigger>
                     </Triggers>
                   </Folder>
