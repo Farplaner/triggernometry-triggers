@@ -1387,6 +1387,21 @@
                       </Trigger>
                     </Triggers>
                   </Folder>
+                  <Folder Id="b287ec6e-dfb1-42d5-8e95-821adc7cba79" Name="Memoria Misera EX" Enabled="true">
+                    <Folders />
+                    <Triggers>
+                      <Trigger Enabled="true" Name="The gunshield begins casting Magitek Spark" Id="09d8264b-b216-4d01-83af-36f52fd2d905" RegularExpression="The gunshield begins casting Magitek Spark">
+                        <Actions>
+                          <Action OrderNumber="1" UseTTSTextExpression="Spread" ActionType="UseTTS" />
+                        </Actions>
+                      </Trigger>
+                      <Trigger Enabled="true" Name="The gunshield begins casting Magitek Torch" Id="eba4ebd0-11e3-47a2-96a0-967de16b75f9" RegularExpression="The gunshield begins casting Magitek Torch">
+                        <Actions>
+                          <Action OrderNumber="1" UseTTSTextExpression="Stack" ActionType="UseTTS" />
+                        </Actions>
+                      </Trigger>
+                    </Triggers>
+                  </Folder>
                 </Folders>
                 <Triggers />
               </Folder>
@@ -3465,7 +3480,6 @@
                         <Actions>
                           <Action OrderNumber="1" UseTTSTextExpression="Tank Stack" ActionType="UseTTS">
                             <Condition Enabled="false" Grouping="Or" />
-                            <Conditions />
                           </Action>
                         </Actions>
                         <Condition Enabled="false" Grouping="Or" />
@@ -3474,7 +3488,6 @@
                         <Actions>
                           <Action OrderNumber="1" UseTTSTextExpression="Tank Spread" ActionType="UseTTS">
                             <Condition Enabled="false" Grouping="Or" />
-                            <Conditions />
                           </Action>
                         </Actions>
                         <Condition Enabled="false" Grouping="Or" />
@@ -3483,7 +3496,6 @@
                         <Actions>
                           <Action OrderNumber="1" UseTTSTextExpression="Buddies" ActionType="UseTTS">
                             <Condition Enabled="false" Grouping="Or" />
-                            <Conditions />
                           </Action>
                         </Actions>
                         <Condition Enabled="false" Grouping="Or" />
@@ -3492,38 +3504,31 @@
                         <Actions>
                           <Action OrderNumber="1" UseTTSTextExpression="Spread" ActionType="UseTTS">
                             <Condition Enabled="false" Grouping="Or" />
-                            <Conditions />
                           </Action>
                         </Actions>
                         <Condition Enabled="false" Grouping="Or" />
                       </Trigger>
                       <Trigger Enabled="true" Name="Holy (Go Edge)" Id="ef5ee5af-a759-40c0-b1a0-82f2c64b0b75" RegularExpression="14:4D82:Shiva">
                         <Actions>
-                          <Action OrderNumber="1" UseTTSTextExpression="Go Edge" ActionType="UseTTS">
-                            <Conditions />
-                          </Action>
+                          <Action OrderNumber="1" UseTTSTextExpression="Go Edge" ActionType="UseTTS" />
                         </Actions>
                         <Condition Enabled="false" Grouping="Or" />
                       </Trigger>
                       <Trigger Enabled="true" Name="Holy (Go Center)" Id="542668fa-e0de-4f38-95c9-4db76fa61b18" RegularExpression="14:4D83:Shiva">
                         <Actions>
-                          <Action OrderNumber="1" UseTTSTextExpression="Go Center" ActionType="UseTTS">
-                            <Conditions />
-                          </Action>
+                          <Action OrderNumber="1" UseTTSTextExpression="Go Center" ActionType="UseTTS" />
                         </Actions>
                         <Condition Enabled="false" Grouping="Or" />
                       </Trigger>
-                      <Trigger Enabled="true" Source="FFXIVNetwork" Name="Lightsteeped Stacks" Id="b4e1b650-57db-4848-b498-e97086b82857" RegularExpression=".*?Lightsteeped\|([^|]*)\|([^|]*)\|([^|]*)\|([^|]*)\|(?&lt;player&gt;[^|]*)\|\d(?&lt;stacks&gt;[^|]*)">
+                      <Trigger Enabled="true" Source="FFXIVNetwork" Name="Lightsteeped Stacks" Id="b4e1b650-57db-4848-b498-e97086b82857" RegularExpression="\|Lightsteeped\|[0-9\.]*\|[0-9A-F]{8}\|([^|]*)\|[0-9A-F]{8}\|(?&lt;player&gt;[^|]*)\|\d(?&lt;stacks&gt;[^|]*)">
                         <Actions>
                           <Action OrderNumber="1" UseTTSTextExpression="${stacks}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS">
                             <Condition Enabled="false" Grouping="Or" />
-                            <Conditions />
                           </Action>
                         </Actions>
                         <Condition Enabled="true" Grouping="And">
                           <ConditionSingle Enabled="true" ExpressionL="${player}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                         </Condition>
-                        <Conditions />
                       </Trigger>
                     </Triggers>
                   </Folder>
