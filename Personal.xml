@@ -1347,7 +1347,47 @@
             <Triggers />
           </Folder>
           <Folder Id="1a2cfca0-9d61-4067-b937-c37dee475c00" Name="E8S" Enabled="true">
-            <Folders />
+            <Folders>
+              <Folder Id="93e1b9c7-8099-4ba4-ba4f-044ff8b415ff" Name="Hallowed Wings" Enabled="true">
+                <Folders />
+                <Triggers>
+                  <Trigger Enabled="true" Sequential="True" Name="14:4D75:Shiva" Id="ffbab200-1575-4398-9157-9ae716ad2983" RegularExpression="14:4D75:Shiva">
+                    <Actions>
+                      <Action OrderNumber="1" LogLevel="-1" UseTTSTextExpression="Go Right" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS">
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Action>
+                      <Action OrderNumber="2" LogLevel="-1" VariableOp="SetNumeric" VariableName="shiva_wings_count" VariableExpression="${var:shiva_wings_count}+1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Action>
+                    </Actions>
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${var:shiva_wings_count}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                    </Condition>
+                  </Trigger>
+                  <Trigger Enabled="true" Sequential="True" Name="14:4D76:Shiva" Id="4a12cfdb-5bbe-4f39-ad5b-9dbe0693b5a4" RegularExpression="14:4D76:Shiva">
+                    <Actions>
+                      <Action OrderNumber="1" LogLevel="-1" UseTTSTextExpression="Go Left" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS">
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Action>
+                      <Action OrderNumber="2" LogLevel="-1" VariableOp="SetNumeric" VariableName="shiva_wings_count" VariableExpression="${var:shiva_wings_count}+1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Action>
+                    </Actions>
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${var:shiva_wings_count}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                    </Condition>
+                  </Trigger>
+                  <Trigger Enabled="true" Sequential="True" Name="Wipe Reset" Id="c42d88cb-fbcb-4e4e-8b44-53bde21faaff" RegularExpression="21:........:40000010:">
+                    <Actions>
+                      <Action OrderNumber="1" LogLevel="-1" VariableOp="SetNumeric" VariableName="shiva_wings_count" VariableExpression="0" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Action>
+                    </Actions>
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Trigger>
+                </Triggers>
+              </Folder>
+            </Folders>
             <Triggers>
               <Trigger Enabled="true" Name="Shiva readies (?&lt;move&gt;Driving Frost|Biting Frost)" Id="85e049b5-88ba-47f6-aaac-317001865032" RegularExpression="Shiva readies (?&lt;move&gt;Driving Frost|Biting Frost)">
                 <Actions>
@@ -1373,15 +1413,36 @@
       <Folder Id="18582cad-dd7f-437c-93d8-077580261cd8" Name="Crafting" Enabled="true">
         <Folders />
         <Triggers>
-          <Trigger Enabled="true" Name="Start Crafting" Id="0227b9b6-a9ab-414f-9512-36a76d9ceb64" RegularExpression="Start Crafting &lt;se\.1&gt;">
+          <Trigger Enabled="true" Name="End Crafting" Id="0227b9b6-a9ab-414f-9512-36a76d9ceb64" RegularExpression="End Crafting &lt;se\.1&gt;">
             <Actions>
-              <Action OrderNumber="1" LogLevel="-1" VariableOp="SetNumeric" VariableName="autocraft" VariableExpression="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+              <Action OrderNumber="1" LogLevel="-1" VariableOp="SetNumeric" VariableName="autocraft" VariableExpression="0" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
             </Actions>
             <Condition Enabled="false" Grouping="Or" />
           </Trigger>
-          <Trigger Enabled="true" Name="Done" Id="70ba490d-7b23-4f92-96e9-19e449feda74" RegularExpression="Done! &lt;se\.1&gt;">
+          <Trigger Enabled="true" Name="Macro #1 finished &lt;se.1&gt;" Id="70ba490d-7b23-4f92-96e9-19e449feda74" RegularExpression="Macro #1 finished &lt;se\.1&gt;">
+            <Actions>
+              <Action OrderNumber="1" KeypressType="WindowMessage" KeyPressCode="72" KeyPressWindow="FINAL FANTASY XIV" LogLevel="-1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="3000">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${var:autocraft}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                </Condition>
+              </Action>
+            </Actions>
+            <Condition Enabled="true" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="${var:autocraft}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+            </Condition>
+          </Trigger>
+          <Trigger Enabled="true" Name="Insufficient Materials" Id="a5539ffc-8493-4365-ba9d-044fc308d41f" RegularExpression="Unable to craft\.">
+            <Actions>
+              <Action OrderNumber="1" LogLevel="-1" VariableName="autocraft" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+            </Actions>
+            <Condition Enabled="false" Grouping="Or" />
+          </Trigger>
+          <Trigger Enabled="true" Name="Craft finished &lt;se.3&gt;" Id="e8ffa79c-0f7c-4556-ba25-5c54d08a3db5" RegularExpression="Craft finished &lt;se\.3&gt;">
             <Actions>
               <Action OrderNumber="1" KeypressType="WindowMessage" KeyPressCode="96" KeyPressWindow="FINAL FANTASY XIV" LogLevel="-1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress">
                 <Condition Enabled="false" Grouping="Or" />
@@ -1389,7 +1450,7 @@
               <Action OrderNumber="2" KeypressType="WindowMessage" KeyPressCode="96" KeyPressWindow="FINAL FANTASY XIV" LogLevel="-1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="300">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="3" KeypressType="WindowMessage" KeyPressCode="96" KeyPressWindow="FINAL FANTASY XIV" LogLevel="-1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="3000">
+              <Action OrderNumber="3" KeypressType="WindowMessage" KeyPressCode="96" KeyPressWindow="FINAL FANTASY XIV" LogLevel="-1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="5000">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
               <Action OrderNumber="4" KeypressType="WindowMessage" KeyPressCode="96" KeyPressWindow="FINAL FANTASY XIV" LogLevel="-1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="300">
@@ -1417,9 +1478,9 @@
               <ConditionSingle Enabled="true" ExpressionL="${var:autocraft}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
             </Condition>
           </Trigger>
-          <Trigger Enabled="true" Name="Insufficient Materials" Id="a5539ffc-8493-4365-ba9d-044fc308d41f" RegularExpression="Unable to craft\. You do not have the required materials\.">
+          <Trigger Enabled="true" Name="Start Crafting" Id="75a52362-38bf-484b-ad38-96e36d415ec0" RegularExpression="Start Crafting &lt;se\.1&gt;">
             <Actions>
-              <Action OrderNumber="1" LogLevel="-1" VariableName="autocraft" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+              <Action OrderNumber="1" LogLevel="-1" VariableOp="SetNumeric" VariableName="autocraft" VariableExpression="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
             </Actions>
