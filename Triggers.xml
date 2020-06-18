@@ -3759,6 +3759,100 @@
           </Trigger>
         </Triggers>
       </Folder>
+      <Folder Id="81a1bef0-297a-4e2c-8a3d-199d7269e4af" Name="Other" Enabled="true">
+        <Folders>
+          <Folder Id="07152172-e4e4-46c0-82b1-bd06bafaddea" Name="Fishing" Enabled="true">
+            <Folders />
+            <Triggers>
+              <Trigger Enabled="true" Name="You land a fish usable with Mooch II" Id="4b0d8fbd-d291-4227-8379-0f5d7a8025c2" RegularExpression="You land a fish usable with Mooch II">
+                <Actions>
+                  <Action OrderNumber="1" LogLevel="-1" UseTTSTextExpression="Mooch 2" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                </Actions>
+                <Condition Enabled="false" Grouping="Or" />
+              </Trigger>
+              <Trigger Enabled="true" Name="We've got .* to thank for this spectral current! No one's going home hungry tonight" Id="f77e0631-e1a1-4ab8-aeff-6ce472ab65d9" RegularExpression="We've got .* to thank for this spectral current! No one's going home hungry tonight">
+                <Actions>
+                  <Action OrderNumber="1" LogLevel="-1" UseTTSTextExpression="Spectral Current" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                </Actions>
+                <Condition Enabled="false" Grouping="Or" />
+              </Trigger>
+              <Trigger Enabled="true" Name="Mooch to land an even bigger catch" Id="1e5636b9-c028-4a62-8e7a-13633fc3fffe" RegularExpression="Mooch to land an even bigger catch">
+                <Actions>
+                  <Action OrderNumber="1" LogLevel="-1" UseTTSTextExpression="Mooch" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                </Actions>
+                <Condition Enabled="false" Grouping="Or" />
+              </Trigger>
+              <Trigger Enabled="true" Name="00:0044:Foerzagyl:.*(?&lt;area&gt;Galadion Bay|Rhotano Sea|northern Strait|southern Strait).*" Id="331c20b4-e72b-421b-b9df-6c8ef1b028a8" RegularExpression="00:0044:Foerzagyl:.*(?&lt;area&gt;Galadion Bay|Rhotano Sea|northern Strait|southern Strait).*">
+                <Actions>
+                  <Action OrderNumber="1" LogLevel="-1" VariableOp="SetString" VariableName="fishing_area" VariableExpression="${area}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="2" ListVariableName="fishing_list" LogLevel="-1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="3" TextAuraAlignment="TopLeft" TextAuraEffect="Bold" TextAuraFontSize="36" TextAuraOutline="Red" TextAuraName="starting_bait" TextAuraExpression="Starting Bait: Plump Worm" TextAuraXIniExpression="200" TextAuraYIniExpression="200" TextAuraWIniExpression="1000" TextAuraHIniExpression="500" TextAuraOIniExpression="100" TextAuraTTLTickExpression="420-${_since}" TextAuraUseOutline="True" TextAuraFontName="Microsoft Sans Serif" ActionType="TextAura" Asynchronous="False">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${area}" ExpressionTypeL="String" ExpressionR="Galadion Bay" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                      <ConditionSingle Enabled="true" ExpressionL="${area}" ExpressionTypeL="String" ExpressionR="Rhotano Sea" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                    </Condition>
+                  </Action>
+                  <Action OrderNumber="4" TextAuraAlignment="TopLeft" TextAuraEffect="Bold" TextAuraFontSize="36" TextAuraOutline="Red" TextAuraName="starting_bait" TextAuraExpression="Starting Bait: Ragworm" TextAuraXIniExpression="200" TextAuraYIniExpression="200" TextAuraWIniExpression="1000" TextAuraHIniExpression="500" TextAuraOIniExpression="100" TextAuraTTLTickExpression="420-${_since}" TextAuraUseOutline="True" TextAuraFontName="Microsoft Sans Serif" ActionType="TextAura" Asynchronous="False">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${area}" ExpressionTypeL="String" ExpressionR="northern Strait" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                    </Condition>
+                  </Action>
+                  <Action OrderNumber="5" TextAuraAlignment="TopLeft" TextAuraEffect="Bold" TextAuraFontSize="36" TextAuraOutline="Red" TextAuraName="starting_bait" TextAuraExpression="Starting Bait: Krill" TextAuraXIniExpression="200" TextAuraYIniExpression="200" TextAuraWIniExpression="1000" TextAuraHIniExpression="500" TextAuraOIniExpression="100" TextAuraTTLTickExpression="420-${_since}" TextAuraUseOutline="True" TextAuraFontName="Microsoft Sans Serif" ActionType="TextAura" Asynchronous="False">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${area}" ExpressionTypeL="String" ExpressionR="southern Strait" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                    </Condition>
+                  </Action>
+                  <Action OrderNumber="6" TextAuraAlignment="TopLeft" TextAuraEffect="Bold" TextAuraFontSize="36" TextAuraOutline="Red" TextAuraName="spectral_bait" TextAuraExpression="(Day) Ragworm ! (Sunset) Plump !!! (Night) Krill !!" TextAuraXIniExpression="200" TextAuraYIniExpression="250" TextAuraWIniExpression="1200" TextAuraHIniExpression="500" TextAuraOIniExpression="100" TextAuraTTLTickExpression="420-${_since}" TextAuraUseOutline="True" TextAuraFontName="Microsoft Sans Serif" ActionType="TextAura" Asynchronous="False">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${area}" ExpressionTypeL="String" ExpressionR="Galadion Bay" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                    </Condition>
+                  </Action>
+                  <Action OrderNumber="7" TextAuraAlignment="TopLeft" TextAuraEffect="Bold" TextAuraFontSize="36" TextAuraOutline="Red" TextAuraName="spectral_bait" TextAuraExpression="(Day) Plump !!! (Sunset) Krill ! (Night) Krill !" TextAuraXIniExpression="200" TextAuraYIniExpression="250" TextAuraWIniExpression="1200" TextAuraHIniExpression="500" TextAuraOIniExpression="100" TextAuraTTLTickExpression="420-${_since}" TextAuraUseOutline="True" TextAuraFontName="Microsoft Sans Serif" ActionType="TextAura" Asynchronous="False">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${area}" ExpressionTypeL="String" ExpressionR="Rhotano Sea" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                    </Condition>
+                  </Action>
+                  <Action OrderNumber="8" TextAuraAlignment="TopLeft" TextAuraEffect="Bold" TextAuraFontSize="36" TextAuraOutline="Red" TextAuraName="spectral_bait" TextAuraExpression="(Day) Plump !!! (Sunset) Ragworm ! (Night) Krill !!" TextAuraXIniExpression="200" TextAuraYIniExpression="250" TextAuraWIniExpression="1200" TextAuraHIniExpression="500" TextAuraOIniExpression="100" TextAuraTTLTickExpression="420-${_since}" TextAuraUseOutline="True" TextAuraFontName="Microsoft Sans Serif" ActionType="TextAura" Asynchronous="False">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${area}" ExpressionTypeL="String" ExpressionR="northern Strait" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                    </Condition>
+                  </Action>
+                  <Action OrderNumber="9" TextAuraAlignment="TopLeft" TextAuraEffect="Bold" TextAuraFontSize="36" TextAuraOutline="Red" TextAuraName="spectral_bait" TextAuraExpression="(Day) Krill !! (Sunset) Ragworm ! (Night) Plump !!" TextAuraXIniExpression="200" TextAuraYIniExpression="250" TextAuraWIniExpression="1200" TextAuraHIniExpression="500" TextAuraOIniExpression="100" TextAuraTTLTickExpression="420-${_since}" TextAuraUseOutline="True" TextAuraFontName="Microsoft Sans Serif" ActionType="TextAura" Asynchronous="False">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${area}" ExpressionTypeL="String" ExpressionR="southern Strait" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                    </Condition>
+                  </Action>
+                </Actions>
+                <Condition Enabled="false" Grouping="Or" />
+              </Trigger>
+              <Trigger Enabled="true" Name="00:0843:You land (a|an|[0-9]) .(?&lt;fish&gt;[a-zA-Z\-' ]+?)s*( .)* measuring (?&lt;size&gt;.*) ilms!" Id="4a7cd94a-a86a-4cd4-980e-abe2894dc0b0" RegularExpression="00:0843:You land (a|an|[0-9]) .(?&lt;fish&gt;[a-zA-Z\-' ]+?)s*( .)* measuring (?&lt;size&gt;.*) ilms!">
+                <Actions>
+                  <Action OrderNumber="1" ListVariableOp="Push" ListVariableName="fishing_list" ListVariableExpression="${fish}" LogLevel="-1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="2" TextAuraAlignment="TopLeft" TextAuraEffect="Bold" TextAuraFontSize="36" TextAuraOutline="Red" TextAuraName="fishing_count" TextAuraExpression="Count: ${lvar:fishing_list.size}" TextAuraXIniExpression="200" TextAuraYIniExpression="300" TextAuraWIniExpression="1000" TextAuraHIniExpression="500" TextAuraOIniExpression="100" TextAuraTTLTickExpression="420-${_since}" TextAuraUseOutline="True" TextAuraFontName="Microsoft Sans Serif" ActionType="TextAura" Asynchronous="False">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                </Actions>
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${lvar:fishing_list.indexof(${fish})}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                </Condition>
+              </Trigger>
+            </Triggers>
+          </Folder>
+        </Folders>
+        <Triggers />
+      </Folder>
     </Folders>
     <Triggers />
   </ExportedFolder>
