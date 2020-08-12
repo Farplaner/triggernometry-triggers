@@ -1078,7 +1078,7 @@
               </Folder>
               <Folder Id="5114a44a-48be-4dc7-9c74-4cbc3086956d" Name="Heavensward" Enabled="true">
                 <Folders>
-                  <Folder Id="c47d19d1-b6e8-461f-98a5-a3a4f6a0d95d" Name="EX Trials: Bismarck" Enabled="true">
+                  <Folder Id="c47d19d1-b6e8-461f-98a5-a3a4f6a0d95d" Name="3.0 - Bismarck EX" Enabled="true">
                     <Folders />
                     <Triggers>
                       <Trigger Enabled="true" Name="You suffer the effect of Will of the Water" Id="b39107a3-4e1a-48a4-a43f-ce65880eef51" RegularExpression="You suffer the effect of Will of the Water">
@@ -1093,7 +1093,7 @@
                       </Trigger>
                     </Triggers>
                   </Folder>
-                  <Folder Id="42cd3bf7-5fb1-496b-af03-6c608bbcab31" Name="EX Trials: Nidhogg" Enabled="true">
+                  <Folder Id="42cd3bf7-5fb1-496b-af03-6c608bbcab31" Name="3.3 - Nidhogg EX" Enabled="true">
                     <Folders />
                     <Triggers>
                       <Trigger Enabled="true" Name="You suffer the effect of Clawbound" Id="502c70a0-9f47-4cd0-b1c9-ffa9df359b51" RegularExpression="You suffer the effect of Clawbound">
@@ -1108,7 +1108,7 @@
                       </Trigger>
                     </Triggers>
                   </Folder>
-                  <Folder Id="126dbf22-8c97-436d-b4d5-107caa29ca51" Name="EX Trials: Sephirot" Enabled="true">
+                  <Folder Id="126dbf22-8c97-436d-b4d5-107caa29ca51" Name="3.2 - Sephirot EX" Enabled="true">
                     <Folders />
                     <Triggers>
                       <Trigger Enabled="true" Name="You suffer the effect of Force Against Magic\." Id="4e6687cf-b8f4-4ac4-a4c9-6d007e534d8c" RegularExpression="You suffer the effect of Force Against Magic\.">
@@ -1128,7 +1128,7 @@
               </Folder>
               <Folder Id="7673538c-5829-4f06-b44d-c31d8d0d3898" Name="A Realm Reborn" Enabled="true">
                 <Folders>
-                  <Folder Id="a02b010d-514f-4da8-9cd6-cdc5da0ce5f7" Name="EX Trials: Leviathan" Enabled="true">
+                  <Folder Id="a02b010d-514f-4da8-9cd6-cdc5da0ce5f7" Name="2.4 - Leviathan EX" Enabled="true">
                     <Folders />
                     <Triggers>
                       <Trigger Enabled="true" Name="The elemental converter is now operable" Id="70969f9b-9bd9-420d-9194-eb88457cf2ec" RegularExpression="The elemental converter is now operable">
@@ -1138,12 +1138,32 @@
                       </Trigger>
                     </Triggers>
                   </Folder>
+                  <Folder Id="70bafb82-45e8-4fa1-ad05-6c8b2758d045" Name="2.5 - Shiva EX" Enabled="true">
+                    <Folders />
+                    <Triggers>
+                      <Trigger Enabled="true" Name="15:[0-9A-F]{8}:Shiva:993:" Id="d23e9b84-0af6-4245-a33a-0719c6a3263e" RegularExpression="15:[0-9A-F]{8}:Shiva:993:">
+                        <Actions>
+                          <Action OrderNumber="1" UseTTSTextExpression="Sword, Stack Behind" ActionType="UseTTS" />
+                        </Actions>
+                      </Trigger>
+                      <Trigger Enabled="true" Name="15:[0-9A-F]{8}:Shiva:995:" Id="46f94709-21f6-4a18-8af4-158107aa542c" RegularExpression="15:[0-9A-F]{8}:Shiva:995:">
+                        <Actions>
+                          <Action OrderNumber="1" UseTTSTextExpression="Staff, Spread" ActionType="UseTTS" />
+                        </Actions>
+                      </Trigger>
+                      <Trigger Enabled="true" Name="15:[0-9A-F]{8}:Shiva:BDD:" Id="92c1e568-bd53-4cb8-a27a-cf580be7aea0" RegularExpression="15:[0-9A-F]{8}:Shiva:BDD:">
+                        <Actions>
+                          <Action OrderNumber="1" UseTTSTextExpression="Bow, Behind Boss" ActionType="UseTTS" />
+                        </Actions>
+                      </Trigger>
+                    </Triggers>
+                  </Folder>
                 </Folders>
                 <Triggers />
               </Folder>
               <Folder Id="ed17885a-0bb3-4f67-abb8-820883299cc9" Name="Stormblood" Enabled="true">
                 <Folders>
-                  <Folder Id="41b5e38d-d91a-4e11-81c2-409086685b06" Name="EX Trials: Tsukuyomi" Enabled="true">
+                  <Folder Id="41b5e38d-d91a-4e11-81c2-409086685b06" Name="4.3 - Tsukuyomi EX" Enabled="true">
                     <Folders>
                       <Folder Id="a46e4b6a-5769-4206-9a0e-0129febf17ba" Name="Bright/Dark Blade" Enabled="true">
                         <Folders />
@@ -1186,7 +1206,7 @@
                       </Trigger>
                     </Triggers>
                   </Folder>
-                  <Folder Id="f6979f61-453f-4a99-85c3-3b2dfa8a2ad4" Name="EX Trials: Shinryu" Enabled="true">
+                  <Folder Id="f6979f61-453f-4a99-85c3-3b2dfa8a2ad4" Name="4.1 - Shinryu EX" Enabled="true">
                     <Folders />
                     <Triggers>
                       <Trigger Enabled="true" Name="The heart has fully regenerated" Id="72697144-eec4-49c9-a295-c93b7bbb6b56" RegularExpression="The heart has fully regenerated">
@@ -1301,7 +1321,7 @@
               </Folder>
               <Folder Id="fc9c037e-a2e0-466b-ac62-77e978b031bf" Name="Shadowbringers" Enabled="true">
                 <Folders>
-                  <Folder Id="ffa62cc0-5424-4558-bd98-e6d69aba1281" Name="Titania EX" Enabled="true">
+                  <Folder Id="ffa62cc0-5424-4558-bd98-e6d69aba1281" Name="5.0 - Titania EX" Enabled="true">
                     <Folders />
                     <Triggers>
                       <Trigger Enabled="true" Name="Phantom Rune" Id="9fc37871-e7df-4b42-90b4-159156a78274" RegularExpression="14:(?&lt;state&gt;3D4C|3D4D):Titania starts using Phantom Rune on Titania">
@@ -1321,7 +1341,7 @@
                       </Trigger>
                     </Triggers>
                   </Folder>
-                  <Folder Id="e96b8af9-a407-4882-8b38-e23c9ee381df" Name="Hades EX" Enabled="true">
+                  <Folder Id="e96b8af9-a407-4882-8b38-e23c9ee381df" Name="5.1 - Hades EX" Enabled="true">
                     <Folders />
                     <Triggers>
                       <Trigger Enabled="true" Name="Hades begins casting Polydegmon's Purgation" Id="b5bbdf29-a49e-4011-82ca-927b64177184" RegularExpression="Hades begins casting Polydegmon's Purgation">
@@ -1346,7 +1366,7 @@
                       </Trigger>
                     </Triggers>
                   </Folder>
-                  <Folder Id="d674c462-31c6-4b49-a06b-8d4a82a39f5b" Name="Ruby Weapon EX" Enabled="true">
+                  <Folder Id="d674c462-31c6-4b49-a06b-8d4a82a39f5b" Name="5.2 (1) - Ruby Weapon EX" Enabled="true">
                     <Folders />
                     <Triggers>
                       <Trigger Enabled="true" Name="The Ruby Weapon readies (?&lt;move&gt;Liquefaction|Undermine)" Id="75b95941-1316-4ed9-a4b2-804c0ae5464b" RegularExpression="The Ruby Weapon readies (?&lt;move&gt;Liquefaction|Undermine)">
@@ -1387,7 +1407,7 @@
                       </Trigger>
                     </Triggers>
                   </Folder>
-                  <Folder Id="b287ec6e-dfb1-42d5-8e95-821adc7cba79" Name="Memoria Misera EX" Enabled="true">
+                  <Folder Id="b287ec6e-dfb1-42d5-8e95-821adc7cba79" Name="5.2 (2) - Memoria Misera EX" Enabled="true">
                     <Folders />
                     <Triggers>
                       <Trigger Enabled="true" Name="The gunshield begins casting Magitek Spark" Id="09d8264b-b216-4d01-83af-36f52fd2d905" RegularExpression="The gunshield begins casting Magitek Spark">
@@ -3534,6 +3554,40 @@
                   </Folder>
                 </Folders>
                 <Triggers />
+              </Folder>
+            </Folders>
+            <Triggers />
+          </Folder>
+          <Folder Id="cbfd35b4-a8b8-4859-9972-254329d727d1" Name="Unreal" Enabled="true">
+            <Folders>
+              <Folder Id="8c0015f7-acd8-4232-93ee-540254dea821" Name="5.3 - Shiva" Enabled="true">
+                <Folders />
+                <Triggers>
+                  <Trigger Enabled="true" Name="15:[0-9A-F]{8}:Shiva:5366:" Id="ae5af646-7ef3-4243-a3f7-997eb8ed12b3" RegularExpression="15:[0-9A-F]{8}:Shiva:5366:">
+                    <Actions>
+                      <Action OrderNumber="1" UseTTSTextExpression="Sword, Stack Behind" ActionType="UseTTS">
+                        <Conditions />
+                      </Action>
+                    </Actions>
+                    <Conditions />
+                  </Trigger>
+                  <Trigger Enabled="true" Name="15:[0-9A-F]{8}:Shiva:5367:" Id="311ca0c0-41f5-42cc-9434-54435ed53ec4" RegularExpression="15:[0-9A-F]{8}:Shiva:5367:">
+                    <Actions>
+                      <Action OrderNumber="1" UseTTSTextExpression="Staff, Spread" ActionType="UseTTS">
+                        <Conditions />
+                      </Action>
+                    </Actions>
+                    <Conditions />
+                  </Trigger>
+                  <Trigger Enabled="true" Name="15:[0-9A-F]{8}:Shiva:5368:" Id="ed8b862e-4664-4a94-b03a-329d1c493a63" RegularExpression="15:[0-9A-F]{8}:Shiva:5368:">
+                    <Actions>
+                      <Action OrderNumber="1" UseTTSTextExpression="Bow, Behind Boss" ActionType="UseTTS">
+                        <Conditions />
+                      </Action>
+                    </Actions>
+                    <Conditions />
+                  </Trigger>
+                </Triggers>
               </Folder>
             </Folders>
             <Triggers />
