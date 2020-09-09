@@ -54,31 +54,36 @@
                       <ConditionSingle Enabled="true" ExpressionL="${debuff}" ExpressionTypeL="String" ExpressionR="008B" ExpressionTypeR="String" ConditionType="StringEqualCase" />
                     </Condition>
                   </Action>
-                  <Action OrderNumber="9" UseTTSTextExpression="Dice on you" TextAuraFontSize="0" ActionType="UseTTS">
+                  <Action OrderNumber="9" UseTTSTextExpression="on ${func:substring(0,${func:indexof( ):${target}}):${target}}" TextAuraFontSize="0" ActionType="UseTTS">
+                    <Condition Enabled="true" Grouping="And">
+                      <ConditionSingle Enabled="true" ExpressionL="${debuff}" ExpressionTypeL="String" ExpressionR="001A" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                    </Condition>
+                  </Action>
+                  <Action OrderNumber="10" UseTTSTextExpression="Dice on you" TextAuraFontSize="0" ActionType="UseTTS">
                     <Condition Enabled="true" Grouping="And">
                       <ConditionSingle Enabled="true" ExpressionL="${debuff}" ExpressionTypeL="String" ExpressionR="004B" ExpressionTypeR="String" ConditionType="StringEqualCase" />
                       <ConditionSingle Enabled="true" ExpressionL="${target}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualCase" />
                     </Condition>
                   </Action>
-                  <Action OrderNumber="10" UseTTSTextExpression="Beam on you" TextAuraFontSize="0" ActionType="UseTTS">
+                  <Action OrderNumber="11" UseTTSTextExpression="Beam on you" TextAuraFontSize="0" ActionType="UseTTS">
                     <Condition Enabled="true" Grouping="And">
                       <ConditionSingle Enabled="true" ExpressionL="${debuff}" ExpressionTypeL="String" ExpressionR="0001" ExpressionTypeR="String" ConditionType="StringEqualCase" />
                       <ConditionSingle Enabled="true" ExpressionL="${target}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualCase" />
                     </Condition>
                   </Action>
-                  <Action OrderNumber="11" UseTTSTextExpression="Tornado on you" TextAuraFontSize="0" ActionType="UseTTS">
+                  <Action OrderNumber="12" UseTTSTextExpression="Tornado on you" TextAuraFontSize="0" ActionType="UseTTS">
                     <Condition Enabled="true" Grouping="And">
                       <ConditionSingle Enabled="true" ExpressionL="${debuff}" ExpressionTypeL="String" ExpressionR="0046" ExpressionTypeR="String" ConditionType="StringEqualCase" />
                       <ConditionSingle Enabled="true" ExpressionL="${target}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualCase" />
                     </Condition>
                   </Action>
-                  <Action OrderNumber="12" UseTTSTextExpression="Meteor on you" TextAuraFontSize="0" ActionType="UseTTS">
+                  <Action OrderNumber="13" UseTTSTextExpression="Meteor on you" TextAuraFontSize="0" ActionType="UseTTS">
                     <Condition Enabled="true" Grouping="And">
                       <ConditionSingle Enabled="true" ExpressionL="${debuff}" ExpressionTypeL="String" ExpressionR="0083" ExpressionTypeR="String" ConditionType="StringEqualCase" />
                       <ConditionSingle Enabled="true" ExpressionL="${target}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualCase" />
                     </Condition>
                   </Action>
-                  <Action OrderNumber="13" UseTTSTextExpression="on you" TextAuraFontSize="0" ActionType="UseTTS">
+                  <Action OrderNumber="14" UseTTSTextExpression="on you" TextAuraFontSize="0" ActionType="UseTTS">
                     <Condition Enabled="true" Grouping="And">
                       <ConditionSingle Enabled="true" ExpressionL="${debuff}" ExpressionTypeL="String" ExpressionR="0028" ExpressionTypeR="String" ConditionType="StringEqualCase" />
                       <ConditionSingle Enabled="true" ExpressionL="${target}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualCase" />
@@ -993,7 +998,7 @@
                       <Action OrderNumber="2" UseTTSTextExpression="Go In" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS">
                         <Condition Enabled="true" Grouping="And">
                           <ConditionSingle Enabled="true" ExpressionL="${caster}" ExpressionTypeL="String" ExpressionR="Nidhogg" ExpressionTypeR="String" ConditionType="StringEqualCase" />
-                          <ConditionSingle Enabled="true" ExpressionL="${move}" ExpressionTypeL="String" ExpressionR="Go In" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                          <ConditionSingle Enabled="true" ExpressionL="${move}" ExpressionTypeL="String" ExpressionR="Hot Wing" ExpressionTypeR="String" ConditionType="StringEqualCase" />
                         </Condition>
                       </Action>
                       <Action OrderNumber="3" UseTTSTextExpression="Go Middle" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS">
@@ -1056,7 +1061,20 @@
                           <ConditionSingle Enabled="true" ExpressionL="${move}" ExpressionTypeL="String" ExpressionR="Hypernova" ExpressionTypeR="String" ConditionType="StringEqualCase" />
                         </Condition>
                       </Action>
+                      <Action OrderNumber="13" UseTTSTextExpression="Go In" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS">
+                        <Condition Enabled="true" Grouping="And">
+                          <ConditionSingle Enabled="true" ExpressionL="${caster}" ExpressionTypeL="String" ExpressionR="Sophia" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                          <ConditionSingle Enabled="true" ExpressionL="${move}" ExpressionTypeL="String" ExpressionR="Thunder III" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                        </Condition>
+                      </Action>
+                      <Action OrderNumber="14" UseTTSTextExpression="Get Behind" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS">
+                        <Condition Enabled="true" Grouping="And">
+                          <ConditionSingle Enabled="true" ExpressionL="${caster}" ExpressionTypeL="String" ExpressionR="Sophia" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                          <ConditionSingle Enabled="true" ExpressionL="${move}" ExpressionTypeL="String" ExpressionR="Thunder II" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                        </Condition>
+                      </Action>
                     </Actions>
+                    <Condition Enabled="false" Grouping="Or" />
                   </Trigger>
                   <Trigger Enabled="true" Name="begins casting" Id="e0f98628-5e62-407d-b883-c62e2d8b4209" RegularExpression="00:[0-9a-f]{4}:(?&lt;caster&gt;.*) begins casting (?&lt;move&gt;.*)\.">
                     <Actions>
@@ -1098,13 +1116,19 @@
                     <Triggers>
                       <Trigger Enabled="true" Name="You suffer the effect of Clawbound" Id="502c70a0-9f47-4cd0-b1c9-ffa9df359b51" RegularExpression="You suffer the effect of Clawbound">
                         <Actions>
-                          <Action OrderNumber="1" UseTTSTextExpression="Red" TextAuraFontSize="0" ActionType="UseTTS" />
+                          <Action OrderNumber="1" UseTTSTextExpression="Red, Take Damage" TextAuraFontSize="0" ActionType="UseTTS">
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Action>
                         </Actions>
+                        <Condition Enabled="false" Grouping="Or" />
                       </Trigger>
                       <Trigger Enabled="true" Name="You suffer the effect of Fangbound" Id="eb6ea02c-7e21-4dc3-83ca-12b7ad44178d" RegularExpression="You suffer the effect of Fangbound">
                         <Actions>
-                          <Action OrderNumber="1" UseTTSTextExpression="Blue" TextAuraFontSize="0" ActionType="UseTTS" />
+                          <Action OrderNumber="1" UseTTSTextExpression="Blue, Damage Sword" TextAuraFontSize="0" ActionType="UseTTS">
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Action>
                         </Actions>
+                        <Condition Enabled="false" Grouping="Or" />
                       </Trigger>
                     </Triggers>
                   </Folder>
@@ -1217,7 +1241,7 @@
                       </Trigger>
                     </Triggers>
                   </Folder>
-                  <Folder Id="cf39f65c-e4f3-4887-b623-c0ebd0c6af55" Name="EX Trials: Seiryu" Enabled="true">
+                  <Folder Id="cf39f65c-e4f3-4887-b623-c0ebd0c6af55" Name="4.5 - Seiryu EX" Enabled="true">
                     <Folders />
                     <Triggers>
                       <Trigger Enabled="true" Name="The numa-no-shiki begins casting Stoneskin" Id="c6637376-7251-4951-8938-f3a1a6bfa791" RegularExpression="The numa-no-shiki begins casting Stoneskin">
@@ -1247,7 +1271,7 @@
                       </Trigger>
                     </Triggers>
                   </Folder>
-                  <Folder Id="8a1f9d6e-ba33-45a7-8b02-39549e771478" Name="EX Trials: Rathalos" Enabled="true">
+                  <Folder Id="8a1f9d6e-ba33-45a7-8b02-39549e771478" Name="4.36 - Rathalos EX" Enabled="true">
                     <Folders />
                     <Triggers>
                       <Trigger Enabled="true" Name="Rathalos Extreme" Id="ed5355fd-85ee-4c9a-9e9b-bb1d215bcd11" RegularExpression="14:(?&lt;id&gt;[0-9A-F]{4}):Rathalos starts using (.*) on (?&lt;char&gt;[a-zA-Z']*)">
@@ -1366,7 +1390,7 @@
                       </Trigger>
                     </Triggers>
                   </Folder>
-                  <Folder Id="d674c462-31c6-4b49-a06b-8d4a82a39f5b" Name="5.2 (1) - Ruby Weapon EX" Enabled="true">
+                  <Folder Id="d674c462-31c6-4b49-a06b-8d4a82a39f5b" Name="5.2 - Ruby Weapon EX" Enabled="true">
                     <Folders />
                     <Triggers>
                       <Trigger Enabled="true" Name="The Ruby Weapon readies (?&lt;move&gt;Liquefaction|Undermine)" Id="75b95941-1316-4ed9-a4b2-804c0ae5464b" RegularExpression="The Ruby Weapon readies (?&lt;move&gt;Liquefaction|Undermine)">
@@ -1407,7 +1431,7 @@
                       </Trigger>
                     </Triggers>
                   </Folder>
-                  <Folder Id="b287ec6e-dfb1-42d5-8e95-821adc7cba79" Name="5.2 (2) - Memoria Misera EX" Enabled="true">
+                  <Folder Id="b287ec6e-dfb1-42d5-8e95-821adc7cba79" Name="5.25 - Memoria Misera EX" Enabled="true">
                     <Folders />
                     <Triggers>
                       <Trigger Enabled="true" Name="The gunshield begins casting Magitek Spark" Id="09d8264b-b216-4d01-83af-36f52fd2d905" RegularExpression="The gunshield begins casting Magitek Spark">
@@ -1419,6 +1443,316 @@
                         <Actions>
                           <Action OrderNumber="1" UseTTSTextExpression="Stack" ActionType="UseTTS" />
                         </Actions>
+                      </Trigger>
+                    </Triggers>
+                  </Folder>
+                  <Folder Id="b7ce3531-8a75-4b30-b5d0-e3ba825a549b" Name="5.3 - Warrior of Light EX" Enabled="true">
+                    <Folders>
+                      <Folder Id="d74c09e8-f59b-4e40-aeda-48c08b6d022b" Name="Imbued Saber" Enabled="true">
+                        <Folders />
+                        <Triggers>
+                          <Trigger Enabled="true" Name="Imbued Saber (Earth)" Id="5c2e8591-8cb1-43e5-ae4a-f1008bdb2017" RegularExpression="15:[0-9A-F]{8}:Warrior Of Light:4EF6:">
+                            <Actions>
+                              <Action OrderNumber="1" UseTTSTextExpression="Earth" ActionType="UseTTS">
+                                <Condition Enabled="false" Grouping="Or" />
+                              </Action>
+                              <Action OrderNumber="2" VariableOp="SetString" VariableName="imbued_saber_tts" VariableExpression="${var:imbued_saber_tts}, Spread" TextAuraFontSize="0" ActionType="Variable">
+                                <Condition Enabled="false" Grouping="And" />
+                              </Action>
+                              <Action OrderNumber="3" VariableOp="SetString" VariableName="imbued_saber_aura" VariableExpression="${var:imbued_saber_aura} &gt; Earth (Spread)" TextAuraFontSize="0" ActionType="Variable">
+                                <Condition Enabled="false" Grouping="And" />
+                              </Action>
+                              <Action OrderNumber="4" TextAuraAlignment="TopLeft" TextAuraEffect="Bold" TextAuraFontSize="36" TextAuraOutline="Red" TextAuraName="imbued_saber_aura" TextAuraExpression="${var:imbued_saber_aura}" TextAuraXIniExpression="200" TextAuraYIniExpression="350" TextAuraWIniExpression="1000" TextAuraHIniExpression="500" TextAuraOIniExpression="100" TextAuraTTLTickExpression="20-${_since}" TextAuraUseOutline="True" TextAuraFontName="Microsoft Sans Serif" ActionType="TextAura" Asynchronous="False">
+                                <Condition Enabled="false" Grouping="Or" />
+                              </Action>
+                            </Actions>
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Trigger>
+                          <Trigger Enabled="true" Name="Imbued Saber (Fire)" Id="19b8c2fa-4211-48c8-97e9-cd0a8090fb30" RegularExpression="15:[0-9A-F]{8}:Warrior Of Light:4EF3:">
+                            <Actions>
+                              <Action OrderNumber="1" UseTTSTextExpression="Fire" ActionType="UseTTS">
+                                <Condition Enabled="false" Grouping="Or" />
+                              </Action>
+                              <Action OrderNumber="2" VariableOp="SetString" VariableName="imbued_saber_tts" VariableExpression="${var:imbued_saber_tts}, Don't Move" TextAuraFontSize="0" ActionType="Variable">
+                                <Condition Enabled="false" Grouping="And" />
+                              </Action>
+                              <Action OrderNumber="3" VariableOp="SetString" VariableName="imbued_saber_aura" VariableExpression="${var:imbued_saber_aura} &gt; Fire" TextAuraFontSize="0" ActionType="Variable">
+                                <Condition Enabled="false" Grouping="And" />
+                              </Action>
+                              <Action OrderNumber="4" TextAuraAlignment="TopLeft" TextAuraEffect="Bold" TextAuraFontSize="36" TextAuraOutline="Red" TextAuraName="imbued_saber_aura" TextAuraExpression="${var:imbued_saber_aura}" TextAuraXIniExpression="200" TextAuraYIniExpression="350" TextAuraWIniExpression="1000" TextAuraHIniExpression="500" TextAuraOIniExpression="100" TextAuraTTLTickExpression="20-${_since}" TextAuraUseOutline="True" TextAuraFontName="Microsoft Sans Serif" ActionType="TextAura" Asynchronous="False">
+                                <Condition Enabled="false" Grouping="Or" />
+                              </Action>
+                            </Actions>
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Trigger>
+                          <Trigger Enabled="true" Name="Imbued Saber (Holy)" Id="5f1e4278-b06c-474c-961a-2ced9ad1a0a3" RegularExpression="15:[0-9A-F]{8}:Warrior Of Light:4EF5:">
+                            <Actions>
+                              <Action OrderNumber="1" UseTTSTextExpression="Holy" ActionType="UseTTS">
+                                <Condition Enabled="false" Grouping="Or" />
+                              </Action>
+                              <Action OrderNumber="2" VariableOp="SetString" VariableName="imbued_saber_tts" VariableExpression="${var:imbued_saber_tts}, Stack" TextAuraFontSize="0" ActionType="Variable">
+                                <Condition Enabled="false" Grouping="And" />
+                              </Action>
+                              <Action OrderNumber="3" VariableOp="SetString" VariableName="imbued_saber_aura" VariableExpression="${var:imbued_saber_aura} &gt; Holy (Stack)" TextAuraFontSize="0" ActionType="Variable">
+                                <Condition Enabled="false" Grouping="And" />
+                              </Action>
+                              <Action OrderNumber="4" TextAuraAlignment="TopLeft" TextAuraEffect="Bold" TextAuraFontSize="36" TextAuraOutline="Red" TextAuraName="imbued_saber_aura" TextAuraExpression="${var:imbued_saber_aura}" TextAuraXIniExpression="200" TextAuraYIniExpression="350" TextAuraWIniExpression="1000" TextAuraHIniExpression="500" TextAuraOIniExpression="100" TextAuraTTLTickExpression="20-${_since}" TextAuraUseOutline="True" TextAuraFontName="Microsoft Sans Serif" ActionType="TextAura" Asynchronous="False">
+                                <Condition Enabled="false" Grouping="Or" />
+                              </Action>
+                            </Actions>
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Trigger>
+                          <Trigger Enabled="true" Name="Imbued Saber (Ice)" Id="45b5b8bf-e81b-43f1-a62a-5ea463a1c8ed" RegularExpression="15:[0-9A-F]{8}:Warrior Of Light:4EF4:">
+                            <Actions>
+                              <Action OrderNumber="1" UseTTSTextExpression="Ice" ActionType="UseTTS">
+                                <Condition Enabled="false" Grouping="Or" />
+                              </Action>
+                              <Action OrderNumber="2" VariableOp="SetString" VariableName="imbued_saber_tts" VariableExpression="${var:imbued_saber_tts}, Keep Moving" TextAuraFontSize="0" ActionType="Variable">
+                                <Condition Enabled="false" Grouping="And" />
+                              </Action>
+                              <Action OrderNumber="3" VariableOp="SetString" VariableName="imbued_saber_aura" VariableExpression="${var:imbued_saber_aura} &gt; Ice" TextAuraFontSize="0" ActionType="Variable">
+                                <Condition Enabled="false" Grouping="And" />
+                              </Action>
+                              <Action OrderNumber="4" TextAuraAlignment="TopLeft" TextAuraEffect="Bold" TextAuraFontSize="36" TextAuraOutline="Red" TextAuraName="imbued_saber_aura" TextAuraExpression="${var:imbued_saber_aura}" TextAuraXIniExpression="200" TextAuraYIniExpression="350" TextAuraWIniExpression="1000" TextAuraHIniExpression="500" TextAuraOIniExpression="100" TextAuraTTLTickExpression="20-${_since}" TextAuraUseOutline="True" TextAuraFontName="Microsoft Sans Serif" ActionType="TextAura" Asynchronous="False">
+                                <Condition Enabled="false" Grouping="Or" />
+                              </Action>
+                            </Actions>
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Trigger>
+                          <Trigger Enabled="true" Name="Call Out" Id="eb090f4f-0ea2-49b8-b4e2-3e9db8abd474" RegularExpression="14:(4F49|4F4A|4EF1|4EF2):Warrior Of Light">
+                            <Actions>
+                              <Action OrderNumber="1" LogLevel="-1" VariableName="imbued_saber_aura" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" ExecutionDelayExpression="10000">
+                                <Condition Enabled="false" Grouping="Or" />
+                              </Action>
+                              <Action OrderNumber="2" LogLevel="-1" VariableName="imbued_saber_tts" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+                                <Condition Enabled="false" Grouping="Or" />
+                              </Action>
+                            </Actions>
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Trigger>
+                          <Trigger Enabled="true" Name="In or Out (In)" Id="bee2dcf1-f5b6-49a3-897f-7f28cac69bb3" RegularExpression="14:(4F4A|4EF2):Warrior Of Light">
+                            <Actions>
+                              <Action OrderNumber="1" UseTTSTextExpression="In ${var:imbued_saber_tts}" ActionType="UseTTS">
+                                <Condition Enabled="false" Grouping="Or" />
+                              </Action>
+                              <Action OrderNumber="2" VariableOp="SetString" VariableName="imbued_saber_aura" VariableExpression="${var:imbued_saber_aura} &gt; In" TextAuraFontSize="0" ActionType="Variable">
+                                <Condition Enabled="false" Grouping="And" />
+                              </Action>
+                              <Action OrderNumber="3" TextAuraAlignment="TopLeft" TextAuraEffect="Bold" TextAuraFontSize="36" TextAuraOutline="Red" TextAuraName="imbued_saber_aura" TextAuraExpression="${var:imbued_saber_aura}" TextAuraXIniExpression="200" TextAuraYIniExpression="350" TextAuraWIniExpression="1000" TextAuraHIniExpression="500" TextAuraOIniExpression="100" TextAuraTTLTickExpression="20-${_since}" TextAuraUseOutline="True" TextAuraFontName="Microsoft Sans Serif" ActionType="TextAura" Asynchronous="False">
+                                <Condition Enabled="false" Grouping="Or" />
+                              </Action>
+                            </Actions>
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Trigger>
+                          <Trigger Enabled="true" Name="In or Out (Out)" Id="eded3d89-9c57-4cec-bd90-52d93eb3c418" RegularExpression="14:(4F49|4EF1):Warrior Of Light">
+                            <Actions>
+                              <Action OrderNumber="1" UseTTSTextExpression="Out ${var:imbued_saber_tts}" ActionType="UseTTS">
+                                <Condition Enabled="false" Grouping="Or" />
+                              </Action>
+                              <Action OrderNumber="2" VariableOp="SetString" VariableName="imbued_saber_aura" VariableExpression="${var:imbued_saber_aura} &gt; Out" TextAuraFontSize="0" ActionType="Variable">
+                                <Condition Enabled="false" Grouping="And" />
+                              </Action>
+                              <Action OrderNumber="3" TextAuraAlignment="TopLeft" TextAuraEffect="Bold" TextAuraFontSize="36" TextAuraOutline="Red" TextAuraName="imbued_saber_aura" TextAuraExpression="${var:imbued_saber_aura}" TextAuraXIniExpression="200" TextAuraYIniExpression="350" TextAuraWIniExpression="1000" TextAuraHIniExpression="500" TextAuraOIniExpression="100" TextAuraTTLTickExpression="20-${_since}" TextAuraUseOutline="True" TextAuraFontName="Microsoft Sans Serif" ActionType="TextAura" Asynchronous="False">
+                                <Condition Enabled="false" Grouping="Or" />
+                              </Action>
+                            </Actions>
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Trigger>
+                        </Triggers>
+                      </Folder>
+                      <Folder Id="38d9cad7-02e1-4cf5-be92-691983fd2f18" Name="Quintuplecast" Enabled="true">
+                        <Folders />
+                        <Triggers>
+                          <Trigger Enabled="true" Name="Quintuplecast (End)" Id="b3374408-c405-43d5-a220-39e77c05e1b3" RegularExpression="The Warrior of Light casts Quintuplecast">
+                            <Actions>
+                              <Action OrderNumber="1" LogLevel="-1" VariableName="quintuplecast" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+                                <Condition Enabled="false" Grouping="Or" />
+                              </Action>
+                              <Action OrderNumber="2" TextAuraAlignment="TopLeft" TextAuraEffect="Bold" TextAuraFontSize="36" TextAuraOutline="Red" TextAuraName="quintuplecast_aura" TextAuraExpression="${var:quintuplecast_aura}" TextAuraXIniExpression="200" TextAuraYIniExpression="350" TextAuraWIniExpression="1000" TextAuraHIniExpression="500" TextAuraOIniExpression="100" TextAuraTTLTickExpression="100-${_since}" TextAuraUseOutline="True" TextAuraFontName="Microsoft Sans Serif" ActionType="TextAura" Asynchronous="False">
+                                <Condition Enabled="false" Grouping="Or" />
+                              </Action>
+                              <Action OrderNumber="3" LogLevel="-1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="9c6bd043-40d3-4171-8481-0d3e5f7a846d" TriggerText="quintuplecast_callout" ActionType="Trigger">
+                                <Condition Enabled="false" Grouping="Or" />
+                              </Action>
+                            </Actions>
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Trigger>
+                          <Trigger Enabled="true" Name="Quintuplecast" Id="62066969-977f-4282-b2ad-27c0d47ac30f" RegularExpression="The Warrior of Light begins casting Quintuplecast">
+                            <Actions>
+                              <Action OrderNumber="1" LogLevel="-1" VariableOp="SetNumeric" VariableName="quintuplecast" VariableExpression="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+                                <Condition Enabled="false" Grouping="Or" />
+                              </Action>
+                              <Action OrderNumber="2" LogLevel="-1" VariableOp="SetString" VariableName="quintuplecast_aura" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+                                <Condition Enabled="false" Grouping="Or" />
+                              </Action>
+                              <Action OrderNumber="3" ListVariableName="quintuplecast_list" LogLevel="-1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable">
+                                <Condition Enabled="false" Grouping="Or" />
+                              </Action>
+                            </Actions>
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Trigger>
+                          <Trigger Enabled="true" Name="Marker" Id="49f912d4-1bbb-41b7-add0-0d6aa10e286c" RegularExpression="1B:[0-9A-F]{8}:(?&lt;target&gt;.*):0000:[0-9A-F]{4}:(?&lt;debuff&gt;[0-9A-F]{4}):0000:0000:0000:" PeriodRefire="Deny" RefirePeriodExpression="1000">
+                            <Actions>
+                              <Action OrderNumber="1" VariableOp="SetString" VariableName="quintuplecast_aura" VariableExpression="${var:quintuplecast_aura} &gt; Earth" TextAuraFontSize="0" ActionType="Variable">
+                                <Condition Enabled="true" Grouping="And">
+                                  <ConditionSingle Enabled="true" ExpressionL="${debuff}" ExpressionTypeL="String" ExpressionR="00DE" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                                </Condition>
+                              </Action>
+                              <Action OrderNumber="2" VariableOp="SetString" VariableName="quintuplecast_aura" VariableExpression="${var:quintuplecast_aura} &gt; Ice" TextAuraFontSize="0" ActionType="Variable">
+                                <Condition Enabled="true" Grouping="And">
+                                  <ConditionSingle Enabled="true" ExpressionL="${debuff}" ExpressionTypeL="String" ExpressionR="00E2" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                                </Condition>
+                              </Action>
+                              <Action OrderNumber="3" VariableOp="SetString" VariableName="quintuplecast_aura" VariableExpression="${var:quintuplecast_aura} &gt; Holy" TextAuraFontSize="0" ActionType="Variable">
+                                <Condition Enabled="true" Grouping="And">
+                                  <ConditionSingle Enabled="true" ExpressionL="${debuff}" ExpressionTypeL="String" ExpressionR="00DD" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                                </Condition>
+                              </Action>
+                              <Action OrderNumber="4" VariableOp="SetString" VariableName="quintuplecast_aura" VariableExpression="${var:quintuplecast_aura} &gt; Look Away" TextAuraFontSize="0" ActionType="Variable">
+                                <Condition Enabled="true" Grouping="And">
+                                  <ConditionSingle Enabled="true" ExpressionL="${debuff}" ExpressionTypeL="String" ExpressionR="00DF" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                                </Condition>
+                              </Action>
+                              <Action OrderNumber="5" VariableOp="SetString" VariableName="quintuplecast_aura" VariableExpression="${var:quintuplecast_aura} &gt; Fire" TextAuraFontSize="0" ActionType="Variable">
+                                <Condition Enabled="true" Grouping="And">
+                                  <ConditionSingle Enabled="true" ExpressionL="${debuff}" ExpressionTypeL="String" ExpressionR="00E4" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                                </Condition>
+                              </Action>
+                              <Action OrderNumber="6" ListVariableOp="Push" ListVariableName="quintuplecast_list" ListVariableExpression="Spread" VariableOp="SetString" TextAuraFontSize="0" ActionType="ListVariable">
+                                <Condition Enabled="true" Grouping="And">
+                                  <ConditionSingle Enabled="true" ExpressionL="${debuff}" ExpressionTypeL="String" ExpressionR="00DE" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                                </Condition>
+                              </Action>
+                              <Action OrderNumber="7" ListVariableOp="Push" ListVariableName="quintuplecast_list" ListVariableExpression="Keep Moving" VariableOp="SetString" TextAuraFontSize="0" ActionType="ListVariable">
+                                <Condition Enabled="true" Grouping="And">
+                                  <ConditionSingle Enabled="true" ExpressionL="${debuff}" ExpressionTypeL="String" ExpressionR="00E2" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                                </Condition>
+                              </Action>
+                              <Action OrderNumber="8" ListVariableOp="Push" ListVariableName="quintuplecast_list" ListVariableExpression="Stack" VariableOp="SetString" TextAuraFontSize="0" ActionType="ListVariable">
+                                <Condition Enabled="true" Grouping="And">
+                                  <ConditionSingle Enabled="true" ExpressionL="${debuff}" ExpressionTypeL="String" ExpressionR="00DD" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                                </Condition>
+                              </Action>
+                              <Action OrderNumber="9" ListVariableOp="Push" ListVariableName="quintuplecast_list" ListVariableExpression="Look Away" VariableOp="SetString" TextAuraFontSize="0" ActionType="ListVariable">
+                                <Condition Enabled="true" Grouping="And">
+                                  <ConditionSingle Enabled="true" ExpressionL="${debuff}" ExpressionTypeL="String" ExpressionR="00DF" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                                </Condition>
+                              </Action>
+                              <Action OrderNumber="10" ListVariableOp="Push" ListVariableName="quintuplecast_list" ListVariableExpression="Don't Move" VariableOp="SetString" TextAuraFontSize="0" ActionType="ListVariable">
+                                <Condition Enabled="true" Grouping="And">
+                                  <ConditionSingle Enabled="true" ExpressionL="${debuff}" ExpressionTypeL="String" ExpressionR="00E4" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                                </Condition>
+                              </Action>
+                              <Action OrderNumber="11" ListVariableOp="Push" ListVariableName="quintuplecast_list" ListVariableExpression="Spread" UseTTSTextExpression="Spread" VariableOp="SetString" TextAuraFontSize="0" ActionType="UseTTS">
+                                <Condition Enabled="true" Grouping="And">
+                                  <ConditionSingle Enabled="true" ExpressionL="${debuff}" ExpressionTypeL="String" ExpressionR="00DE" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                                </Condition>
+                              </Action>
+                              <Action OrderNumber="12" ListVariableOp="Push" ListVariableName="quintuplecast_list" ListVariableExpression="Keep Moving" UseTTSTextExpression="Keep Moving" VariableOp="SetString" TextAuraFontSize="0" ActionType="UseTTS">
+                                <Condition Enabled="true" Grouping="And">
+                                  <ConditionSingle Enabled="true" ExpressionL="${debuff}" ExpressionTypeL="String" ExpressionR="00E2" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                                </Condition>
+                              </Action>
+                              <Action OrderNumber="13" ListVariableOp="Push" ListVariableName="quintuplecast_list" ListVariableExpression="Stack" UseTTSTextExpression="Stack" VariableOp="SetString" TextAuraFontSize="0" ActionType="UseTTS">
+                                <Condition Enabled="true" Grouping="And">
+                                  <ConditionSingle Enabled="true" ExpressionL="${debuff}" ExpressionTypeL="String" ExpressionR="00DD" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                                </Condition>
+                              </Action>
+                              <Action OrderNumber="14" ListVariableOp="Push" ListVariableName="quintuplecast_list" ListVariableExpression="Look Away" UseTTSTextExpression="Look Away" VariableOp="SetString" TextAuraFontSize="0" ActionType="UseTTS">
+                                <Condition Enabled="true" Grouping="And">
+                                  <ConditionSingle Enabled="true" ExpressionL="${debuff}" ExpressionTypeL="String" ExpressionR="00DF" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                                </Condition>
+                              </Action>
+                              <Action OrderNumber="15" ListVariableOp="Push" ListVariableName="quintuplecast_list" ListVariableExpression="Don't Move" UseTTSTextExpression="Don't Move" VariableOp="SetString" TextAuraFontSize="0" ActionType="UseTTS">
+                                <Condition Enabled="true" Grouping="And">
+                                  <ConditionSingle Enabled="true" ExpressionL="${debuff}" ExpressionTypeL="String" ExpressionR="00E4" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                                </Condition>
+                              </Action>
+                              <Action OrderNumber="16" TextAuraAlignment="TopLeft" TextAuraEffect="Bold" TextAuraFontSize="36" TextAuraOutline="Red" TextAuraName="quintuplecast_aura" TextAuraExpression="${var:quintuplecast_aura}" TextAuraXIniExpression="200" TextAuraYIniExpression="350" TextAuraWIniExpression="1000" TextAuraHIniExpression="500" TextAuraOIniExpression="100" TextAuraTTLTickExpression="20-${_since}" TextAuraUseOutline="True" TextAuraFontName="Microsoft Sans Serif" ActionType="TextAura" Asynchronous="False">
+                                <Condition Enabled="false" Grouping="Or" />
+                              </Action>
+                            </Actions>
+                            <Condition Enabled="true" Grouping="Or">
+                              <ConditionSingle Enabled="true" ExpressionL="${var:quintuplecast}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                            </Condition>
+                          </Trigger>
+                          <Trigger Enabled="true" Source="None" Sequential="True" Name="Call Out" Id="9c6bd043-40d3-4171-8481-0d3e5f7a846d" RegularExpression="quintuplecast_callout">
+                            <Actions>
+                              <Action OrderNumber="1" ListVariableOp="PopFirst" ListVariableName="quintuplecast_list" ListVariableTarget="quintuplecast_tts" LogLevel="-1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable">
+                                <Condition Enabled="false" Grouping="Or" />
+                              </Action>
+                              <Action OrderNumber="2" LogLevel="-1" UseTTSTextExpression="${var:quintuplecast_tts}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS">
+                                <Condition Enabled="false" Grouping="Or" />
+                              </Action>
+                              <Action OrderNumber="3" LogLevel="-1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="9c6bd043-40d3-4171-8481-0d3e5f7a846d" TriggerText="quintuplecast_callout" ActionType="Trigger" ExecutionDelayExpression="3000">
+                                <Condition Enabled="true" Grouping="Or">
+                                  <ConditionSingle Enabled="true" ExpressionL="${lvar:quintuplecast_list.size}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
+                                </Condition>
+                              </Action>
+                            </Actions>
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Trigger>
+                        </Triggers>
+                      </Folder>
+                    </Folders>
+                    <Triggers>
+                      <Trigger Enabled="true" Name="LB1 - 3 Stacks" Id="68346292-abfb-4707-bacc-3b23f784b134" RegularExpression="14:4F34:Warrior Of Light">
+                        <Actions>
+                          <Action OrderNumber="1" UseTTSTextExpression="3 Stacks" Enabled="False" ActionType="UseTTS" />
+                          <Action OrderNumber="2" LogLevel="-1" VariableOp="SetString" VariableName="limit_break" VariableExpression="3 Stacks" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Action>
+                        </Actions>
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Trigger>
+                      <Trigger Enabled="true" Name="LB2 - 1 2 Stacks" Id="ac5f701e-fe76-4555-b8cf-e912ebee1736" RegularExpression="14:4F35:Warrior Of Light">
+                        <Actions>
+                          <Action OrderNumber="1" UseTTSTextExpression="1 2 Stacks" Enabled="False" ActionType="UseTTS" />
+                          <Action OrderNumber="2" LogLevel="-1" VariableOp="SetString" VariableName="limit_break" VariableExpression="1 2 Stacks" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Action>
+                        </Actions>
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Trigger>
+                      <Trigger Enabled="true" Name="LB3 - Meteors, Go Corner" Id="95322fb4-25c4-4638-8e7d-b56326a6eaa6" RegularExpression="14:4F36:Warrior Of Light">
+                        <Actions>
+                          <Action OrderNumber="1" UseTTSTextExpression="Meteors, Go Corner" Enabled="False" ActionType="UseTTS" />
+                          <Action OrderNumber="2" LogLevel="-1" VariableOp="SetString" VariableName="limit_break" VariableExpression="Meteors, Go Corner" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Action>
+                        </Actions>
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Trigger>
+                      <Trigger Enabled="true" Name="The Warrior of Light (readies|begins casting) Limit Break" Id="cce9426f-5d7a-4648-a8a2-95c68f7c9d14" RegularExpression="The Warrior of Light (readies|begins casting) Limit Break">
+                        <Actions>
+                          <Action OrderNumber="1" LogLevel="-1" UseTTSTextExpression="${var:limit_break}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS">
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Action>
+                        </Actions>
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Trigger>
+                      <Trigger Enabled="true" Sequential="True" Name="Wipe Reset" Id="713711eb-4170-40a1-af8b-88802e5a64a8" RegularExpression="21:........:40000010:">
+                        <Actions>
+                          <Action OrderNumber="1" TextAuraOp="DeactivateAllAura" TextAuraAlignment="TopLeft" TextAuraEffect="Bold" TextAuraFontSize="36" TextAuraOutline="Red" TextAuraName="quintuplecast_aura" TextAuraExpression="${var:quintuplecast_aura}" TextAuraXIniExpression="200" TextAuraYIniExpression="350" TextAuraWIniExpression="1000" TextAuraHIniExpression="500" TextAuraOIniExpression="100" TextAuraTTLTickExpression="20-${_since}" TextAuraUseOutline="True" TextAuraFontName="Microsoft Sans Serif" ActionType="TextAura" Asynchronous="False">
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Action>
+                          <Action OrderNumber="2" VariableName="imbued_saber_aura" VariableExpression="${var:imbued_saber_aura} &gt; In" TextAuraFontSize="0" ActionType="Variable">
+                            <Condition Enabled="false" Grouping="And" />
+                          </Action>
+                          <Action OrderNumber="3" VariableName="imbued_saber_tts" VariableExpression="${var:imbued_saber_aura} &gt; In" TextAuraFontSize="0" ActionType="Variable">
+                            <Condition Enabled="false" Grouping="And" />
+                          </Action>
+                          <Action OrderNumber="4" LogLevel="-1" VariableName="quintuplecast" VariableExpression="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Action>
+                          <Action OrderNumber="5" LogLevel="-1" VariableName="quintuplecast_aura" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Action>
+                          <Action OrderNumber="6" ListVariableName="quintuplecast_list" LogLevel="-1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable">
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Action>
+                        </Actions>
+                        <Condition Enabled="false" Grouping="Or" />
                       </Trigger>
                     </Triggers>
                   </Folder>
@@ -3565,27 +3899,18 @@
                 <Triggers>
                   <Trigger Enabled="true" Name="15:[0-9A-F]{8}:Shiva:5366:" Id="ae5af646-7ef3-4243-a3f7-997eb8ed12b3" RegularExpression="15:[0-9A-F]{8}:Shiva:5366:">
                     <Actions>
-                      <Action OrderNumber="1" UseTTSTextExpression="Sword, Stack Behind" ActionType="UseTTS">
-                        <Conditions />
-                      </Action>
+                      <Action OrderNumber="1" UseTTSTextExpression="Sword, Stack Behind" ActionType="UseTTS" />
                     </Actions>
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Name="15:[0-9A-F]{8}:Shiva:5367:" Id="311ca0c0-41f5-42cc-9434-54435ed53ec4" RegularExpression="15:[0-9A-F]{8}:Shiva:5367:">
                     <Actions>
-                      <Action OrderNumber="1" UseTTSTextExpression="Staff, Spread" ActionType="UseTTS">
-                        <Conditions />
-                      </Action>
+                      <Action OrderNumber="1" UseTTSTextExpression="Staff, Spread" ActionType="UseTTS" />
                     </Actions>
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Name="15:[0-9A-F]{8}:Shiva:5368:" Id="ed8b862e-4664-4a94-b03a-329d1c493a63" RegularExpression="15:[0-9A-F]{8}:Shiva:5368:">
                     <Actions>
-                      <Action OrderNumber="1" UseTTSTextExpression="Bow, Behind Boss" ActionType="UseTTS">
-                        <Conditions />
-                      </Action>
+                      <Action OrderNumber="1" UseTTSTextExpression="Bow, Behind Boss" ActionType="UseTTS" />
                     </Actions>
-                    <Conditions />
                   </Trigger>
                 </Triggers>
               </Folder>
