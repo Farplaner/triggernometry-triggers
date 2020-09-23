@@ -21,7 +21,6 @@
                     <Actions>
                       <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="81c16a02-9880-4f49-94ff-409b80cb0731" TriggerText="addTimer(3326,action,raidbuffs,Libra (${type}),30,30)" ActionType="Trigger">
                         <Condition Enabled="false" Grouping="Or" />
-                        <Conditions />
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
@@ -285,10 +284,11 @@
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
                   </Trigger>
-                  <Trigger Enabled="true" Name="Benediction" Id="3225a7b4-59c8-4301-ae5d-82352587dbba" RegularExpression="You use Presence of Mind">
+                  <Trigger Enabled="true" Name="Benediction" Id="3225a7b4-59c8-4301-ae5d-82352587dbba" RegularExpression="You use Benediction">
                     <Actions>
                       <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="81c16a02-9880-4f49-94ff-409b80cb0731" TriggerText="addTimer(2627,action,cooldowns,Benediction,0,180)" TriggerForce="conditions" ActionType="Trigger">
                         <Condition Enabled="false" Grouping="Or" />
+                        <Conditions />
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
