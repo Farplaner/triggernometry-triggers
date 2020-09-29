@@ -2,7 +2,7 @@
 <TriggernometryExport Version="1">
   <ExportedFolder Id="c5e7858f-7c76-4eed-80be-071d8be610ae" Name="Shared" Enabled="true">
     <Folders>
-      <Folder Id="33baa4ab-8de0-44d1-a6cb-3eed3f4193b1" Name="The Epic of Alexander (Ultimate)" Enabled="true">
+      <Folder ZoneFilterEnabled="True" Id="33baa4ab-8de0-44d1-a6cb-3eed3f4193b1" ZoneFilterRegularExpression="The\ Epic\ Of\ Alexander\ \(Ultimate\)" Name="The Epic of Alexander (Ultimate)" Enabled="true">
         <Folders>
           <Folder Id="78e20c1c-b4db-4113-8f9c-106ac8011a0b" Name="Temporal Stasis" Enabled="true">
             <Folders>
