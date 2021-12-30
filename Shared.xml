@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <TriggernometryExport Version="1">
-  <ExportedFolder Id="c5e7858f-7c76-4eed-80be-071d8be610ae" Name="Shared" Enabled="true">
+  <ExportedFolder Id="c5e7858f-7c76-4eed-80be-071d8be610ae" Name="Shared" Enabled="false">
     <Folders>
       <Folder ZoneFilterEnabled="True" Id="33baa4ab-8de0-44d1-a6cb-3eed3f4193b1" ZoneFilterRegularExpression="The\ Epic\ Of\ Alexander\ \(Ultimate\)" Name="The Epic of Alexander (Ultimate)" Enabled="true">
         <Folders>

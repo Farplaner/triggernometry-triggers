@@ -53,19 +53,15 @@
         <Actions>
           <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="417f6259-a9a1-4226-af1a-7535b6387028" TriggerText="addTimerGroup(raidbuffs,2580,800,30,150,5)" ActionType="Trigger">
             <Condition Enabled="false" Grouping="Or" />
-            <Conditions />
           </Action>
           <Action OrderNumber="2" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="417f6259-a9a1-4226-af1a-7535b6387028" TriggerText="addTimerGroup(cooldowns,2360,800,30,150,5)" ActionType="Trigger">
             <Condition Enabled="false" Grouping="Or" />
-            <Conditions />
           </Action>
           <Action OrderNumber="3" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="417f6259-a9a1-4226-af1a-7535b6387028" TriggerText="addTimerGroup(debuffs,200,200,30,150,5)" ActionType="Trigger">
             <Condition Enabled="false" Grouping="Or" />
-            <Conditions />
           </Action>
           <Action OrderNumber="4" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="417f6259-a9a1-4226-af1a-7535b6387028" TriggerText="addTimerGroup(party,2800,800,30,150,5)" ActionType="Trigger">
             <Condition Enabled="false" Grouping="Or" />
-            <Conditions />
           </Action>
         </Actions>
         <Condition Enabled="false" Grouping="Or" />

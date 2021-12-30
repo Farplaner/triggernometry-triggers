@@ -3,7 +3,7 @@
   <ExportedFolder Id="78827a54-c69c-4e38-89dd-ee18c73a53a7" Name="Test" Enabled="true">
     <Folders />
     <Triggers>
-      <Trigger Enabled="true" Sequential="True" Name="Test addTimer (Action)" Id="3795ac50-2d85-4419-b038-ae5d765aa81b" RegularExpression="">
+      <Trigger Enabled="false" Source="None" Sequential="True" Name="Test addTimer (Action)" Id="3795ac50-2d85-4419-b038-ae5d765aa81b" RegularExpression="">
         <Actions>
           <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="81c16a02-9880-4f49-94ff-409b80cb0731" TriggerText="addTimer(3142,action,cooldowns,Celestial Opposition,30,60)" ActionType="Trigger">
             <Condition Enabled="true" Grouping="Or">
@@ -76,6 +76,22 @@
         <Condition Enabled="true" Grouping="Or">
           <ConditionSingle Enabled="true" ExpressionL="${player}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualCase" />
         </Condition>
+      </Trigger>
+      <Trigger Enabled="false" Name="Test TTS" Id="b8708322-b53e-4ff9-967c-fb0b195f92eb" RegularExpression="">
+        <Actions>
+          <Action OrderNumber="1" LogLevel="-1" UseTTSTextExpression="Test" UseTTSExclusive="False" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+        </Actions>
+        <Condition Enabled="false" Grouping="Or" />
+      </Trigger>
+      <Trigger Enabled="false" Source="FFXIVNetwork" Name="Error" Id="d009fe43-ebeb-4ae4-a27a-7cb10d23b9c7" RegularExpression="\|083c\|">
+        <Actions>
+          <Action OrderNumber="1" LogLevel="-1" UseTTSTextExpression="Error" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+        </Actions>
+        <Condition Enabled="false" Grouping="Or" />
       </Trigger>
     </Triggers>
   </ExportedFolder>

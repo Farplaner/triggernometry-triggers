@@ -1,0 +1,8 @@
+Aho - https://raw.githubusercontent.com/Aho-Senpai/Aho-Triggers/main/Triggernomety/ffxiv_ahos_raidbuffs.xml
+Aho - https://raw.githubusercontent.com/Aho-Senpai/Aho-Triggers/main/Triggernomety/ffxiv_ahos_raids.xml
+Aho - https://raw.githubusercontent.com/Aho-Senpai/Aho-Triggers/main/Triggernomety/ffxiv_ahos_trials.xml
+Aya - https://raw.githubusercontent.com/ayaliz/triggers/main/repo.xml
+Dansa - https://raw.githubusercontent.com/dansa/FFXIV-Trigg/master/Triggers/MultiDot/MultiDot.xml
+Farplaner - https://raw.githubusercontent.com/Farplaner/triggernometry-triggers/master/Shared.xml
+Lexxie - https://raw.githubusercontent.com/lexxiesia/xiv_triggernometry/master/Triggernometry_Lexxie.xml
+Zeff - https://raw.githubusercontent.com/Zeffuro/Zeffuro-s-Trigger-Repository/master/TriggernometryExport.xml
