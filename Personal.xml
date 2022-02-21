@@ -41,53 +41,63 @@
                 <Actions>
                   <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="81c16a02-9880-4f49-94ff-409b80cb0731" TriggerText="addTimer(618,action,raidbuffs,Trick Attack,15,60)" ActionType="Trigger">
                     <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
                   </Action>
                   <Action OrderNumber="2" PlaySoundFileExpression="https://raw.githubusercontent.com/Farplaner/triggernometry-triggers/master/resources/sound/actions/trick_attack.mp3" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="PlaySound">
                     <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
               </Trigger>
               <Trigger Enabled="true" Name="Battle Litany" Id="873adefd-dd0f-4de8-8b60-c3c88b298933" RegularExpression="(15|16):[0-9A-F]{8}:(?&lt;player&gt;[\w-' ]{1,31}):DE5:Battle Litany:" DebugLevel="Warning" PrevActions="Interrupt" PeriodRefire="Deny" RefirePeriodExpression="10">
                 <Actions>
-                  <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="81c16a02-9880-4f49-94ff-409b80cb0731" TriggerText="addTimer(2585,action,raidbuffs,Battle Litany,20,180)" ActionType="Trigger">
+                  <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="81c16a02-9880-4f49-94ff-409b80cb0731" TriggerText="addTimer(2585,action,raidbuffs,Battle Litany,15,120)" ActionType="Trigger">
                     <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
                   </Action>
                   <Action OrderNumber="2" PlaySoundFileExpression="https://raw.githubusercontent.com/Farplaner/triggernometry-triggers/master/resources/sound/actions/battle_litany.mp3" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="PlaySound">
                     <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="And" />
               </Trigger>
               <Trigger Enabled="true" Name="Battle Voice" Id="fffd2eff-be25-42de-8dda-3f965a978a82" RegularExpression="1(5|6):[0-9A-F]{8}:(?&lt;player&gt;[\w-' ]{1,31}):76:Battle Voice:" DebugLevel="Warning" PrevActions="Interrupt" PeriodRefire="Deny" RefirePeriodExpression="10">
                 <Actions>
-                  <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="81c16a02-9880-4f49-94ff-409b80cb0731" TriggerText="addTimer(2601,action,raidbuffs,Battle Voice,20,180)" ActionType="Trigger">
+                  <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="81c16a02-9880-4f49-94ff-409b80cb0731" TriggerText="addTimer(2601,action,raidbuffs,Battle Voice,15,120)" ActionType="Trigger">
                     <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
                   </Action>
                   <Action OrderNumber="2" PlaySoundFileExpression="https://raw.githubusercontent.com/Farplaner/triggernometry-triggers/master/resources/sound/actions/battle_voice.mp3" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="PlaySound">
                     <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="And" />
               </Trigger>
               <Trigger Enabled="true" Name="Technical Finish" Id="b302e5b1-b0b8-4fbf-93f7-3eb92f9ff689" RegularExpression="1(5|6):[0-9A-F]{8}:(?&lt;player&gt;[\w-' ]{1,31}):3F4(2|3|4):(Double|Triple|Quadruple) Technical Finish:" DebugLevel="Warning" PrevActions="Interrupt" PeriodRefire="Deny" RefirePeriodExpression="10">
                 <Actions>
-                  <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="81c16a02-9880-4f49-94ff-409b80cb0731" TriggerText="addTimer(3474,action,raidbuffs,Technical Finish,15,120)" ActionType="Trigger">
+                  <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="81c16a02-9880-4f49-94ff-409b80cb0731" TriggerText="addTimer(3474,action,raidbuffs,Technical Finish,20,110)" ActionType="Trigger">
                     <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
                   </Action>
                   <Action OrderNumber="2" PlaySoundFileExpression="https://raw.githubusercontent.com/Farplaner/triggernometry-triggers/master/resources/sound/actions/technical_finish.mp3" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="PlaySound">
                     <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="And" />
               </Trigger>
               <Trigger Enabled="true" Name="Chain Stratagem" Id="3d81c8e6-ea52-4609-9bdf-0e84b543bad8" RegularExpression="15:[0-9A-F]{8}:(?&lt;player&gt;[\w-' ]{1,31}):1D0C:Chain Stratagem:" DebugLevel="Warning" PrevActions="Interrupt" PeriodRefire="Deny" RefirePeriodExpression="10">
                 <Actions>
-                  <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="81c16a02-9880-4f49-94ff-409b80cb0731" TriggerText="addTimer(2815,action,raidbuffs,Chain Stratagem,15,180)" ActionType="Trigger">
+                  <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="81c16a02-9880-4f49-94ff-409b80cb0731" TriggerText="addTimer(2815,action,raidbuffs,Chain Stratagem,15,120)" ActionType="Trigger">
                     <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
                   </Action>
                   <Action OrderNumber="2" PlaySoundFileExpression="https://raw.githubusercontent.com/Farplaner/triggernometry-triggers/master/resources/sound/actions/chain_stratagem.mp3" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="PlaySound">
                     <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="And" />
@@ -107,11 +117,13 @@
               </Trigger>
               <Trigger Enabled="true" Name="Brotherhood" Id="38c5ccff-1a93-4fce-a4ee-abbbdc3c2c22" RegularExpression="1(5|6):[0-9A-F]{8}:(?&lt;player&gt;[\w-' ]{1,31}):1CE4:Brotherhood:" DebugLevel="Warning" PrevActions="Interrupt" PeriodRefire="Deny" RefirePeriodExpression="10">
                 <Actions>
-                  <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="81c16a02-9880-4f49-94ff-409b80cb0731" TriggerText="addTimer(2542,action,raidbuffs,Brotherhood,15,90)" ActionType="Trigger">
+                  <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="81c16a02-9880-4f49-94ff-409b80cb0731" TriggerText="addTimer(2542,action,raidbuffs,Brotherhood,15,120)" ActionType="Trigger">
                     <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
                   </Action>
                   <Action OrderNumber="2" PlaySoundFileExpression="https://raw.githubusercontent.com/Farplaner/triggernometry-triggers/master/resources/sound/actions/brotherhood.mp3" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="PlaySound">
                     <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="And" />
@@ -129,11 +141,13 @@
               </Trigger>
               <Trigger Enabled="true" Name="Arcane Circle" Id="4d2f9e57-4801-4085-8dfb-f33916e36150" RegularExpression="(15|16):[0-9A-F]{8}:(?&lt;player&gt;[\w-' ]{1,31}):5F55:Arcane Circle:" DebugLevel="Warning" PrevActions="Interrupt" PeriodRefire="Deny" RefirePeriodExpression="10">
                 <Actions>
-                  <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="81c16a02-9880-4f49-94ff-409b80cb0731" TriggerText="addTimer(3633,action,raidbuffs,Arcane Circle,20,180)" ActionType="Trigger">
+                  <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="81c16a02-9880-4f49-94ff-409b80cb0731" TriggerText="addTimer(3633,action,raidbuffs,Arcane Circle,20,120)" ActionType="Trigger">
                     <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
                   </Action>
                   <Action OrderNumber="2" PlaySoundFileExpression="https://raw.githubusercontent.com/Farplaner/triggernometry-triggers/master/resources/sound/actions/arcane_circle.mp3" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="PlaySound">
                     <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="And" />
