@@ -1,7 +1,153 @@
 <?xml version="1.0"?>
 <TriggernometryExport Version="1">
   <ExportedFolder Id="78827a54-c69c-4e38-89dd-ee18c73a53a7" Name="Test" Enabled="true">
-    <Folders />
+    <Folders>
+      <Folder Id="85ea31fd-cc19-446e-8e9a-4503fe0387f8" Name="Queen's Edict" Enabled="true">
+        <Folders />
+        <Triggers>
+          <Trigger Enabled="true" Name="Test Queen's Edict" Id="0fdb677d-c2a9-4ddd-9480-19fc8b594f44" RegularExpression="Test Queen's Edict">
+            <Actions>
+              <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="a5755160-65cb-4f55-b6b7-655db26e1900" TriggerText="queens_edict(Soldier,2,0,2,1)" ActionType="Trigger">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="2" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="a5755160-65cb-4f55-b6b7-655db26e1900" TriggerText="queens_edict(Warrior,6,2,3,2)" ActionType="Trigger">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="3" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="a5755160-65cb-4f55-b6b7-655db26e1900" TriggerText="queens_edict(Gunner,4,6,2,3)" ActionType="Trigger">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="4" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="a5755160-65cb-4f55-b6b7-655db26e1900" TriggerText="queens_edict(Knight,0,4,1,0)" ActionType="Trigger">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+            </Actions>
+            <Condition Enabled="false" Grouping="Or" />
+          </Trigger>
+        </Triggers>
+      </Folder>
+      <Folder Id="d89b9c3e-6c66-46f6-a884-9925cfbf0ad7" Name="Movement Edict" Enabled="true">
+        <Folders />
+        <Triggers>
+          <Trigger Enabled="true" Name="Test Movement Edict" Id="40712755-0cdf-40cb-b7e6-fd0d77cdc09d" RegularExpression="Test Movement Edict">
+            <Actions>
+              <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="0d0aaf48-6032-4c01-8269-b7eb9b704082" TriggerText="You suffer the effect of Movement Edict: 2 Squares." ActionType="Trigger">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="2" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="0d0aaf48-6032-4c01-8269-b7eb9b704082" TriggerText="You suffer the effect of Movement Edict: 4 Squares." ActionType="Trigger">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+            </Actions>
+            <Condition Enabled="false" Grouping="Or" />
+          </Trigger>
+        </Triggers>
+      </Folder>
+      <Folder Id="24ac4481-2bde-42c8-ae6e-3bd8d2db0d7d" Name="Trinity Avowed Slashes" Enabled="true">
+        <Folders />
+        <Triggers>
+          <Trigger Enabled="true" Name="Test TA Slashes 3" Id="1d1ababb-44c9-41bc-b8ce-a618f50644fa" RegularExpression="Test TA Slashes 3">
+            <Actions>
+              <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="35069bc0-5755-4cb0-83cd-7e4f030f2450" TriggerText="trinity_avowed_slash(-277,-97,0,5957)" ActionType="Trigger">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="2" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="35069bc0-5755-4cb0-83cd-7e4f030f2450" TriggerText="trinity_avowed_slash(-287,-87,3,5942)" ActionType="Trigger">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="3" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="35069bc0-5755-4cb0-83cd-7e4f030f2450" TriggerText="trinity_avowed_slash(-277,-77,1,5943)" ActionType="Trigger">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="4" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="35069bc0-5755-4cb0-83cd-7e4f030f2450" TriggerText="trinity_avowed_slash(-267,-87,3,5956)" ActionType="Trigger">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+            </Actions>
+            <Condition Enabled="false" Grouping="Or" />
+          </Trigger>
+          <Trigger Enabled="true" Name="Test TA Slashes 2" Id="3d74a47c-e4d8-49ae-878d-da693c6266af" RegularExpression="Test TA Slashes 2">
+            <Actions>
+              <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="35069bc0-5755-4cb0-83cd-7e4f030f2450" TriggerText="trinity_avowed_slash(-277,-97,1,5957)" ActionType="Trigger">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="2" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="35069bc0-5755-4cb0-83cd-7e4f030f2450" TriggerText="trinity_avowed_slash(-287,-87,2,5943)" ActionType="Trigger">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="3" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="35069bc0-5755-4cb0-83cd-7e4f030f2450" TriggerText="trinity_avowed_slash(-277,-77,2,5942)" ActionType="Trigger">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="4" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="35069bc0-5755-4cb0-83cd-7e4f030f2450" TriggerText="trinity_avowed_slash(-267,-87,3,5956)" ActionType="Trigger">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+            </Actions>
+            <Condition Enabled="false" Grouping="Or" />
+          </Trigger>
+          <Trigger Enabled="true" Name="Test TA Slashes 4" Id="bf4db513-603e-4b1b-b63f-fe040a5aea12" RegularExpression="Test TA Slashes 4">
+            <Actions>
+              <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="35069bc0-5755-4cb0-83cd-7e4f030f2450" TriggerText="trinity_avowed_slash(-277,-97,1,5943)" ActionType="Trigger">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="2" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="35069bc0-5755-4cb0-83cd-7e4f030f2450" TriggerText="trinity_avowed_slash(-287,-87,1,5946)" ActionType="Trigger">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="3" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="35069bc0-5755-4cb0-83cd-7e4f030f2450" TriggerText="trinity_avowed_slash(-277,-77,0,595A)" ActionType="Trigger">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="4" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="35069bc0-5755-4cb0-83cd-7e4f030f2450" TriggerText="trinity_avowed_slash(-267,-87,0,5957)" ActionType="Trigger">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+            </Actions>
+            <Condition Enabled="false" Grouping="Or" />
+          </Trigger>
+          <Trigger Enabled="true" Name="Test TA Slashes 1" Id="8098bc40-5a10-45d4-857a-df628efbf738" RegularExpression="Test TA Slashes 1">
+            <Actions>
+              <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="35069bc0-5755-4cb0-83cd-7e4f030f2450" TriggerText="trinity_avowed_slash(-277,-97,3,5957)" ActionType="Trigger">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="2" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="35069bc0-5755-4cb0-83cd-7e4f030f2450" TriggerText="trinity_avowed_slash(-287,-87,1,5947)" ActionType="Trigger">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="3" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="35069bc0-5755-4cb0-83cd-7e4f030f2450" TriggerText="trinity_avowed_slash(-277,-77,3,595A)" ActionType="Trigger">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="4" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="35069bc0-5755-4cb0-83cd-7e4f030f2450" TriggerText="trinity_avowed_slash(-267,-87,0,5942)" ActionType="Trigger">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+            </Actions>
+            <Condition Enabled="false" Grouping="Or" />
+          </Trigger>
+        </Triggers>
+      </Folder>
+      <Folder Id="e5daff05-6fd2-4c3c-a02a-3a0fe3b53554" Name="Strength of the Ward" Enabled="true">
+        <Folders />
+        <Triggers>
+          <Trigger Enabled="true" Sequential="True" Name="Test Dive Bombs" Id="d45112f2-1777-47dd-b442-68892e687afc" RegularExpression="">
+            <Actions>
+              <Action OrderNumber="1" OBSEndPoint="" VariableName="dsr_spiral_thrust_safespot" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="2" ListVariableName="dsr_spiral_thrust_list" OBSEndPoint="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="3" ListVariableOp="Push" ListVariableExpressionType="Numeric" ListVariableName="dsr_spiral_thrust_list" ListVariableExpression="0" OBSEndPoint="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="4" ListVariableOp="Push" ListVariableExpressionType="Numeric" ListVariableName="dsr_spiral_thrust_list" ListVariableExpression="0" OBSEndPoint="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="5" ListVariableOp="Push" ListVariableExpressionType="Numeric" ListVariableName="dsr_spiral_thrust_list" ListVariableExpression="0" OBSEndPoint="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="6" OBSEndPoint="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="04977942-f926-4455-99af-611e08c711d1" TriggerText="Spiral Thrust Safespot: 1,84,116" ActionType="Trigger">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="7" OBSEndPoint="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="04977942-f926-4455-99af-611e08c711d1" TriggerText="Spiral Thrust Safespot: 2,100,123" ActionType="Trigger">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="8" OBSEndPoint="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="04977942-f926-4455-99af-611e08c711d1" TriggerText="Spiral Thrust Safespot: 3,84,84" ActionType="Trigger">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+            </Actions>
+            <Condition Enabled="false" Grouping="Or" />
+          </Trigger>
+        </Triggers>
+      </Folder>
+    </Folders>
     <Triggers>
       <Trigger Enabled="false" Source="None" Sequential="True" Name="Test addTimer (Action)" Id="3795ac50-2d85-4419-b038-ae5d765aa81b" RegularExpression="">
         <Actions>
@@ -63,31 +209,65 @@
           <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
         </Condition>
       </Trigger>
-      <Trigger Enabled="false" Name="Skill Used" Id="3a1f85ca-64b1-4350-bfe5-e018adec54df" RegularExpression="1[56]:[A-F0-9]{8}:(?&lt;player&gt;[a-zA-Z-' ]{1,31}):(?&lt;skillid&gt;[A-F0-9]{2,4}):">
+      <Trigger Enabled="true" Sequential="True" Name="Test 4" Id="916d92cd-6cbc-48eb-aa54-e589c75d7c8d" RegularExpression="Test 4">
         <Actions>
-          <Action OrderNumber="1" JsonEndpointExpression="https://xivapi.com/Action/${numeric:hex2dec(${skillid})}" JsonFiringExpression="addTimer(${_jsonresponse[IconID]},action,cooldowns,${_jsonresponse[Name]},0,${numeric:round(${_jsonresponse[Recast100ms]}/10)})" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="GenericJson">
-            <Condition Enabled="true" Grouping="And">
-              <ConditionSingle Enabled="true" ExpressionL="VCTrackerSkillBlacklist" ExpressionTypeL="String" ExpressionR="${numeric:hex2dec(${skillid})}" ExpressionTypeR="Numeric" ConditionType="ListDoesNotContain" />
-              <ConditionSingle Enabled="true" ExpressionL="${numeric:hex2dec(${skillid})}" ExpressionTypeL="Numeric" ExpressionR="7" ExpressionTypeR="Numeric" ConditionType="NumericNotEqual" />
-              <ConditionSingle Enabled="true" ExpressionL="${numeric:hex2dec(${skillid})}" ExpressionTypeL="Numeric" ExpressionR="8" ExpressionTypeR="Numeric" ConditionType="NumericNotEqual" />
-            </Condition>
+          <Action OrderNumber="1" OBSEndPoint="ws://${_const[OBSWebsocketEndpoint]}:${_const[OBSWebsocketPort]}" OBSPassword="${_const[OBSWebsocketPassword]}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="6d88c4de-11cd-4b41-80ae-82311a52696d" TriggerText="Cthonic Vent Jump: 85,85,0.7853622" ActionType="Trigger">
+            <Condition Enabled="false" Grouping="Or" />
           </Action>
-        </Actions>
-        <Condition Enabled="true" Grouping="Or">
-          <ConditionSingle Enabled="true" ExpressionL="${player}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualCase" />
-        </Condition>
-      </Trigger>
-      <Trigger Enabled="false" Name="Test TTS" Id="b8708322-b53e-4ff9-967c-fb0b195f92eb" RegularExpression="">
-        <Actions>
-          <Action OrderNumber="1" LogLevel="-1" UseTTSTextExpression="Test" UseTTSExclusive="False" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS">
+          <Action OrderNumber="2" OBSEndPoint="ws://${_const[OBSWebsocketEndpoint]}:${_const[OBSWebsocketPort]}" OBSPassword="${_const[OBSWebsocketPassword]}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="6d88c4de-11cd-4b41-80ae-82311a52696d" TriggerText="Cthonic Vent Jump: 115,115,3.141593" ActionType="Trigger">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
         </Actions>
         <Condition Enabled="false" Grouping="Or" />
       </Trigger>
-      <Trigger Enabled="false" Source="FFXIVNetwork" Name="Error" Id="d009fe43-ebeb-4ae4-a27a-7cb10d23b9c7" RegularExpression="\|083c\|">
+      <Trigger Enabled="true" Name="Test Overlay" Id="c63b8fc4-c05c-4595-a5df-f7f6bac7f0f4" RegularExpression="Show Overlay">
         <Actions>
-          <Action OrderNumber="1" LogLevel="-1" UseTTSTextExpression="Error" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS">
+          <Action OrderNumber="1" AuraImageMode="StretchImage" AuraName="viewport-overlay" AuraImage="C:\Users\tongy\OneDrive\Development\triggernometry-triggers\resources\images\IconOverlay-Active.gif" AuraXIniExpression="440" AuraYIniExpression="0" AuraWIniExpression="2560" AuraHIniExpression="1440" AuraOIniExpression="0.3" AuraTTLTickExpression="10" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" Enabled="False" ActionType="Aura">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="2" UseTTSTextExpression="Showing Overlay" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="3" AuraImageMode="StretchImage" AuraName="viewport-left" AuraImage="https://raw.githubusercontent.com/Farplaner/triggernometry-triggers/master/resources/images/TimerBarLeft.png" AuraXIniExpression="440" AuraYIniExpression="0" AuraWIniExpression="1" AuraHIniExpression="1440" AuraOIniExpression="100" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Aura">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="4" AuraImageMode="StretchImage" AuraName="viewport-right" AuraImage="https://raw.githubusercontent.com/Farplaner/triggernometry-triggers/master/resources/images/TimerBarRight.png" AuraXIniExpression="3000" AuraYIniExpression="0" AuraWIniExpression="1" AuraHIniExpression="1440" AuraOIniExpression="100" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Aura">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="5" AuraImageMode="StretchImage" AuraName="test_bar_left" AuraImage="https://raw.githubusercontent.com/Farplaner/triggernometry-triggers/master/resources/images/TimerBarLeft.png" AuraXIniExpression="500" AuraYIniExpression="500" AuraWIniExpression="3" AuraHIniExpression="21" AuraOIniExpression="100" AuraTTLTickExpression="20-${_since}" Enabled="False" ActionType="Aura" DebugLevel="Warning">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+        </Actions>
+        <Condition Enabled="false" Grouping="Or" />
+      </Trigger>
+      <Trigger Enabled="true" Sequential="True" Name="Test" Id="fd00c32c-a791-4eb9-9d9d-877a64eae52a" RegularExpression="Test">
+        <Actions>
+          <Action OrderNumber="1" OBSEndPoint="ws://${_const[OBSWebsocketEndpoint]}:${_const[OBSWebsocketPort]}" OBSPassword="${_const[OBSWebsocketPassword]}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="6d88c4de-11cd-4b41-80ae-82311a52696d" TriggerText="Cthonic Vent Jump: 115,115,3.141593" ActionType="Trigger">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="2" OBSEndPoint="ws://${_const[OBSWebsocketEndpoint]}:${_const[OBSWebsocketPort]}" OBSPassword="${_const[OBSWebsocketPassword]}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="6d88c4de-11cd-4b41-80ae-82311a52696d" TriggerText="Cthonic Vent Jump: 85,85,0.7853622" ActionType="Trigger">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+        </Actions>
+        <Condition Enabled="false" Grouping="Or" />
+      </Trigger>
+      <Trigger Enabled="true" Sequential="True" Name="Test 2" Id="803aa459-30dd-4d6c-be91-c4146077191b" RegularExpression="Test 2">
+        <Actions>
+          <Action OrderNumber="1" OBSEndPoint="ws://${_const[OBSWebsocketEndpoint]}:${_const[OBSWebsocketPort]}" OBSPassword="${_const[OBSWebsocketPassword]}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="6d88c4de-11cd-4b41-80ae-82311a52696d" TriggerText="Cthonic Vent Jump: 115,85,-0.00004792213" ActionType="Trigger">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="2" OBSEndPoint="ws://${_const[OBSWebsocketEndpoint]}:${_const[OBSWebsocketPort]}" OBSPassword="${_const[OBSWebsocketPassword]}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="6d88c4de-11cd-4b41-80ae-82311a52696d" TriggerText="Cthonic Vent Jump: 115,115,-1.570868" ActionType="Trigger">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+        </Actions>
+        <Condition Enabled="false" Grouping="Or" />
+      </Trigger>
+      <Trigger Enabled="true" Sequential="True" Name="Test 3" Id="22fd58c6-f5a7-4316-a24f-55a55ad1a99c" RegularExpression="Test 3">
+        <Actions>
+          <Action OrderNumber="1" OBSEndPoint="ws://${_const[OBSWebsocketEndpoint]}:${_const[OBSWebsocketPort]}" OBSPassword="${_const[OBSWebsocketPassword]}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="6d88c4de-11cd-4b41-80ae-82311a52696d" TriggerText="Cthonic Vent Jump: 115,115,3.141593" ActionType="Trigger">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="2" OBSEndPoint="ws://${_const[OBSWebsocketEndpoint]}:${_const[OBSWebsocketPort]}" OBSPassword="${_const[OBSWebsocketPassword]}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="6d88c4de-11cd-4b41-80ae-82311a52696d" TriggerText="Cthonic Vent Jump: 115,85,-0.7854581" ActionType="Trigger">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
         </Actions>
